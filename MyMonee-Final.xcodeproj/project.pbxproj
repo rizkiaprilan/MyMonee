@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA99F5BE264C11B500CD9288 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F5BD264C11B500CD9288 /* Common.swift */; };
 		FA9E6A9B264B8A0B006166F0 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A89264B8A0B006166F0 /* Poppins-BoldItalic.ttf */; };
 		FA9E6A9C264B8A0B006166F0 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8A264B8A0B006166F0 /* Poppins-MediumItalic.ttf */; };
 		FA9E6A9D264B8A0B006166F0 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8B264B8A0B006166F0 /* Poppins-ExtraLight.ttf */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA99F5BD264C11B500CD9288 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		FA9E6A89264B8A0B006166F0 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BoldItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		FA9E6A8A264B8A0B006166F0 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		FA9E6A8B264B8A0B006166F0 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 				FA9E6AD4264BB91F006166F0 /* TabBar */,
 				FA9E6AB8264B8CB7006166F0 /* TableViewCells */,
 				FAE33F36264B8731006C5C72 /* HomeViewController.swift */,
+				FA99F5BD264C11B500CD9288 /* Common.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -461,6 +464,7 @@
 				FAB4A294264B66BF00611FC6 /* AppDelegate.swift in Sources */,
 				FA9E6AE4264BC2E3006166F0 /* ProfileViewController.swift in Sources */,
 				FAB4A296264B66BF00611FC6 /* SceneDelegate.swift in Sources */,
+				FA99F5BE264C11B500CD9288 /* Common.swift in Sources */,
 				FAE33F38264B8731006C5C72 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

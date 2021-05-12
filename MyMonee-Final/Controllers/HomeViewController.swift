@@ -11,21 +11,36 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     let homeTableViewCell = String(describing: HomeTableViewCell.self) // ambil nama xib
     
+    @IBOutlet weak var lastWithdraw: UILabel!
+    @IBOutlet weak var lastDeposit: UILabel!
+    @IBOutlet weak var balance: UILabel!
     @IBOutlet weak var historyView: UIView!
     @IBOutlet weak var historyTableView: UITableView!
+    @IBOutlet weak var greetingMessage: UILabel!
+    @IBOutlet weak var userName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        greetingMessage.text = "Selamat \(getCurrentDayTime()),"
+        balance.text = getBalance()
+        
+        let lastDataTransaction = getLastDepoAndWithdraw()
+        lastWithdraw.text = lastDataTransaction.lastWithdraw
+        lastDeposit.text = lastDataTransaction.lastDeposit
+        
+        
         historyView.layer.cornerRadius = 24
+        
+        
         
         historyTableView.delegate = self // untuk manage action
         historyTableView.dataSource = self
-        
         let uiNib = UINib(nibName: homeTableViewCell, bundle: nil) // set UINib nya
         // swiftlint:disable:next line_length
         historyTableView.register(uiNib, forCellReuseIdentifier: homeTableViewCell) // masukkan UINib kedalam table view nya
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return historyData.count
     }
@@ -37,7 +52,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.imageStatus.image = UIImage(named: historyData[indexPath.row].extensions.image)
         cell.title.text = historyData[indexPath.row].title
         cell.dateAndTime.text = historyData[indexPath.row].date
-        cell.price.text = historyData[indexPath.row].price
+        cell.price.text = convertIntToFormatMoney(money: historyData[indexPath.row].price, isDepoOrWithdraw: historyData[indexPath.row].extensions.status)
         cell.price.textColor = UIColor(named: historyData[indexPath.row].extensions.fontColor)
         
         return cell

@@ -1,0 +1,787 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA9E6A9B264B8A0B006166F0 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A89264B8A0B006166F0 /* Poppins-BoldItalic.ttf */; };
+		FA9E6A9C264B8A0B006166F0 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8A264B8A0B006166F0 /* Poppins-MediumItalic.ttf */; };
+		FA9E6A9D264B8A0B006166F0 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8B264B8A0B006166F0 /* Poppins-ExtraLight.ttf */; };
+		FA9E6A9E264B8A0B006166F0 /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8C264B8A0B006166F0 /* Poppins-LightItalic.ttf */; };
+		FA9E6A9F264B8A0B006166F0 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8D264B8A0B006166F0 /* Poppins-Italic.ttf */; };
+		FA9E6AA0264B8A0B006166F0 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8E264B8A0B006166F0 /* Poppins-Medium.ttf */; };
+		FA9E6AA1264B8A0B006166F0 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8F264B8A0B006166F0 /* Poppins-BlackItalic.ttf */; };
+		FA9E6AA2264B8A0B006166F0 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A90264B8A0B006166F0 /* Poppins-Black.ttf */; };
+		FA9E6AA3264B8A0B006166F0 /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A91264B8A0B006166F0 /* Poppins-ThinItalic.ttf */; };
+		FA9E6AA4264B8A0B006166F0 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A92264B8A0B006166F0 /* Poppins-Bold.ttf */; };
+		FA9E6AA5264B8A0B006166F0 /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A93264B8A0B006166F0 /* Poppins-SemiBoldItalic.ttf */; };
+		FA9E6AA6264B8A0B006166F0 /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A94264B8A0B006166F0 /* Poppins-Thin.ttf */; };
+		FA9E6AA7264B8A0B006166F0 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A95264B8A0B006166F0 /* Poppins-Light.ttf */; };
+		FA9E6AA8264B8A0B006166F0 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A96264B8A0B006166F0 /* Poppins-SemiBold.ttf */; };
+		FA9E6AA9264B8A0B006166F0 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A97264B8A0B006166F0 /* Poppins-ExtraLightItalic.ttf */; };
+		FA9E6AAA264B8A0B006166F0 /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A98264B8A0B006166F0 /* Poppins-ExtraBoldItalic.ttf */; };
+		FA9E6AAB264B8A0B006166F0 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A99264B8A0B006166F0 /* Poppins-Regular.ttf */; };
+		FA9E6AAC264B8A0B006166F0 /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A9A264B8A0B006166F0 /* Poppins-ExtraBold.ttf */; };
+		FA9E6AB2264B8C69006166F0 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E6AB0264B8C69006166F0 /* HomeTableViewCell.swift */; };
+		FA9E6AB3264B8C69006166F0 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6AB1264B8C69006166F0 /* HomeTableViewCell.xib */; };
+		FA9E6AC3264BA6B4006166F0 /* HistoryTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E6AC2264BA6B4006166F0 /* HistoryTransaction.swift */; };
+		FA9E6AC8264BA902006166F0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6AC7264BA902006166F0 /* .swiftlint.yml */; };
+		FA9E6ACE264BB8FE006166F0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E6ACC264BB8FE006166F0 /* MainTabBarController.swift */; };
+		FA9E6ACF264BB8FE006166F0 /* MainTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6ACD264BB8FE006166F0 /* MainTabBarController.xib */; };
+		FA9E6ADA264BBF90006166F0 /* ImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E6AD8264BBF90006166F0 /* ImpianViewController.swift */; };
+		FA9E6ADB264BBF90006166F0 /* ImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6AD9264BBF90006166F0 /* ImpianViewController.xib */; };
+		FA9E6AE4264BC2E3006166F0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E6AE2264BC2E3006166F0 /* ProfileViewController.swift */; };
+		FA9E6AE5264BC2E3006166F0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6AE3264BC2E3006166F0 /* ProfileViewController.xib */; };
+		FAB4A294264B66BF00611FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A293264B66BF00611FC6 /* AppDelegate.swift */; };
+		FAB4A296264B66BF00611FC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A295264B66BF00611FC6 /* SceneDelegate.swift */; };
+		FAB4A298264B66BF00611FC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A297264B66BF00611FC6 /* ViewController.swift */; };
+		FAB4A29D264B66C100611FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB4A29C264B66C100611FC6 /* Assets.xcassets */; };
+		FAB4A2A0264B66C100611FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB4A29E264B66C100611FC6 /* LaunchScreen.storyboard */; };
+		FAB4A2AB264B66C200611FC6 /* MyMonee_FinalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A2AA264B66C200611FC6 /* MyMonee_FinalTests.swift */; };
+		FAB4A2B6264B66C200611FC6 /* MyMonee_FinalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A2B5264B66C200611FC6 /* MyMonee_FinalUITests.swift */; };
+		FAE33F38264B8731006C5C72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE33F36264B8731006C5C72 /* HomeViewController.swift */; };
+		FAE33F39264B8731006C5C72 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE33F37264B8731006C5C72 /* HomeViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAB4A2A7264B66C200611FC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAB4A288264B66BF00611FC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAB4A28F264B66BF00611FC6;
+			remoteInfo = "MyMonee-Final";
+		};
+		FAB4A2B2264B66C200611FC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAB4A288264B66BF00611FC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAB4A28F264B66BF00611FC6;
+			remoteInfo = "MyMonee-Final";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA9E6A89264B8A0B006166F0 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BoldItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		FA9E6A8A264B8A0B006166F0 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		FA9E6A8B264B8A0B006166F0 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		FA9E6A8C264B8A0B006166F0 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-LightItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		FA9E6A8D264B8A0B006166F0 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Italic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		FA9E6A8E264B8A0B006166F0 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		FA9E6A8F264B8A0B006166F0 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BlackItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		FA9E6A90264B8A0B006166F0 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Black.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		FA9E6A91264B8A0B006166F0 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ThinItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		FA9E6A92264B8A0B006166F0 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		FA9E6A93264B8A0B006166F0 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBoldItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		FA9E6A94264B8A0B006166F0 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Thin.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		FA9E6A95264B8A0B006166F0 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		FA9E6A96264B8A0B006166F0 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-SemiBold.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		FA9E6A97264B8A0B006166F0 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLightItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		FA9E6A98264B8A0B006166F0 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBoldItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		FA9E6A99264B8A0B006166F0 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		FA9E6A9A264B8A0B006166F0 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraBold.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		FA9E6AB0264B8C69006166F0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		FA9E6AB1264B8C69006166F0 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		FA9E6AC2264BA6B4006166F0 /* HistoryTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTransaction.swift; sourceTree = "<group>"; };
+		FA9E6AC7264BA902006166F0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		FA9E6ACC264BB8FE006166F0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FA9E6ACD264BB8FE006166F0 /* MainTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
+		FA9E6AD8264BBF90006166F0 /* ImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianViewController.swift; sourceTree = "<group>"; };
+		FA9E6AD9264BBF90006166F0 /* ImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianViewController.xib; sourceTree = "<group>"; };
+		FA9E6AE2264BC2E3006166F0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FA9E6AE3264BC2E3006166F0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		FAB4A290264B66BF00611FC6 /* MyMonee-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyMonee-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB4A293264B66BF00611FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAB4A295264B66BF00611FC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAB4A297264B66BF00611FC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAB4A29C264B66C100611FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAB4A29F264B66C100611FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAB4A2A1264B66C100611FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB4A2A6264B66C200611FC6 /* MyMonee-FinalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyMonee-FinalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB4A2AA264B66C200611FC6 /* MyMonee_FinalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMonee_FinalTests.swift; sourceTree = "<group>"; };
+		FAB4A2AC264B66C200611FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB4A2B1264B66C200611FC6 /* MyMonee-FinalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MyMonee-FinalUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAB4A2B5264B66C200611FC6 /* MyMonee_FinalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMonee_FinalUITests.swift; sourceTree = "<group>"; };
+		FAB4A2B7264B66C200611FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAE33F36264B8731006C5C72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FAE33F37264B8731006C5C72 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAB4A28D264B66BF00611FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB4A2A3264B66C200611FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB4A2AE264B66C200611FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA9E6A88264B89E4006166F0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6A90264B8A0B006166F0 /* Poppins-Black.ttf */,
+				FA9E6A8F264B8A0B006166F0 /* Poppins-BlackItalic.ttf */,
+				FA9E6A92264B8A0B006166F0 /* Poppins-Bold.ttf */,
+				FA9E6A89264B8A0B006166F0 /* Poppins-BoldItalic.ttf */,
+				FA9E6A9A264B8A0B006166F0 /* Poppins-ExtraBold.ttf */,
+				FA9E6A98264B8A0B006166F0 /* Poppins-ExtraBoldItalic.ttf */,
+				FA9E6A8B264B8A0B006166F0 /* Poppins-ExtraLight.ttf */,
+				FA9E6A97264B8A0B006166F0 /* Poppins-ExtraLightItalic.ttf */,
+				FA9E6A8D264B8A0B006166F0 /* Poppins-Italic.ttf */,
+				FA9E6A95264B8A0B006166F0 /* Poppins-Light.ttf */,
+				FA9E6A8C264B8A0B006166F0 /* Poppins-LightItalic.ttf */,
+				FA9E6A8E264B8A0B006166F0 /* Poppins-Medium.ttf */,
+				FA9E6A8A264B8A0B006166F0 /* Poppins-MediumItalic.ttf */,
+				FA9E6A99264B8A0B006166F0 /* Poppins-Regular.ttf */,
+				FA9E6A96264B8A0B006166F0 /* Poppins-SemiBold.ttf */,
+				FA9E6A93264B8A0B006166F0 /* Poppins-SemiBoldItalic.ttf */,
+				FA9E6A94264B8A0B006166F0 /* Poppins-Thin.ttf */,
+				FA9E6A91264B8A0B006166F0 /* Poppins-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		FA9E6AB7264B8CA5006166F0 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6AB1264B8C69006166F0 /* HomeTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FA9E6AB8264B8CB7006166F0 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6AB0264B8C69006166F0 /* HomeTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		FA9E6AD3264BB90B006166F0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6ACD264BB8FE006166F0 /* MainTabBarController.xib */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FA9E6AD4264BB91F006166F0 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6ACC264BB8FE006166F0 /* MainTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FAB4A287264B66BF00611FC6 = {
+			isa = PBXGroup;
+			children = (
+				FAB4A292264B66BF00611FC6 /* MyMonee-Final */,
+				FAB4A2A9264B66C200611FC6 /* MyMonee-FinalTests */,
+				FAB4A2B4264B66C200611FC6 /* MyMonee-FinalUITests */,
+				FAB4A291264B66BF00611FC6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAB4A291264B66BF00611FC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAB4A290264B66BF00611FC6 /* MyMonee-Final.app */,
+				FAB4A2A6264B66C200611FC6 /* MyMonee-FinalTests.xctest */,
+				FAB4A2B1264B66C200611FC6 /* MyMonee-FinalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAB4A292264B66BF00611FC6 /* MyMonee-Final */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6A88264B89E4006166F0 /* Fonts */,
+				FAB4A2CC264B679500611FC6 /* Views */,
+				FAB4A2CA264B677D00611FC6 /* Controllers */,
+				FAB4A2C9264B677800611FC6 /* Models */,
+				FAB4A293264B66BF00611FC6 /* AppDelegate.swift */,
+				FAB4A295264B66BF00611FC6 /* SceneDelegate.swift */,
+				FAB4A297264B66BF00611FC6 /* ViewController.swift */,
+				FAB4A29C264B66C100611FC6 /* Assets.xcassets */,
+				FAB4A29E264B66C100611FC6 /* LaunchScreen.storyboard */,
+				FAB4A2A1264B66C100611FC6 /* Info.plist */,
+				FA9E6AC7264BA902006166F0 /* .swiftlint.yml */,
+			);
+			path = "MyMonee-Final";
+			sourceTree = "<group>";
+		};
+		FAB4A2A9264B66C200611FC6 /* MyMonee-FinalTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAB4A2AA264B66C200611FC6 /* MyMonee_FinalTests.swift */,
+				FAB4A2AC264B66C200611FC6 /* Info.plist */,
+			);
+			path = "MyMonee-FinalTests";
+			sourceTree = "<group>";
+		};
+		FAB4A2B4264B66C200611FC6 /* MyMonee-FinalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAB4A2B5264B66C200611FC6 /* MyMonee_FinalUITests.swift */,
+				FAB4A2B7264B66C200611FC6 /* Info.plist */,
+			);
+			path = "MyMonee-FinalUITests";
+			sourceTree = "<group>";
+		};
+		FAB4A2C9264B677800611FC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6AC2264BA6B4006166F0 /* HistoryTransaction.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAB4A2CA264B677D00611FC6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6AE2264BC2E3006166F0 /* ProfileViewController.swift */,
+				FA9E6AD8264BBF90006166F0 /* ImpianViewController.swift */,
+				FA9E6AD4264BB91F006166F0 /* TabBar */,
+				FA9E6AB8264B8CB7006166F0 /* TableViewCells */,
+				FAE33F36264B8731006C5C72 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAB4A2CC264B679500611FC6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA9E6AD9264BBF90006166F0 /* ImpianViewController.xib */,
+				FA9E6AD3264BB90B006166F0 /* TabBar */,
+				FA9E6AB7264B8CA5006166F0 /* TableViewCells */,
+				FAE33F37264B8731006C5C72 /* HomeViewController.xib */,
+				FA9E6AE3264BC2E3006166F0 /* ProfileViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAB4A28F264B66BF00611FC6 /* MyMonee-Final */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB4A2BA264B66C200611FC6 /* Build configuration list for PBXNativeTarget "MyMonee-Final" */;
+			buildPhases = (
+				FAB4A28C264B66BF00611FC6 /* Sources */,
+				FAB4A28D264B66BF00611FC6 /* Frameworks */,
+				FAB4A28E264B66BF00611FC6 /* Resources */,
+				FAB4A2D7264B690600611FC6 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MyMonee-Final";
+			productName = "MyMonee-Final";
+			productReference = FAB4A290264B66BF00611FC6 /* MyMonee-Final.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAB4A2A5264B66C200611FC6 /* MyMonee-FinalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB4A2BD264B66C200611FC6 /* Build configuration list for PBXNativeTarget "MyMonee-FinalTests" */;
+			buildPhases = (
+				FAB4A2A2264B66C200611FC6 /* Sources */,
+				FAB4A2A3264B66C200611FC6 /* Frameworks */,
+				FAB4A2A4264B66C200611FC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAB4A2A8264B66C200611FC6 /* PBXTargetDependency */,
+			);
+			name = "MyMonee-FinalTests";
+			productName = "MyMonee-FinalTests";
+			productReference = FAB4A2A6264B66C200611FC6 /* MyMonee-FinalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAB4A2B0264B66C200611FC6 /* MyMonee-FinalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAB4A2C0264B66C200611FC6 /* Build configuration list for PBXNativeTarget "MyMonee-FinalUITests" */;
+			buildPhases = (
+				FAB4A2AD264B66C200611FC6 /* Sources */,
+				FAB4A2AE264B66C200611FC6 /* Frameworks */,
+				FAB4A2AF264B66C200611FC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAB4A2B3264B66C200611FC6 /* PBXTargetDependency */,
+			);
+			name = "MyMonee-FinalUITests";
+			productName = "MyMonee-FinalUITests";
+			productReference = FAB4A2B1264B66C200611FC6 /* MyMonee-FinalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAB4A288264B66BF00611FC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					FAB4A28F264B66BF00611FC6 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					FAB4A2A5264B66C200611FC6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FAB4A28F264B66BF00611FC6;
+					};
+					FAB4A2B0264B66C200611FC6 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = FAB4A28F264B66BF00611FC6;
+					};
+				};
+			};
+			buildConfigurationList = FAB4A28B264B66BF00611FC6 /* Build configuration list for PBXProject "MyMonee-Final" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAB4A287264B66BF00611FC6;
+			productRefGroup = FAB4A291264B66BF00611FC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAB4A28F264B66BF00611FC6 /* MyMonee-Final */,
+				FAB4A2A5264B66C200611FC6 /* MyMonee-FinalTests */,
+				FAB4A2B0264B66C200611FC6 /* MyMonee-FinalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAB4A28E264B66BF00611FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA9E6AB3264B8C69006166F0 /* HomeTableViewCell.xib in Resources */,
+				FA9E6A9D264B8A0B006166F0 /* Poppins-ExtraLight.ttf in Resources */,
+				FAB4A2A0264B66C100611FC6 /* LaunchScreen.storyboard in Resources */,
+				FA9E6AA1264B8A0B006166F0 /* Poppins-BlackItalic.ttf in Resources */,
+				FA9E6AA5264B8A0B006166F0 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				FA9E6ADB264BBF90006166F0 /* ImpianViewController.xib in Resources */,
+				FA9E6A9F264B8A0B006166F0 /* Poppins-Italic.ttf in Resources */,
+				FA9E6ACF264BB8FE006166F0 /* MainTabBarController.xib in Resources */,
+				FA9E6A9E264B8A0B006166F0 /* Poppins-LightItalic.ttf in Resources */,
+				FAB4A29D264B66C100611FC6 /* Assets.xcassets in Resources */,
+				FAE33F39264B8731006C5C72 /* HomeViewController.xib in Resources */,
+				FA9E6AA0264B8A0B006166F0 /* Poppins-Medium.ttf in Resources */,
+				FA9E6AA6264B8A0B006166F0 /* Poppins-Thin.ttf in Resources */,
+				FA9E6AAC264B8A0B006166F0 /* Poppins-ExtraBold.ttf in Resources */,
+				FA9E6AA4264B8A0B006166F0 /* Poppins-Bold.ttf in Resources */,
+				FA9E6AA7264B8A0B006166F0 /* Poppins-Light.ttf in Resources */,
+				FA9E6AE5264BC2E3006166F0 /* ProfileViewController.xib in Resources */,
+				FA9E6AA9264B8A0B006166F0 /* Poppins-ExtraLightItalic.ttf in Resources */,
+				FA9E6AAA264B8A0B006166F0 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				FA9E6AA2264B8A0B006166F0 /* Poppins-Black.ttf in Resources */,
+				FA9E6AA3264B8A0B006166F0 /* Poppins-ThinItalic.ttf in Resources */,
+				FA9E6A9B264B8A0B006166F0 /* Poppins-BoldItalic.ttf in Resources */,
+				FA9E6A9C264B8A0B006166F0 /* Poppins-MediumItalic.ttf in Resources */,
+				FA9E6AC8264BA902006166F0 /* .swiftlint.yml in Resources */,
+				FA9E6AA8264B8A0B006166F0 /* Poppins-SemiBold.ttf in Resources */,
+				FA9E6AAB264B8A0B006166F0 /* Poppins-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB4A2A4264B66C200611FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB4A2AF264B66C200611FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FAB4A2D7264B690600611FC6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAB4A28C264B66BF00611FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB4A298264B66BF00611FC6 /* ViewController.swift in Sources */,
+				FA9E6AC3264BA6B4006166F0 /* HistoryTransaction.swift in Sources */,
+				FA9E6ADA264BBF90006166F0 /* ImpianViewController.swift in Sources */,
+				FA9E6AB2264B8C69006166F0 /* HomeTableViewCell.swift in Sources */,
+				FA9E6ACE264BB8FE006166F0 /* MainTabBarController.swift in Sources */,
+				FAB4A294264B66BF00611FC6 /* AppDelegate.swift in Sources */,
+				FA9E6AE4264BC2E3006166F0 /* ProfileViewController.swift in Sources */,
+				FAB4A296264B66BF00611FC6 /* SceneDelegate.swift in Sources */,
+				FAE33F38264B8731006C5C72 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB4A2A2264B66C200611FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB4A2AB264B66C200611FC6 /* MyMonee_FinalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAB4A2AD264B66C200611FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAB4A2B6264B66C200611FC6 /* MyMonee_FinalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAB4A2A8264B66C200611FC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAB4A28F264B66BF00611FC6 /* MyMonee-Final */;
+			targetProxy = FAB4A2A7264B66C200611FC6 /* PBXContainerItemProxy */;
+		};
+		FAB4A2B3264B66C200611FC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAB4A28F264B66BF00611FC6 /* MyMonee-Final */;
+			targetProxy = FAB4A2B2264B66C200611FC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAB4A29E264B66C100611FC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAB4A29F264B66C100611FC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAB4A2B8264B66C200611FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAB4A2B9264B66C200611FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAB4A2BB264B66C200611FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MyMonee-Final/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.MyMonee-Final";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAB4A2BC264B66C200611FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MyMonee-Final/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.MyMonee-Final";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAB4A2BE264B66C200611FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MyMonee-FinalTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.MyMonee-FinalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMonee-Final.app/MyMonee-Final";
+			};
+			name = Debug;
+		};
+		FAB4A2BF264B66C200611FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MyMonee-FinalTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.MyMonee-FinalTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyMonee-Final.app/MyMonee-Final";
+			};
+			name = Release;
+		};
+		FAB4A2C1264B66C200611FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MyMonee-FinalUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.MyMonee-FinalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MyMonee-Final";
+			};
+			name = Debug;
+		};
+		FAB4A2C2264B66C200611FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "MyMonee-FinalUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.MyMonee-FinalUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "MyMonee-Final";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAB4A28B264B66BF00611FC6 /* Build configuration list for PBXProject "MyMonee-Final" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB4A2B8264B66C200611FC6 /* Debug */,
+				FAB4A2B9264B66C200611FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB4A2BA264B66C200611FC6 /* Build configuration list for PBXNativeTarget "MyMonee-Final" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB4A2BB264B66C200611FC6 /* Debug */,
+				FAB4A2BC264B66C200611FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB4A2BD264B66C200611FC6 /* Build configuration list for PBXNativeTarget "MyMonee-FinalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB4A2BE264B66C200611FC6 /* Debug */,
+				FAB4A2BF264B66C200611FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAB4A2C0264B66C200611FC6 /* Build configuration list for PBXNativeTarget "MyMonee-FinalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAB4A2C1264B66C200611FC6 /* Debug */,
+				FAB4A2C2264B66C200611FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAB4A288264B66BF00611FC6 /* Project object */;
+}

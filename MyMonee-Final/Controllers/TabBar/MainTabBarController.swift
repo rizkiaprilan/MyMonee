@@ -15,6 +15,7 @@ class MainTabBarController: UITabBarController {
         // Home Tab Bar
         let home = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
         let homeTab = UINavigationController(rootViewController: home)
+        homeTab.setNavigationBarHidden(true, animated: false)
         let homeImage = UIImage(named: "Home")?.withRenderingMode(.alwaysOriginal) //withRenderingMode: apabila melakukan perubahan warna maka icon juga ikut berubah
         let homeImageSelected = UIImage(named: "Home_Selected")?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "TabBarSelected") ?? UIColor.black)
         homeTab.tabBarItem = UITabBarItem(title: "Home", image: homeImage, selectedImage: homeImageSelected)
@@ -25,6 +26,7 @@ class MainTabBarController: UITabBarController {
         // Impian Tab Bar
         let impian = ImpianViewController(nibName: String(describing: ImpianViewController.self), bundle: nil)
         let impianTab = UINavigationController(rootViewController: impian)
+        impianTab.setNavigationBarHidden(true, animated: false)
         let impianImage = UIImage(named: "Impian")?.withRenderingMode(.alwaysOriginal) //withRenderingMode: apabila melakukan perubahan warna maka icon juga ikut berubah
         let impianImageSelected = UIImage(named: "Impian_Selected")?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "TabBarSelected") ?? UIColor.black)
         impianTab.tabBarItem = UITabBarItem(title: "Impian", image: impianImage, selectedImage: impianImageSelected)
@@ -35,6 +37,7 @@ class MainTabBarController: UITabBarController {
         // Profile Tab Bar
         let profile = ProfileViewController(nibName: String(describing: ProfileViewController.self), bundle: nil)
         let profileTab = UINavigationController(rootViewController: profile)
+        profileTab.setNavigationBarHidden(true, animated: false)
         let profileImage = UIImage(named: "Profile")?.withRenderingMode(.alwaysOriginal) //withRenderingMode: apabila melakukan perubahan warna maka icon juga ikut berubah
         let profileImageSelected = UIImage(named: "Profile_Selected")?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "TabBarSelected") ?? UIColor.black)
         profileTab.tabBarItem = UITabBarItem(title: "Profile", image: profileImage, selectedImage: profileImageSelected)

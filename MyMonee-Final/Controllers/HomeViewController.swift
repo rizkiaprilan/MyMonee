@@ -19,20 +19,22 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var greetingMessage: UILabel!
     @IBOutlet weak var userName: UILabel!
     
+    override func viewDidAppear(_ animated: Bool) {
+        self.userName.text = profileData.name
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         greetingMessage.text = "Selamat \(getCurrentDayTime()),"
+        
         balance.text = getBalance()
         
         let lastDataTransaction = getLastDepoAndWithdraw()
         lastWithdraw.text = lastDataTransaction.lastWithdraw
         lastDeposit.text = lastDataTransaction.lastDeposit
         
-        
         historyView.layer.cornerRadius = 24
-        
-        
         
         historyTableView.delegate = self // untuk manage action
         historyTableView.dataSource = self

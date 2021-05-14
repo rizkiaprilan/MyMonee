@@ -66,7 +66,7 @@ func getBalance() -> String {
 func getLastDepoAndWithdraw() -> LastTransaction{
     var result:LastTransaction = LastTransaction()
     
-    for value in historyData {
+    historyData.forEach { (value: HistoryData) in
         switch value.extensions.status{
         case .deposit:
             result.lastDeposit = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
@@ -74,6 +74,15 @@ func getLastDepoAndWithdraw() -> LastTransaction{
             result.lastWithdraw = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
         }
     }
+    
+//    for value in historyData {
+//        switch value.extensions.status{
+//        case .deposit:
+//            result.lastDeposit = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
+//        case .withdraw:
+//            result.lastWithdraw = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
+//        }
+//    }
     
     return result
 }

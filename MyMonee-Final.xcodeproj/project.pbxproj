@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA8427DE264DF62F0063FED4 /* ImpianDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8427DC264DF62F0063FED4 /* ImpianDetailViewController.swift */; };
+		FA8427DF264DF62F0063FED4 /* ImpianDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8427DD264DF62F0063FED4 /* ImpianDetailViewController.xib */; };
+		FA8427E8264E19000063FED4 /* AddImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8427E6264E19000063FED4 /* AddImpianViewController.swift */; };
+		FA8427E9264E19000063FED4 /* AddImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8427E7264E19000063FED4 /* AddImpianViewController.xib */; };
 		FA99F5BE264C11B500CD9288 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F5BD264C11B500CD9288 /* Common.swift */; };
+		FA9D1C2A264D2C94000AB2A8 /* ImpianTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D1C28264D2C94000AB2A8 /* ImpianTableViewCell.swift */; };
+		FA9D1C2B264D2C94000AB2A8 /* ImpianTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9D1C29264D2C94000AB2A8 /* ImpianTableViewCell.xib */; };
+		FA9D1C33264D87D8000AB2A8 /* ImpianSavedByUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D1C32264D87D8000AB2A8 /* ImpianSavedByUser.swift */; };
 		FA9E6A9B264B8A0B006166F0 /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A89264B8A0B006166F0 /* Poppins-BoldItalic.ttf */; };
 		FA9E6A9C264B8A0B006166F0 /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8A264B8A0B006166F0 /* Poppins-MediumItalic.ttf */; };
 		FA9E6A9D264B8A0B006166F0 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6A8B264B8A0B006166F0 /* Poppins-ExtraLight.ttf */; };
@@ -67,7 +74,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA8427DC264DF62F0063FED4 /* ImpianDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianDetailViewController.swift; sourceTree = "<group>"; };
+		FA8427DD264DF62F0063FED4 /* ImpianDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianDetailViewController.xib; sourceTree = "<group>"; };
+		FA8427E6264E19000063FED4 /* AddImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImpianViewController.swift; sourceTree = "<group>"; };
+		FA8427E7264E19000063FED4 /* AddImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddImpianViewController.xib; sourceTree = "<group>"; };
 		FA99F5BD264C11B500CD9288 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FA9D1C28264D2C94000AB2A8 /* ImpianTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianTableViewCell.swift; sourceTree = "<group>"; };
+		FA9D1C29264D2C94000AB2A8 /* ImpianTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianTableViewCell.xib; sourceTree = "<group>"; };
+		FA9D1C32264D87D8000AB2A8 /* ImpianSavedByUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianSavedByUser.swift; sourceTree = "<group>"; };
 		FA9E6A89264B8A0B006166F0 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-BoldItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		FA9E6A8A264B8A0B006166F0 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-MediumItalic.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		FA9E6A8B264B8A0B006166F0 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "../../../../../../../Fonts/Poppins/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
@@ -170,6 +184,7 @@
 		FA9E6AB7264B8CA5006166F0 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				FA9D1C29264D2C94000AB2A8 /* ImpianTableViewCell.xib */,
 				FA9E6AB1264B8C69006166F0 /* HomeTableViewCell.xib */,
 			);
 			path = TableViewCells;
@@ -178,6 +193,7 @@
 		FA9E6AB8264B8CB7006166F0 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				FA9D1C28264D2C94000AB2A8 /* ImpianTableViewCell.swift */,
 				FA9E6AB0264B8C69006166F0 /* HomeTableViewCell.swift */,
 			);
 			path = TableViewCells;
@@ -262,6 +278,7 @@
 			children = (
 				FA9E6AC2264BA6B4006166F0 /* HistoryTransaction.swift */,
 				FAC2A488264CE4BC00E41F28 /* ProfileEditable.swift */,
+				FA9D1C32264D87D8000AB2A8 /* ImpianSavedByUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -269,8 +286,10 @@
 		FAB4A2CA264B677D00611FC6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FA8427E6264E19000063FED4 /* AddImpianViewController.swift */,
 				FA9E6AE2264BC2E3006166F0 /* ProfileViewController.swift */,
 				FA9E6AD8264BBF90006166F0 /* ImpianViewController.swift */,
+				FA8427DC264DF62F0063FED4 /* ImpianDetailViewController.swift */,
 				FA9E6AD4264BB91F006166F0 /* TabBar */,
 				FA9E6AB8264B8CB7006166F0 /* TableViewCells */,
 				FAE33F36264B8731006C5C72 /* HomeViewController.swift */,
@@ -282,11 +301,13 @@
 		FAB4A2CC264B679500611FC6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA8427DD264DF62F0063FED4 /* ImpianDetailViewController.xib */,
 				FA9E6AD9264BBF90006166F0 /* ImpianViewController.xib */,
 				FA9E6AD3264BB90B006166F0 /* TabBar */,
 				FA9E6AB7264B8CA5006166F0 /* TableViewCells */,
 				FAE33F37264B8731006C5C72 /* HomeViewController.xib */,
 				FA9E6AE3264BC2E3006166F0 /* ProfileViewController.xib */,
+				FA8427E7264E19000063FED4 /* AddImpianViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -417,7 +438,9 @@
 				FA9E6AA0264B8A0B006166F0 /* Poppins-Medium.ttf in Resources */,
 				FA9E6AA6264B8A0B006166F0 /* Poppins-Thin.ttf in Resources */,
 				FA9E6AAC264B8A0B006166F0 /* Poppins-ExtraBold.ttf in Resources */,
+				FA8427E9264E19000063FED4 /* AddImpianViewController.xib in Resources */,
 				FA9E6AA4264B8A0B006166F0 /* Poppins-Bold.ttf in Resources */,
+				FA8427DF264DF62F0063FED4 /* ImpianDetailViewController.xib in Resources */,
 				FA9E6AA7264B8A0B006166F0 /* Poppins-Light.ttf in Resources */,
 				FA9E6AE5264BC2E3006166F0 /* ProfileViewController.xib in Resources */,
 				FA9E6AA9264B8A0B006166F0 /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -426,6 +449,7 @@
 				FA9E6AA3264B8A0B006166F0 /* Poppins-ThinItalic.ttf in Resources */,
 				FA9E6A9B264B8A0B006166F0 /* Poppins-BoldItalic.ttf in Resources */,
 				FA9E6A9C264B8A0B006166F0 /* Poppins-MediumItalic.ttf in Resources */,
+				FA9D1C2B264D2C94000AB2A8 /* ImpianTableViewCell.xib in Resources */,
 				FA9E6AC8264BA902006166F0 /* .swiftlint.yml in Resources */,
 				FA9E6AA8264B8A0B006166F0 /* Poppins-SemiBold.ttf in Resources */,
 				FA9E6AAB264B8A0B006166F0 /* Poppins-Regular.ttf in Resources */,
@@ -480,9 +504,13 @@
 				FA9E6AB2264B8C69006166F0 /* HomeTableViewCell.swift in Sources */,
 				FA9E6ACE264BB8FE006166F0 /* MainTabBarController.swift in Sources */,
 				FAB4A294264B66BF00611FC6 /* AppDelegate.swift in Sources */,
+				FA8427E8264E19000063FED4 /* AddImpianViewController.swift in Sources */,
+				FA9D1C33264D87D8000AB2A8 /* ImpianSavedByUser.swift in Sources */,
 				FA9E6AE4264BC2E3006166F0 /* ProfileViewController.swift in Sources */,
 				FAB4A296264B66BF00611FC6 /* SceneDelegate.swift in Sources */,
+				FA9D1C2A264D2C94000AB2A8 /* ImpianTableViewCell.swift in Sources */,
 				FA99F5BE264C11B500CD9288 /* Common.swift in Sources */,
+				FA8427DE264DF62F0063FED4 /* ImpianDetailViewController.swift in Sources */,
 				FAE33F38264B8731006C5C72 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

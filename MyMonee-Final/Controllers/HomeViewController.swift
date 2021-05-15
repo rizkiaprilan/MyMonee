@@ -26,7 +26,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.present(addHomeViewController, animated: true, completion: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         self.userName.text = profileData.name
     }
     
@@ -71,17 +71,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let homeDetailViewController = HomeDetailViewController(nibName: String(describing: HomeDetailViewController.self), bundle: nil)
         
-//        switch historyData[indexPath.row].extensions.status {
-//        case .deposit:
-//            homeDetailViewController.typeImage.image = UIImage(named: historyData[indexPath.row].extensions.image)
-//        case .withdraw:
-//            homeDetailViewController.typeImage.image = UIImage(named: historyData[indexPath.row].extensions.image)
-//        }
-        print(historyData[indexPath.row])
-//        print(homeDetailViewController.dateTransaction.text!)
-//        home DetailViewController.dateTransaction.text = historyData[indexPath.row].date
         homeDetailViewController.dataHistory = historyData[indexPath.row]
-        
+        homeDetailViewController.indexData = indexPath.row
         homeDetailViewController.modalPresentationStyle = .fullScreen
         homeDetailViewController.modalTransitionStyle = .flipHorizontal
         self.present(homeDetailViewController, animated: true, completion: nil)

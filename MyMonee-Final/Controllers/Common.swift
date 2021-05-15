@@ -57,3 +57,4 @@ func getCurrentDate() -> String {
     let result = formatter.string(from: date)
     return result
 }
+

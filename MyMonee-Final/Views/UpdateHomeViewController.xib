@@ -22,6 +22,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UpdateHomeViewController" customModule="MyMonee_Final" customModuleProvider="target">
             <connections>
+                <outlet property="hapusButton" destination="knx-5p-PB6" id="uar-b8-axX"/>
+                <outlet property="judulField" destination="Sac-ea-S6x" id="iGw-yH-xRg"/>
+                <outlet property="jumlahField" destination="csT-ff-rnW" id="eg5-IG-zJS"/>
+                <outlet property="pemasukanView" destination="NEO-MG-igg" id="l2a-Ry-Ef3"/>
+                <outlet property="penarikanView" destination="dzt-IH-Hi1" id="VLf-j0-WZA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -37,7 +42,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="558" height="1000"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-Rk-VSw">
-                                    <rect key="frame" x="18" y="21" width="164" height="24"/>
+                                    <rect key="frame" x="18" y="21" width="149" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="Yng-UX-xnM"/>
                                     </constraints>
@@ -45,9 +50,12 @@
                                     <state key="normal" title="  Ubah Penggunaan" image="Back_Chevron">
                                         <color key="titleColor" name="Regular"/>
                                     </state>
+                                    <connections>
+                                        <action selector="back:" destination="-1" eventType="touchUpInside" id="HkO-Z1-ej8"/>
+                                    </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3k-xh-lQ1">
-                                    <rect key="frame" x="16" y="67" width="38.5" height="21"/>
+                                    <rect key="frame" x="16" y="67" width="34.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="FXd-OH-5hZ"/>
                                     </constraints>
@@ -65,7 +73,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah (Rp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxm-vk-bvO">
-                                    <rect key="frame" x="16" y="137" width="90" height="21"/>
+                                    <rect key="frame" x="16" y="137" width="74.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="Ybm-iQ-Rf9"/>
                                     </constraints>
@@ -78,16 +86,17 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="cID-xD-rGv"/>
                                     </constraints>
+                                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="25"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategori Penggunaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-5K-5jU">
-                                    <rect key="frame" x="16" y="207" width="166" height="21"/>
+                                    <rect key="frame" x="16" y="207" width="145.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="X3Y-UH-Syf"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEO-MG-igg" userLabel="PemasukanView">
@@ -122,6 +131,9 @@
                                             <integer key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="Vhi-yr-lBG" appends="YES" id="Kxl-Qb-Gs5"/>
+                                    </connections>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dzt-IH-Hi1" userLabel="PenarikanView">
                                     <rect key="frame" x="285.5" y="244" width="256.5" height="75"/>
@@ -155,6 +167,9 @@
                                             <integer key="value" value="8"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="ehW-58-SLt" appends="YES" id="2Ej-ng-03q"/>
+                                    </connections>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftn-ha-kHk">
                                     <rect key="frame" x="16" y="809" width="526" height="43"/>
@@ -171,6 +186,9 @@
                                             <integer key="value" value="20"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="simpan:" destination="-1" eventType="touchUpInside" id="eCD-le-HzI"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knx-5p-PB6">
                                     <rect key="frame" x="16" y="868" width="526" height="43"/>
@@ -186,6 +204,9 @@
                                             <integer key="value" value="20"/>
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="hapus:" destination="-1" eventType="touchUpInside" id="zYL-0h-t2D"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -246,6 +267,16 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-23.75" y="60"/>
         </view>
+        <tapGestureRecognizer id="Vhi-yr-lBG" userLabel="Tap Gesture Recognizer Pemasukan">
+            <connections>
+                <action selector="pemasukkanTapped:" destination="-1" id="uPo-0b-IIx"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="ehW-58-SLt" userLabel="Tap Gesture Recognizer Penarikan">
+            <connections>
+                <action selector="penarikanTapped:" destination="-1" id="go7-LD-UrU"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="Arrow_Down" width="16" height="16"/>

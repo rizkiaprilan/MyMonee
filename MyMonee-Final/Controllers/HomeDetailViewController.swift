@@ -10,11 +10,13 @@ import UIKit
 class HomeDetailViewController: UIViewController {
 
     var dataHistory:HistoryData?
+    var indexData:Int?
     
     @IBAction func edit(_ sender: Any) {
         let viewController = UpdateHomeViewController(nibName: String(describing: UpdateHomeViewController.self), bundle: nil)
-
         
+        viewController.indexData = indexData
+        viewController.lastData = dataHistory
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal
         self.present(viewController, animated: true, completion: nil)

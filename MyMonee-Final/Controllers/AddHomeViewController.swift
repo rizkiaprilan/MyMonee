@@ -17,11 +17,15 @@ class AddHomeViewController: UIViewController {
     var statusPenarikan:Bool = false
     @IBOutlet var simpan: UIButton!
     
+    fileprivate func goBackToMainTabBar() {
+        let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .flipHorizontal
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     @IBAction func back(_ sender: Any) {
-        let homeViewController = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
-        homeViewController.modalPresentationStyle = .fullScreen
-        homeViewController.modalTransitionStyle = .flipHorizontal
-        self.present(homeViewController, animated: true, completion: nil)
+        goBackToMainTabBar()
     }
     
     private func alert() {
@@ -36,7 +40,7 @@ class AddHomeViewController: UIViewController {
     }
     
     @IBAction func simpanTapped(_ sender: UIButton) {
-        if fieldJudul.text!.isEmpty || fieldJumlah.text!.isEmpty   {
+        if fieldJudul.text!.isEmpty || fieldJumlah.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false)   {
             alert()
             return
         }
@@ -47,12 +51,7 @@ class AddHomeViewController: UIViewController {
         if statusPenarikan{
             insertDataHistory(type: .withdraw)
         }
-        let homeViewController = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
-
-        
-        homeViewController.modalPresentationStyle = .fullScreen
-        homeViewController.modalTransitionStyle = .flipHorizontal
-        self.present(homeViewController, animated: true, completion: nil)
+        goBackToMainTabBar()
     }
     @IBAction func pemasukanTapped(_ sender: UITapGestureRecognizer) {
         if statusPemasukan == false{
@@ -61,11 +60,12 @@ class AddHomeViewController: UIViewController {
             statusPemasukan = true
             penarikan.layer.borderWidth = 0
             simpan.layer.backgroundColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
-            
+            simpan.isEnabled = true
         }else{
             pemasukan.layer.borderWidth = 0
             simpan.layer.backgroundColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
             statusPemasukan = true
+            simpan.isEnabled = false
         }
         statusPenarikan = false
     }
@@ -76,10 +76,12 @@ class AddHomeViewController: UIViewController {
             statusPenarikan = true
             pemasukan.layer.borderWidth = 0
             simpan.layer.backgroundColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
+            simpan.isEnabled = true
         }else{
             penarikan.layer.borderWidth = 0
             simpan.layer.backgroundColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
             statusPenarikan = false
+            simpan.isEnabled = false
         }
         
         statusPemasukan = false
@@ -88,6 +90,7 @@ class AddHomeViewController: UIViewController {
     @IBOutlet var pemasukan: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        simpan.isEnabled = false
         
     }
 }

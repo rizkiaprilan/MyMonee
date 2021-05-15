@@ -44,7 +44,7 @@ struct LastTransaction {
 }
 
 
-let historyData: [HistoryData] = [
+var historyData: [HistoryData] = [
     HistoryData(title: "Bayar Listrik", date: "1 Mei 2021 - 19.30", extensions: Extensions(statusHistory: .withdraw),price: 256000),
     HistoryData(title: "Gaji Februari", date: "2 Mei 2021 - 19.30", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]

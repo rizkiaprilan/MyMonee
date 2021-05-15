@@ -18,6 +18,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var historyTableView: UITableView!
     @IBOutlet weak var greetingMessage: UILabel!
     @IBOutlet weak var userName: UILabel!
+    @IBAction func addPenggunaan(_ sender: UITapGestureRecognizer) {
+        let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
+    
+//        
+        self.present(addHomeViewController, animated: true, completion: nil)
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         self.userName.text = profileData.name
@@ -27,15 +33,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         greetingMessage.text = "Selamat \(getCurrentDayTime()),"
-        
+
         balance.text = getBalance()
-        
+
         let lastDataTransaction = getLastDepoAndWithdraw()
         lastWithdraw.text = lastDataTransaction.lastWithdraw
         lastDeposit.text = lastDataTransaction.lastDeposit
-        
+
         historyView.layer.cornerRadius = 24
-        
+
         historyTableView.delegate = self // untuk manage action
         historyTableView.dataSource = self
         let uiNib = UINib(nibName: homeTableViewCell, bundle: nil) // set UINib nya
@@ -59,14 +65,4 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

@@ -48,3 +48,12 @@ func convertIntToFormatMoney(money:Int,isDepoOrWithdraw:TypeHistory?) -> String{
     }
     return result
 }
+
+
+func getCurrentDate() -> String {
+    let date = Date()
+    let formatter = DateFormatter()
+    formatter.dateFormat = "dd-MM-yyyy - HH.mm"
+    let result = formatter.string(from: date)
+    return result
+}

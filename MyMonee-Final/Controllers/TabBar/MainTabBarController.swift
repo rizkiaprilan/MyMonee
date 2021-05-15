@@ -24,7 +24,7 @@ class MainTabBarController: UITabBarController {
         homeTab.tabBarItem.tag = 0
         
         // Impian Tab Bar
-        let impian = ImpianViewController(nibName: String(describing: ImpianViewController.self), bundle: nil)
+        let impian = ImpianViewController(nibName: "ImpianViewControllerView", bundle: nil)
         let impianTab = UINavigationController(rootViewController: impian)
         impianTab.setNavigationBarHidden(true, animated: false)
         let impianImage = UIImage(named: "Impian")?.withRenderingMode(.alwaysOriginal) //withRenderingMode: apabila melakukan perubahan warna maka icon juga ikut berubah

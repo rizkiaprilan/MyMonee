@@ -31,10 +31,18 @@ enum TypeHistory: String{
 }
 
 struct HistoryData {
+    let id:String = UUID.init().uuidString.uppercased()
     let title: String
     let date: String
     let extensions: Extensions
     let price: Int
+    
+    init(title:String,date:String,extensions:Extensions,price:Int) {
+        self.title = title
+        self.date = date
+        self.extensions = extensions
+        self.price = price
+    }
     
 }
 

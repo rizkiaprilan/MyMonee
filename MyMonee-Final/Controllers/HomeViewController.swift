@@ -20,7 +20,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var userName: UILabel!
     @IBAction func addPenggunaan(_ sender: UITapGestureRecognizer) {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
-    
+        
         addHomeViewController.modalPresentationStyle = .fullScreen
         addHomeViewController.modalTransitionStyle = .flipHorizontal
         self.present(addHomeViewController, animated: true, completion: nil)
@@ -34,15 +34,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         
         greetingMessage.text = "Selamat \(getCurrentDayTime()),"
-
+        
         balance.text = getBalance()
-
+        
         let lastDataTransaction = getLastDepoAndWithdraw()
         lastWithdraw.text = lastDataTransaction.lastWithdraw
         lastDeposit.text = lastDataTransaction.lastDeposit
-
+        
         historyView.layer.cornerRadius = 24
-
+        
         historyTableView.delegate = self // untuk manage action
         historyTableView.dataSource = self
         let uiNib = UINib(nibName: homeTableViewCell, bundle: nil) // set UINib nya
@@ -58,6 +58,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         // swiftlint:disable:next line_length
         let cell = historyTableView.dequeueReusableCell(withIdentifier: homeTableViewCell, for: indexPath) as! HomeTableViewCell
         
+        cell.dataHistoryRow = historyData[indexPath.row]
         cell.imageStatus.image = UIImage(named: historyData[indexPath.row].extensions.image)
         cell.title.text = historyData[indexPath.row].title
         cell.dateAndTime.text = historyData[indexPath.row].date
@@ -65,5 +66,24 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.price.textColor = UIColor(named: historyData[indexPath.row].extensions.fontColor)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let homeDetailViewController = HomeDetailViewController(nibName: String(describing: HomeDetailViewController.self), bundle: nil)
+        
+//        switch historyData[indexPath.row].extensions.status {
+//        case .deposit:
+//            homeDetailViewController.typeImage.image = UIImage(named: historyData[indexPath.row].extensions.image)
+//        case .withdraw:
+//            homeDetailViewController.typeImage.image = UIImage(named: historyData[indexPath.row].extensions.image)
+//        }
+        print(historyData[indexPath.row])
+//        print(homeDetailViewController.dateTransaction.text!)
+//        home DetailViewController.dateTransaction.text = historyData[indexPath.row].date
+        homeDetailViewController.dataHistory = historyData[indexPath.row]
+        
+        homeDetailViewController.modalPresentationStyle = .fullScreen
+        homeDetailViewController.modalTransitionStyle = .flipHorizontal
+        self.present(homeDetailViewController, animated: true, completion: nil)
     }
 }

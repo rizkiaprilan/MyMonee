@@ -21,6 +21,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeDetailViewController" customModule="MyMonee_Final" customModuleProvider="target">
             <connections>
+                <outlet property="dateTransaction" destination="6kh-XI-ETh" id="ScF-k8-ZhS"/>
+                <outlet property="titleTransaction" destination="3Bl-uF-5er" id="ucf-ho-2Ul"/>
+                <outlet property="transactionPrice" destination="ATx-sc-tjR" id="KeR-1v-w6q"/>
+                <outlet property="trasancationId" destination="Ehn-AZ-aEA" id="0rX-xB-Gt1"/>
+                <outlet property="typeImage" destination="XFq-RK-BcR" id="OIw-sb-AVy"/>
+                <outlet property="typeTransaction" destination="MTQ-Df-7Xt" id="eRe-aT-0wN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

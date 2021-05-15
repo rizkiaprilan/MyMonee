@@ -21,7 +21,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBAction func addPenggunaan(_ sender: UITapGestureRecognizer) {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
     
-//        
+        addHomeViewController.modalPresentationStyle = .fullScreen
+        addHomeViewController.modalTransitionStyle = .flipHorizontal
         self.present(addHomeViewController, animated: true, completion: nil)
     }
     

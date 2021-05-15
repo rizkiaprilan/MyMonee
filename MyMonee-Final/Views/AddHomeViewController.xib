@@ -43,6 +43,9 @@
                     <state key="normal" title="  Tambah Penggunaan" image="Back_Chevron">
                         <color key="titleColor" name="Regular"/>
                     </state>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="lhz-wf-rp8"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkj-Y0-BHK">
                     <rect key="frame" x="16" y="68.5" width="343" height="21"/>

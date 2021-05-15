@@ -17,6 +17,13 @@ class AddHomeViewController: UIViewController {
     var statusPenarikan:Bool = false
     @IBOutlet var simpan: UIButton!
     
+    @IBAction func back(_ sender: Any) {
+        let homeViewController = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
+        homeViewController.modalPresentationStyle = .fullScreen
+        homeViewController.modalTransitionStyle = .flipHorizontal
+        self.present(homeViewController, animated: true, completion: nil)
+    }
+    
     private func alert() {
         let alert = UIAlertController(title: "Bad Request", message: "Tolong masukkan data dengan lengkap", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
@@ -42,6 +49,9 @@ class AddHomeViewController: UIViewController {
         }
         let homeViewController = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
 
+        
+        homeViewController.modalPresentationStyle = .fullScreen
+        homeViewController.modalTransitionStyle = .flipHorizontal
         self.present(homeViewController, animated: true, completion: nil)
     }
     @IBAction func pemasukanTapped(_ sender: UITapGestureRecognizer) {
@@ -79,24 +89,5 @@ class AddHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
-        
-        
-        
-        // Do any additional setup after loading the view.
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

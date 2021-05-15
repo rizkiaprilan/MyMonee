@@ -32,7 +32,6 @@ class AddHomeViewController: UIViewController {
         let alert = UIAlertController(title: "Bad Request", message: "Tolong masukkan data dengan lengkap", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-//        return
     }
     
     fileprivate func insertDataHistory(type: TypeHistory) {

@@ -18,6 +18,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddImpianViewController" customModule="MyMonee_Final" customModuleProvider="target">
             <connections>
+                <outlet property="targetImpian" destination="Lr7-du-8Ab" id="CVe-pK-Xxz"/>
+                <outlet property="titleImpian" destination="4CQ-ep-0nA" id="irJ-NQ-g8M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -32,6 +34,9 @@
                     <state key="normal" title="  Tambah Impian" image="Back_Chevron">
                         <color key="titleColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="mXl-7z-V8J"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eO-04-gGf">
                     <rect key="frame" x="16" y="117.5" width="38.5" height="20"/>
@@ -55,6 +60,9 @@
                     <state key="normal" title="Simpan">
                         <color key="titleColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="simpanTapped:" destination="-1" eventType="touchUpInside" id="RtK-Y4-1Xg"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Target Impian" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr7-du-8Ab">
                     <rect key="frame" x="16" y="207" width="207" height="35.5"/>

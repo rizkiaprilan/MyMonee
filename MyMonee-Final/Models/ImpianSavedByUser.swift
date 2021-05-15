@@ -11,19 +11,23 @@ struct ImpianByUser {
     var id:String = UUID.init().uuidString
     var title:String
     var progress:Float
-    var amount:String
-    
-//    init(title:String,progress:Float,amount:String) {
-//        self.id = UUID.init().uuidString
-//        self.title = title
-//        self.progress = progress
-//        self.amount = amount
-//    }
+    var amount:Amount
+    var amountString:String
+    init(title:String,amount:Amount) {
+        self.amountString = "IDR \(convertIntToFormatMoneyRaw(money:amount.current)) / IDR \(convertIntToFormatMoneyRaw(money: amount.target))"
+        self.title = title
+        self.progress = Float(amount.current)/Float(amount.target)
+        self.amount = amount
+    }
 }
 
+struct Amount{
+    var current:Int
+    var target:Int
+}
 
-let dataImpianByUser: [ImpianByUser] = [
-    ImpianByUser(title: "Membeli Mobil", progress: 0.5, amount: "IDR 1.000.000.000 / IDR 2.000.000.000")
-//    ImpianByUser(title: "Membeli Rumah", progress: 0.2, amount: "IDR 2.000.000.000 / IDR 10.000.000.000"),
-//    ImpianByUser(title: "Membeli Macbook Pro", progress: 1, amount: "IDR 25.000.000 / IDR 25.000.000")
+var dataImpianByUser: [[ImpianByUser]] = [
+    [ImpianByUser(title: "Membeli Mobil", amount: Amount(current: 1000000000, target: 2000000000))],
+    [ImpianByUser(title: "Membeli Rumah", amount: Amount(current: 2000000000, target: 10000000000))],
+    [ImpianByUser(title: "Membeli Macbook Pro", amount: Amount(current: 25000000, target: 25000000))]
 ]

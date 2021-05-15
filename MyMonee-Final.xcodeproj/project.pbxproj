@@ -18,9 +18,10 @@
 		FA842806264E66DE0063FED4 /* AddHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA842804264E66DE0063FED4 /* AddHomeViewController.swift */; };
 		FA842807264E66DE0063FED4 /* AddHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA842805264E66DE0063FED4 /* AddHomeViewController.xib */; };
 		FA8C01B4264F5EE800CBA6BD /* ImpianTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C01B3264F5EE800CBA6BD /* ImpianTableViewCell.swift */; };
-		FA8C01BC264F5FD900CBA6BD /* ImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C01BB264F5FD900CBA6BD /* ImpianViewController.swift */; };
 		FA8C01CB264FBA1000CBA6BD /* UpdateHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C01C9264FBA1000CBA6BD /* UpdateHomeViewController.swift */; };
 		FA8C01CC264FBA1000CBA6BD /* UpdateHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8C01CA264FBA1000CBA6BD /* UpdateHomeViewController.xib */; };
+		FA8C01EB265006DD00CBA6BD /* ImpianViewControllerNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C01E9265006DD00CBA6BD /* ImpianViewControllerNew.swift */; };
+		FA8C01EC265006DD00CBA6BD /* ImpianViewControllerNew.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8C01EA265006DD00CBA6BD /* ImpianViewControllerNew.xib */; };
 		FA99F5BE264C11B500CD9288 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA99F5BD264C11B500CD9288 /* Common.swift */; };
 		FA9D1C2B264D2C94000AB2A8 /* ImpianTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9D1C29264D2C94000AB2A8 /* ImpianTableViewCell.xib */; };
 		FA9D1C33264D87D8000AB2A8 /* ImpianSavedByUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9D1C32264D87D8000AB2A8 /* ImpianSavedByUser.swift */; };
@@ -48,7 +49,6 @@
 		FA9E6AC8264BA902006166F0 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6AC7264BA902006166F0 /* .swiftlint.yml */; };
 		FA9E6ACE264BB8FE006166F0 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E6ACC264BB8FE006166F0 /* MainTabBarController.swift */; };
 		FA9E6ACF264BB8FE006166F0 /* MainTabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6ACD264BB8FE006166F0 /* MainTabBarController.xib */; };
-		FA9E6ADB264BBF90006166F0 /* ImpianViewControllerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6AD9264BBF90006166F0 /* ImpianViewControllerView.xib */; };
 		FA9E6AE4264BC2E3006166F0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9E6AE2264BC2E3006166F0 /* ProfileViewController.swift */; };
 		FA9E6AE5264BC2E3006166F0 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9E6AE3264BC2E3006166F0 /* ProfileViewController.xib */; };
 		FAB4A294264B66BF00611FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB4A293264B66BF00611FC6 /* AppDelegate.swift */; };
@@ -93,9 +93,10 @@
 		FA842804264E66DE0063FED4 /* AddHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeViewController.swift; sourceTree = "<group>"; };
 		FA842805264E66DE0063FED4 /* AddHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddHomeViewController.xib; sourceTree = "<group>"; };
 		FA8C01B3264F5EE800CBA6BD /* ImpianTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianTableViewCell.swift; sourceTree = "<group>"; };
-		FA8C01BB264F5FD900CBA6BD /* ImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianViewController.swift; sourceTree = "<group>"; };
 		FA8C01C9264FBA1000CBA6BD /* UpdateHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateHomeViewController.swift; sourceTree = "<group>"; };
 		FA8C01CA264FBA1000CBA6BD /* UpdateHomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateHomeViewController.xib; sourceTree = "<group>"; };
+		FA8C01E9265006DD00CBA6BD /* ImpianViewControllerNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianViewControllerNew.swift; sourceTree = "<group>"; };
+		FA8C01EA265006DD00CBA6BD /* ImpianViewControllerNew.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianViewControllerNew.xib; sourceTree = "<group>"; };
 		FA99F5BD264C11B500CD9288 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		FA9D1C29264D2C94000AB2A8 /* ImpianTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianTableViewCell.xib; sourceTree = "<group>"; };
 		FA9D1C32264D87D8000AB2A8 /* ImpianSavedByUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianSavedByUser.swift; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		FA9E6AC7264BA902006166F0 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		FA9E6ACC264BB8FE006166F0 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FA9E6ACD264BB8FE006166F0 /* MainTabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTabBarController.xib; sourceTree = "<group>"; };
-		FA9E6AD9264BBF90006166F0 /* ImpianViewControllerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianViewControllerView.xib; sourceTree = "<group>"; };
 		FA9E6AE2264BC2E3006166F0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		FA9E6AE3264BC2E3006166F0 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		FAB4A290264B66BF00611FC6 /* MyMonee-Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MyMonee-Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,8 +312,8 @@
 				FA9E6AB8264B8CB7006166F0 /* TableViewCells */,
 				FAE33F36264B8731006C5C72 /* HomeViewController.swift */,
 				FA99F5BD264C11B500CD9288 /* Common.swift */,
-				FA8C01BB264F5FD900CBA6BD /* ImpianViewController.swift */,
 				FA8C01C9264FBA1000CBA6BD /* UpdateHomeViewController.swift */,
+				FA8C01E9265006DD00CBA6BD /* ImpianViewControllerNew.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -322,7 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				FA8427DD264DF62F0063FED4 /* ImpianDetailViewController.xib */,
-				FA9E6AD9264BBF90006166F0 /* ImpianViewControllerView.xib */,
 				FA9E6AD3264BB90B006166F0 /* TabBar */,
 				FA9E6AB7264B8CA5006166F0 /* TableViewCells */,
 				FAE33F37264B8731006C5C72 /* HomeViewController.xib */,
@@ -332,6 +331,7 @@
 				FA842805264E66DE0063FED4 /* AddHomeViewController.xib */,
 				FA8427FB264E4E5B0063FED4 /* HomeDetailViewController.xib */,
 				FA8C01CA264FBA1000CBA6BD /* UpdateHomeViewController.xib */,
+				FA8C01EA265006DD00CBA6BD /* ImpianViewControllerNew.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -453,7 +453,6 @@
 				FAB4A2A0264B66C100611FC6 /* LaunchScreen.storyboard in Resources */,
 				FA9E6AA1264B8A0B006166F0 /* Poppins-BlackItalic.ttf in Resources */,
 				FA9E6AA5264B8A0B006166F0 /* Poppins-SemiBoldItalic.ttf in Resources */,
-				FA9E6ADB264BBF90006166F0 /* ImpianViewControllerView.xib in Resources */,
 				FA9E6A9F264B8A0B006166F0 /* Poppins-Italic.ttf in Resources */,
 				FA9E6ACF264BB8FE006166F0 /* MainTabBarController.xib in Resources */,
 				FA9E6A9E264B8A0B006166F0 /* Poppins-LightItalic.ttf in Resources */,
@@ -474,6 +473,7 @@
 				FA9E6AA2264B8A0B006166F0 /* Poppins-Black.ttf in Resources */,
 				FA9E6AA3264B8A0B006166F0 /* Poppins-ThinItalic.ttf in Resources */,
 				FA8427F3264E31990063FED4 /* UpdateImpianViewController.xib in Resources */,
+				FA8C01EC265006DD00CBA6BD /* ImpianViewControllerNew.xib in Resources */,
 				FA9E6A9B264B8A0B006166F0 /* Poppins-BoldItalic.ttf in Resources */,
 				FA9E6A9C264B8A0B006166F0 /* Poppins-MediumItalic.ttf in Resources */,
 				FA842807264E66DE0063FED4 /* AddHomeViewController.xib in Resources */,
@@ -535,11 +535,11 @@
 				FAB4A294264B66BF00611FC6 /* AppDelegate.swift in Sources */,
 				FA8427E8264E19000063FED4 /* AddImpianViewController.swift in Sources */,
 				FA842806264E66DE0063FED4 /* AddHomeViewController.swift in Sources */,
-				FA8C01BC264F5FD900CBA6BD /* ImpianViewController.swift in Sources */,
 				FA9D1C33264D87D8000AB2A8 /* ImpianSavedByUser.swift in Sources */,
 				FA9E6AE4264BC2E3006166F0 /* ProfileViewController.swift in Sources */,
 				FAB4A296264B66BF00611FC6 /* SceneDelegate.swift in Sources */,
 				FA8427FC264E4E5B0063FED4 /* HomeDetailViewController.swift in Sources */,
+				FA8C01EB265006DD00CBA6BD /* ImpianViewControllerNew.swift in Sources */,
 				FA99F5BE264C11B500CD9288 /* Common.swift in Sources */,
 				FA8427DE264DF62F0063FED4 /* ImpianDetailViewController.swift in Sources */,
 				FA8C01CB264FBA1000CBA6BD /* UpdateHomeViewController.swift in Sources */,

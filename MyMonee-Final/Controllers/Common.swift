@@ -49,6 +49,18 @@ func convertIntToFormatMoney(money:Int,isDepoOrWithdraw:TypeHistory?) -> String{
     return result
 }
 
+func convertIntToFormatMoneyRaw(money:Int) -> String{
+    let formatter = NumberFormatter()
+    formatter.locale = Locale(identifier: "id_ID")
+    formatter.groupingSeparator = "."
+    formatter.numberStyle = .decimal
+    var result: String = ""
+    if let formattedTipAmount = formatter.string(from: money as NSNumber) {
+       result = formattedTipAmount
+    }
+    return result
+}
+
 
 func getCurrentDate() -> String {
     let date = Date()

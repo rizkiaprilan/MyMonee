@@ -22,12 +22,11 @@ class HomeDetailViewController: UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     @IBAction func back(_ sender: UIButton) {
-        let homeViewController = HomeViewController(nibName: String(describing: HomeViewController.self), bundle: nil)
+        let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
 
-        
-        homeViewController.modalPresentationStyle = .fullScreen
-        homeViewController.modalTransitionStyle = .flipHorizontal
-        self.present(homeViewController, animated: true, completion: nil)
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .flipHorizontal
+        self.present(viewController, animated: true, completion: nil)
     }
     @IBOutlet var typeImage: UIImageView!
     @IBOutlet var titleTransaction: UILabel!
@@ -45,7 +44,6 @@ class HomeDetailViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         dateTransaction.text = dataHistory?.date
         typeImage.image = UIImage(named: (dataHistory?.extensions.image)!)

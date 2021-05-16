@@ -82,7 +82,6 @@ class AddHomeViewController: UIViewController {
             statusPenarikan = false
             simpan.isEnabled = false
         }
-        
         statusPemasukan = false
     }
     @IBOutlet var penarikan: UIView!

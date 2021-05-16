@@ -9,6 +9,7 @@ import UIKit
 
 class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet var dataTable: UITableView!
     @IBAction func addImpian(_ sender: UIButton) {
         let viewController = AddImpianViewController(nibName: String(describing: AddImpianViewController.self), bundle: nil)
         
@@ -35,10 +36,15 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = ImpianDetailViewController(nibName: String(describing: ImpianDetailViewController.self), bundle: nil)
+            
+        viewController.impianData = dataImpianByUser[indexPath.section]
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .flipHorizontal
+        self.present(viewController, animated: true, completion: nil)
+    }
 
-    
-    
-    @IBOutlet var dataTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

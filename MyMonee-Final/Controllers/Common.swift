@@ -61,7 +61,6 @@ func convertIntToFormatMoneyRaw(money:Int) -> String{
     return result
 }
 
-
 func getCurrentDate() -> String {
     let date = Date()
     let formatter = DateFormatter()
@@ -69,4 +68,3 @@ func getCurrentDate() -> String {
     let result = formatter.string(from: date)
     return result
 }
-

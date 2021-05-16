@@ -27,15 +27,18 @@ class ProfileViewController: UIViewController {
             let textField = alert?.textFields![0] // Force unwrapping because we know it exists.
             profileData.name = textField!.text!
             self.userName.text = textField!.text!
+            self.status.text = "Edit"
+            self.editName.isHidden = true
+            self.editPicture.isHidden = true
         }))
         self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func editablePictureUser(_ sender: UITapGestureRecognizer) {
-        let documentPicker = UIDocumentPickerViewController(documentTypes: [kUTTypePNG as String,kUTTypeJPEG as String,kUTTypeImage as String], in: .import)
-        documentPicker.delegate = self
-        documentPicker.allowsMultipleSelection = false
-        present(documentPicker, animated: true, completion: nil)
+//        let documentPicker = UIDocumentPickerViewController(documentTypes: [kUTTypePNG as String,kUTTypeJPEG as String,kUTTypeImage as String], in: .import)
+//        documentPicker.delegate = self
+//        documentPicker.allowsMultipleSelection = false
+//        present(documentPicker, animated: true, completion: nil)
     }
     
     @IBAction func editClicked(_ sender: UITapGestureRecognizer) {
@@ -64,28 +67,28 @@ class ProfileViewController: UIViewController {
     }
 }
 
-extension ProfileViewController: UIDocumentPickerDelegate{
-    private func documentPicker(_ controller: UIDocumentPickerViewController,didPickDocumentAt urls:[URL]) {
-        
-        guard let selectedFileURL = urls.first else {
-            return
-        }
-        // swiftlint:disable:next identifier_name
-        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let sandboxFileURL = dir.appendingPathComponent(selectedFileURL.lastPathComponent)
-        
-        if FileManager.default.fileExists(atPath: sandboxFileURL.path){
-            print("already exists")
-        }else{
-            do {
-                try FileManager.default.copyItem(at: selectedFileURL, to: sandboxFileURL)
-                print("Copied")
-            } catch  {
-                print("Error: \(error)")
-            }
-        }
-    }
-    
-}
+//extension ProfileViewController: UIDocumentPickerDelegate{
+//    private func documentPicker(_ controller: UIDocumentPickerViewController,didPickDocumentAt urls:[URL]) {
+//        
+//        guard let selectedFileURL = urls.first else {
+//            return
+//        }
+//        // swiftlint:disable:next identifier_name
+//        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+//        let sandboxFileURL = dir.appendingPathComponent(selectedFileURL.lastPathComponent)
+//        
+//        if FileManager.default.fileExists(atPath: sandboxFileURL.path){
+//            print("already exists")
+//        }else{
+//            do {
+//                try FileManager.default.copyItem(at: selectedFileURL, to: sandboxFileURL)
+//                print("Copied")
+//            } catch  {
+//                print("Error: \(error)")
+//            }
+//        }
+//    }
+//    
+//}
 
 

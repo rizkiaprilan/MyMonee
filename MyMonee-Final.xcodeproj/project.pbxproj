@@ -11,8 +11,6 @@
 		FA8427DF264DF62F0063FED4 /* ImpianDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8427DD264DF62F0063FED4 /* ImpianDetailViewController.xib */; };
 		FA8427E8264E19000063FED4 /* AddImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8427E6264E19000063FED4 /* AddImpianViewController.swift */; };
 		FA8427E9264E19000063FED4 /* AddImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8427E7264E19000063FED4 /* AddImpianViewController.xib */; };
-		FA8427F2264E31990063FED4 /* UpdateImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8427F0264E31990063FED4 /* UpdateImpianViewController.swift */; };
-		FA8427F3264E31990063FED4 /* UpdateImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8427F1264E31990063FED4 /* UpdateImpianViewController.xib */; };
 		FA8427FC264E4E5B0063FED4 /* HomeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8427FA264E4E5B0063FED4 /* HomeDetailViewController.swift */; };
 		FA8427FD264E4E5B0063FED4 /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8427FB264E4E5B0063FED4 /* HomeDetailViewController.xib */; };
 		FA842806264E66DE0063FED4 /* AddHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA842804264E66DE0063FED4 /* AddHomeViewController.swift */; };
@@ -62,6 +60,8 @@
 		FAC2A496264D14A000E41F28 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC2A495264D14A000E41F28 /* CloudKit.framework */; };
 		FAE33F38264B8731006C5C72 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE33F36264B8731006C5C72 /* HomeViewController.swift */; };
 		FAE33F39264B8731006C5C72 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE33F37264B8731006C5C72 /* HomeViewController.xib */; };
+		FAF58CA02650C97B001BE474 /* UpdateImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF58C9E2650C97B001BE474 /* UpdateImpianViewController.swift */; };
+		FAF58CA12650C97B001BE474 /* UpdateImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF58C9F2650C97B001BE474 /* UpdateImpianViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,8 +86,6 @@
 		FA8427DD264DF62F0063FED4 /* ImpianDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianDetailViewController.xib; sourceTree = "<group>"; };
 		FA8427E6264E19000063FED4 /* AddImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImpianViewController.swift; sourceTree = "<group>"; };
 		FA8427E7264E19000063FED4 /* AddImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddImpianViewController.xib; sourceTree = "<group>"; };
-		FA8427F0264E31990063FED4 /* UpdateImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateImpianViewController.swift; sourceTree = "<group>"; };
-		FA8427F1264E31990063FED4 /* UpdateImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateImpianViewController.xib; sourceTree = "<group>"; };
 		FA8427FA264E4E5B0063FED4 /* HomeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDetailViewController.swift; sourceTree = "<group>"; };
 		FA8427FB264E4E5B0063FED4 /* HomeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
 		FA842804264E66DE0063FED4 /* AddHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHomeViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +142,8 @@
 		FAC2A495264D14A000E41F28 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		FAE33F36264B8731006C5C72 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FAE33F37264B8731006C5C72 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		FAF58C9E2650C97B001BE474 /* UpdateImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateImpianViewController.swift; sourceTree = "<group>"; };
+		FAF58C9F2650C97B001BE474 /* UpdateImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateImpianViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,7 +303,6 @@
 			isa = PBXGroup;
 			children = (
 				FA8427E6264E19000063FED4 /* AddImpianViewController.swift */,
-				FA8427F0264E31990063FED4 /* UpdateImpianViewController.swift */,
 				FA9E6AE2264BC2E3006166F0 /* ProfileViewController.swift */,
 				FA8427DC264DF62F0063FED4 /* ImpianDetailViewController.swift */,
 				FA8427FA264E4E5B0063FED4 /* HomeDetailViewController.swift */,
@@ -314,6 +313,7 @@
 				FA99F5BD264C11B500CD9288 /* Common.swift */,
 				FA8C01C9264FBA1000CBA6BD /* UpdateHomeViewController.swift */,
 				FA8C01E9265006DD00CBA6BD /* ImpianViewControllerNew.swift */,
+				FAF58C9E2650C97B001BE474 /* UpdateImpianViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,11 +327,11 @@
 				FAE33F37264B8731006C5C72 /* HomeViewController.xib */,
 				FA9E6AE3264BC2E3006166F0 /* ProfileViewController.xib */,
 				FA8427E7264E19000063FED4 /* AddImpianViewController.xib */,
-				FA8427F1264E31990063FED4 /* UpdateImpianViewController.xib */,
 				FA842805264E66DE0063FED4 /* AddHomeViewController.xib */,
 				FA8427FB264E4E5B0063FED4 /* HomeDetailViewController.xib */,
 				FA8C01CA264FBA1000CBA6BD /* UpdateHomeViewController.xib */,
 				FA8C01EA265006DD00CBA6BD /* ImpianViewControllerNew.xib */,
+				FAF58C9F2650C97B001BE474 /* UpdateImpianViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -456,6 +456,7 @@
 				FA9E6A9F264B8A0B006166F0 /* Poppins-Italic.ttf in Resources */,
 				FA9E6ACF264BB8FE006166F0 /* MainTabBarController.xib in Resources */,
 				FA9E6A9E264B8A0B006166F0 /* Poppins-LightItalic.ttf in Resources */,
+				FAF58CA12650C97B001BE474 /* UpdateImpianViewController.xib in Resources */,
 				FAB4A29D264B66C100611FC6 /* Assets.xcassets in Resources */,
 				FAE33F39264B8731006C5C72 /* HomeViewController.xib in Resources */,
 				FA9E6AA0264B8A0B006166F0 /* Poppins-Medium.ttf in Resources */,
@@ -472,7 +473,6 @@
 				FA9E6AAA264B8A0B006166F0 /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				FA9E6AA2264B8A0B006166F0 /* Poppins-Black.ttf in Resources */,
 				FA9E6AA3264B8A0B006166F0 /* Poppins-ThinItalic.ttf in Resources */,
-				FA8427F3264E31990063FED4 /* UpdateImpianViewController.xib in Resources */,
 				FA8C01EC265006DD00CBA6BD /* ImpianViewControllerNew.xib in Resources */,
 				FA9E6A9B264B8A0B006166F0 /* Poppins-BoldItalic.ttf in Resources */,
 				FA9E6A9C264B8A0B006166F0 /* Poppins-MediumItalic.ttf in Resources */,
@@ -528,10 +528,10 @@
 				FAB4A298264B66BF00611FC6 /* ViewController.swift in Sources */,
 				FA9E6AC3264BA6B4006166F0 /* HistoryTransaction.swift in Sources */,
 				FAC2A489264CE4BC00E41F28 /* ProfileEditable.swift in Sources */,
+				FAF58CA02650C97B001BE474 /* UpdateImpianViewController.swift in Sources */,
 				FA9E6AB2264B8C69006166F0 /* HomeTableViewCell.swift in Sources */,
 				FA9E6ACE264BB8FE006166F0 /* MainTabBarController.swift in Sources */,
 				FA8C01B4264F5EE800CBA6BD /* ImpianTableViewCell.swift in Sources */,
-				FA8427F2264E31990063FED4 /* UpdateImpianViewController.swift in Sources */,
 				FAB4A294264B66BF00611FC6 /* AppDelegate.swift in Sources */,
 				FA8427E8264E19000063FED4 /* AddImpianViewController.swift in Sources */,
 				FA842806264E66DE0063FED4 /* AddHomeViewController.swift in Sources */,

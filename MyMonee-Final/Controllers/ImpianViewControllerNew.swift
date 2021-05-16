@@ -38,7 +38,7 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = ImpianDetailViewController(nibName: String(describing: ImpianDetailViewController.self), bundle: nil)
-            
+        viewController.indexSection = indexPath.section
         viewController.impianData = dataImpianByUser[indexPath.section]
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal

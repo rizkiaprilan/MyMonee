@@ -51,12 +51,10 @@ struct LastTransaction {
     var lastWithdraw: String = "-"
 }
 
-
 var historyData: [HistoryData] = [
-    HistoryData(title: "Bayar Listrik", date: "1 Mei 2021 - 19.30", extensions: Extensions(statusHistory: .withdraw),price: 256000),
-    HistoryData(title: "Gaji Februari", date: "2 Mei 2021 - 19.30", extensions: Extensions(statusHistory: .deposit),price: 1250000)
+    HistoryData(title: "Bayar Listrik", date: "1 May 2021 - 19.30", extensions: Extensions(statusHistory: .withdraw),price: 256000),
+    HistoryData(title: "Gaji Februari", date: "2 May 2021 - 19.30", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]
-
 
 func getBalance() -> String {
     var result:Int = 0
@@ -82,15 +80,5 @@ func getLastDepoAndWithdraw() -> LastTransaction{
             result.lastWithdraw = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
         }
     }
-    
-//    for value in historyData {
-//        switch value.extensions.status{
-//        case .deposit:
-//            result.lastDeposit = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
-//        case .withdraw:
-//            result.lastWithdraw = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
-//        }
-//    }
-    
     return result
 }

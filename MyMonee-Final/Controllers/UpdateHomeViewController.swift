@@ -12,6 +12,7 @@ class UpdateHomeViewController: UIViewController {
     
     var lastData:HistoryData?
     var indexData:Int?
+    var indexSection:Int?
     var statusPemasukan:Bool = false
     var statusPenarikan:Bool = false
     @IBOutlet var judulField: UITextField!
@@ -73,6 +74,18 @@ class UpdateHomeViewController: UIViewController {
         statusPemasukan = false
     }
     
+    fileprivate func makeViewShadow(view: UIView) {
+        view.clipsToBounds = false
+        let shadowPath0 = UIBezierPath(roundedRect: view.bounds, cornerRadius: 8)
+        view.layer.shadowPath = shadowPath0.cgPath
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowRadius = 8
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.bounds = view.bounds
+        view.layer.position = view.center
+    }
+    
     fileprivate func goBackToMainTabBar() {
         let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
         viewController.modalPresentationStyle = .fullScreen
@@ -100,7 +113,8 @@ class UpdateHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        makeViewShadow(view: penarikanView)
+        makeViewShadow(view: pemasukanView)
     }
 }
 

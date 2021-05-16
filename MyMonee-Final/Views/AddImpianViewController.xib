@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,50 +30,50 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-KP-aLb">
-                    <rect key="frame" x="16" y="65.5" width="144" height="24"/>
+                    <rect key="frame" x="16" y="65.5" width="128" height="24"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                     <state key="normal" title="  Tambah Impian" image="Back_Chevron">
-                        <color key="titleColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" name="4F4F4F"/>
                     </state>
                     <connections>
                         <action selector="back:" destination="-1" eventType="touchUpInside" id="mXl-7z-V8J"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eO-04-gGf">
-                    <rect key="frame" x="16" y="117.5" width="38.5" height="20"/>
+                    <rect key="frame" x="16" y="117.5" width="34.5" height="16.5"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <color key="textColor" name="4F4F4F"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Capaian (Rp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-KF-pW8">
-                    <rect key="frame" x="16" y="187" width="145" height="20"/>
+                    <rect key="frame" x="16" y="177.5" width="123.5" height="16.5"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <color key="textColor" name="4F4F4F"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yn-q7-SOV">
                     <rect key="frame" x="19" y="743" width="376" height="43"/>
-                    <color key="backgroundColor" red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" name="5069B8"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="43" id="aRA-p4-WBw"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
                     <state key="normal" title="Simpan">
-                        <color key="titleColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" name="F2F2F2"/>
                     </state>
                     <connections>
                         <action selector="simpanTapped:" destination="-1" eventType="touchUpInside" id="RtK-Y4-1Xg"/>
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Target Impian" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr7-du-8Ab">
-                    <rect key="frame" x="16" y="207" width="207" height="35.5"/>
-                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="16" y="194" width="207" height="29.5"/>
+                    <color key="textColor" name="4F4F4F"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Judul Impian" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CQ-ep-0nA">
-                    <rect key="frame" x="16" y="137.5" width="207" height="35.5"/>
-                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="16" y="134" width="207" height="29.5"/>
+                    <color key="textColor" name="4F4F4F"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
@@ -102,6 +103,15 @@
     </objects>
     <resources>
         <image name="Back_Chevron" width="24" height="24"/>
+        <namedColor name="4F4F4F">
+            <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="5069B8">
+            <color red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F2F2F2">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

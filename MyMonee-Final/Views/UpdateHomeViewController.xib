@@ -48,7 +48,7 @@
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                     <state key="normal" title="  Ubah Penggunaan" image="Back_Chevron">
-                                        <color key="titleColor" name="Regular"/>
+                                        <color key="titleColor" name="4F4F4F"/>
                                     </state>
                                     <connections>
                                         <action selector="back:" destination="-1" eventType="touchUpInside" id="HkO-Z1-ej8"/>
@@ -60,7 +60,7 @@
                                         <constraint firstAttribute="height" constant="21" id="FXd-OH-5hZ"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="4F4F4F"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Judul " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sac-ea-S6x">
@@ -68,7 +68,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="oHJ-tY-bsH"/>
                                     </constraints>
-                                    <color key="textColor" red="0.30980392159999998" green="0.30980392159999998" blue="0.30980392159999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="4F4F4F"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
@@ -77,8 +77,8 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="Ybm-iQ-Rf9"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
-                                    <color key="textColor" name="Regular"/>
+                                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
+                                    <color key="textColor" name="4F4F4F"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Jumlah" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="csT-ff-rnW">
@@ -86,7 +86,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="cID-xD-rGv"/>
                                     </constraints>
-                                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="4F4F4F"/>
                                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="25"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
@@ -96,7 +96,7 @@
                                         <constraint firstAttribute="height" constant="21" id="X3Y-UH-Syf"/>
                                     </constraints>
                                     <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
-                                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                    <color key="textColor" name="4F4F4F"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEO-MG-igg" userLabel="PemasukanView">
@@ -282,8 +282,8 @@
         <image name="Arrow_Down" width="16" height="16"/>
         <image name="Arrow_Up" width="16" height="16"/>
         <image name="Back_Chevron" width="24" height="24"/>
-        <namedColor name="Regular">
-            <color red="0.50999999046325684" green="0.50999999046325684" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="4F4F4F">
+            <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TabBarSelected">
             <color red="0.31400001049041748" green="0.41200000047683716" blue="0.72200000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

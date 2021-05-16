@@ -3,8 +3,8 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -35,7 +35,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lv-dk-zJ6" userLabel="Profile View">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="311"/>
+                    <rect key="frame" x="0.0" y="-6" width="414" height="311"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bagus! Pengeluaranmu lebih sedikit dari Pemasukan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKn-F8-z5Q">
                             <rect key="frame" x="74" y="236" width="266" height="36"/>
@@ -43,21 +43,21 @@
                                 <constraint firstAttribute="height" constant="36" id="BwV-pT-0J5"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="FFFFFF"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iUR-qg-GS0">
-                            <rect key="frame" x="373" y="59" width="26" height="20"/>
+                            <rect key="frame" x="374.5" y="65" width="24.5" height="16.5"/>
                             <gestureRecognizers/>
                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="FFFFFF"/>
                             <nil key="highlightedColor"/>
                             <connections>
                                 <outletCollection property="gestureRecognizers" destination="7FH-wq-9dA" appends="YES" id="Bfu-sm-W6J"/>
                             </connections>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-8V-Yg2" userLabel="Profile Container">
-                            <rect key="frame" x="156.5" y="60" width="101" height="101"/>
+                            <rect key="frame" x="156.5" y="66" width="101" height="101"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="Ju9-Wj-bOI">
                                     <rect key="frame" x="0.0" y="0.0" width="101" height="101"/>
@@ -87,13 +87,13 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Your Name" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiG-2A-yZJ">
-                            <rect key="frame" x="156" y="191" width="102" height="25.5"/>
+                            <rect key="frame" x="162.5" y="197" width="89" height="19.5"/>
                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="FFFFFF"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pencil" translatesAutoresizingMaskIntoConstraints="NO" id="eDZ-T7-Ldd" userLabel="editable">
-                            <rect key="frame" x="273" y="196" width="16" height="16"/>
+                            <rect key="frame" x="266.5" y="199" width="16" height="16"/>
                             <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="eDZ-T7-Ldd" secondAttribute="height" multiplier="1:1" id="0Ne-Qp-5vE"/>
@@ -103,7 +103,7 @@
                             </connections>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" name="5069B8"/>
                     <constraints>
                         <constraint firstItem="eDZ-T7-Ldd" firstAttribute="centerY" secondItem="OiG-2A-yZJ" secondAttribute="centerY" id="1xh-2B-3Mx"/>
                         <constraint firstItem="OiG-2A-yZJ" firstAttribute="centerX" secondItem="Ju9-Wj-bOI" secondAttribute="centerX" id="DZl-z9-rQd"/>
@@ -121,12 +121,12 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="F0F2F8"/>
             <constraints>
                 <constraint firstItem="iUR-qg-GS0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="0lb-IP-t0w"/>
                 <constraint firstItem="Vh0-8V-Yg2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="2VN-My-qpp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="9lv-dk-zJ6" secondAttribute="top" constant="50" id="Oyx-DI-NLA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="9lv-dk-zJ6" secondAttribute="trailing" id="Zpx-Ax-pk3"/>
-                <constraint firstItem="9lv-dk-zJ6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cUW-Jj-yPE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iUR-qg-GS0" secondAttribute="trailing" constant="15" id="d2c-o0-MkX"/>
                 <constraint firstItem="9lv-dk-zJ6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fwV-Ry-edq"/>
             </constraints>
@@ -152,8 +152,14 @@
         <image name="Default_Profile" width="5184" height="3456"/>
         <image name="Pencil" width="16" height="16"/>
         <image name="Pencil_Border" width="24" height="24"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="5069B8">
+            <color red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F0F2F8">
+            <color red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FFFFFF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

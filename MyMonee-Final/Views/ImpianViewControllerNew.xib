@@ -27,7 +27,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4u-Va-znm">
                     <rect key="frame" x="16" y="60.5" width="72.5" height="28"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
-                    <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <color key="textColor" name="4F4F4F"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzb-Oq-Sq0">
@@ -45,7 +45,7 @@
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="AccentColor"/>
+            <color key="backgroundColor" name="F0F2F8"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CJW-LT-1yD" secondAttribute="bottom" id="C4n-3j-8SH"/>
                 <constraint firstItem="Wzb-Oq-Sq0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="17.530000000000001" id="EfL-A6-ahr"/>
@@ -61,8 +61,14 @@
     </objects>
     <resources>
         <image name="Insert" width="36" height="36"/>
+        <namedColor name="4F4F4F">
+            <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="AccentColor">
             <color red="0.94099998474121094" green="0.94900000095367432" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F0F2F8">
+            <color red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -3,8 +3,8 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -56,53 +56,53 @@
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
                             <state key="normal" title="Kembali">
-                                <color key="titleColor" red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" name="5069B8"/>
                             </state>
                             <connections>
                                 <action selector="back:" destination="-1" eventType="touchUpInside" id="oC4-VR-yiK"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID Pembuatan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lb6-Ge-ufg">
-                            <rect key="frame" x="17" y="173.5" width="170.5" height="20"/>
+                            <rect key="frame" x="17" y="170.5" width="170.5" height="16.5"/>
                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                            <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="4F4F4F"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tanggal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iQA-8g-G3f">
-                            <rect key="frame" x="17" y="205.5" width="170.5" height="20"/>
+                            <rect key="frame" x="17" y="199" width="170.5" height="16.5"/>
                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="14"/>
-                            <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="4F4F4F"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;ID&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehn-AZ-aEA">
-                            <rect key="frame" x="187.5" y="173.5" width="170.5" height="20"/>
+                            <rect key="frame" x="187.5" y="170.5" width="170.5" height="16.5"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                            <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="4F4F4F"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;Tanggal&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kh-XI-ETh">
-                            <rect key="frame" x="187.5" y="205.5" width="170.5" height="20"/>
+                            <rect key="frame" x="187.5" y="199" width="170.5" height="16.5"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
-                            <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="4F4F4F"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;type transaction&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTQ-Df-7Xt">
-                            <rect key="frame" x="131.5" y="84.5" width="112" height="17"/>
+                            <rect key="frame" x="137" y="84.5" width="101" height="14"/>
                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="12"/>
-                            <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" name="828282"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;title transaction&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Bl-uF-5er">
-                            <rect key="frame" x="104" y="55" width="167" height="25.5"/>
+                            <rect key="frame" x="115" y="55" width="145.5" height="25.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25.5" id="rsX-JS-Nn3"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="18"/>
-                            <nil key="textColor"/>
+                            <color key="textColor" name="4F4F4F"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;price&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATx-sc-tjR">
-                            <rect key="frame" x="142.5" y="109.5" width="90" height="34"/>
+                            <rect key="frame" x="146.5" y="106.5" width="82.5" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="34" id="6YA-64-YWf"/>
                             </constraints>
@@ -118,7 +118,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" name="FFFFFF"/>
                     <constraints>
                         <constraint firstItem="Lb6-Ge-ufg" firstAttribute="top" secondItem="ATx-sc-tjR" secondAttribute="bottom" constant="30" id="0VQ-bI-Vmk"/>
                         <constraint firstItem="Ehn-AZ-aEA" firstAttribute="top" secondItem="Lb6-Ge-ufg" secondAttribute="top" id="3GG-W3-rfb"/>
@@ -157,7 +157,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" name="F0F2F8"/>
             <constraints>
                 <constraint firstItem="XR7-dj-bNx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="75.689999999999998" id="1g0-5z-xVB"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5V7-0Q-nlL" secondAttribute="trailing" constant="17" id="VOQ-Hu-Nq9"/>
@@ -172,8 +172,20 @@
     </objects>
     <resources>
         <image name="Update" width="36" height="36"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="4F4F4F">
+            <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="5069B8">
+            <color red="0.31372549019607843" green="0.41176470588235292" blue="0.72156862745098038" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="828282">
+            <color red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="F0F2F8">
+            <color red="0.94117647058823528" green="0.94901960784313721" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FFFFFF">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -6,8 +6,7 @@
 //
 
 import Foundation
-
-
+import UIKit
 
 func getCurrentDayTime() -> String{
     let date = Date()
@@ -16,19 +15,11 @@ func getCurrentDayTime() -> String{
         calendar.timeZone = timeZone
     }
     let hour = calendar.component(.hour, from: date)
-    var status:String
-    if hour >= 5 && hour <= 10 {
-        status = "Pagi"
-    }else if hour >= 11 && hour <= 15{
-        status = "Siang"
-    }else if hour >= 16 && hour < 18{
-        status = "Sore"
-    }else if hour >= 18 && hour <= 19{
-        status = "Petang"
-    }else{
-        status = "Malam"
-    }
-    return status
+    if hour >= 5 && hour <= 10 {return "Pagi"}
+    if hour >= 11 && hour <= 15 {return "Siang"}
+    if hour >= 16 && hour < 18 {return "Sore"}
+    if hour >= 18 && hour <= 19 {return "Petang"}
+    return "Malam"
 }
 
 
@@ -67,4 +58,17 @@ func getCurrentDate() -> String {
     formatter.dateFormat = "dd MMMM yyyy - HH.mm"
     let result = formatter.string(from: date)
     return result
+}
+
+func alert() -> UIAlertController {
+    let alert = UIAlertController(title: "Data Kurang Lengkap!", message: "Tolong masukkan data dengan lengkap", preferredStyle: UIAlertController.Style.alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+    return alert
+}
+
+func goBackToMainTabBar() -> UIViewController {
+    let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
+    viewController.modalPresentationStyle = .fullScreen
+    viewController.modalTransitionStyle = .flipHorizontal
+    return viewController
 }

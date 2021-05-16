@@ -62,6 +62,7 @@
 		FAE33F39264B8731006C5C72 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAE33F37264B8731006C5C72 /* HomeViewController.xib */; };
 		FAF58CA02650C97B001BE474 /* UpdateImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF58C9E2650C97B001BE474 /* UpdateImpianViewController.swift */; };
 		FAF58CA12650C97B001BE474 /* UpdateImpianViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAF58C9F2650C97B001BE474 /* UpdateImpianViewController.xib */; };
+		FAF58CA926512BAB001BE474 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF58CA826512BAB001BE474 /* TabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +145,7 @@
 		FAE33F37264B8731006C5C72 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		FAF58C9E2650C97B001BE474 /* UpdateImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateImpianViewController.swift; sourceTree = "<group>"; };
 		FAF58C9F2650C97B001BE474 /* UpdateImpianViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateImpianViewController.xib; sourceTree = "<group>"; };
+		FAF58CA826512BAB001BE474 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +297,7 @@
 				FA9E6AC2264BA6B4006166F0 /* HistoryTransaction.swift */,
 				FAC2A488264CE4BC00E41F28 /* ProfileEditable.swift */,
 				FA9D1C32264D87D8000AB2A8 /* ImpianSavedByUser.swift */,
+				FAF58CA826512BAB001BE474 /* TabBar.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				FA8427DE264DF62F0063FED4 /* ImpianDetailViewController.swift in Sources */,
 				FA8C01CB264FBA1000CBA6BD /* UpdateHomeViewController.swift in Sources */,
 				FAE33F38264B8731006C5C72 /* HomeViewController.swift in Sources */,
+				FAF58CA926512BAB001BE474 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

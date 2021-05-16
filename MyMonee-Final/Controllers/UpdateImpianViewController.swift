@@ -13,6 +13,7 @@ class UpdateImpianViewController: UIViewController {
     var indexSection:Int?
     @IBOutlet var judulField: UITextField!
     @IBOutlet var targetImpian: UITextField!
+    @IBOutlet var deleteButton: UIButton!
     
     @IBAction func back(_ sender: Any) {
         let viewController = ImpianDetailViewController(nibName: String(describing: ImpianDetailViewController.self), bundle: nil)
@@ -25,33 +26,27 @@ class UpdateImpianViewController: UIViewController {
     
     @IBAction func perbaruiTapped(_ sender: Any) {
         if judulField.text!.isEmpty || targetImpian.text!.isEmpty {
-            alert()
+            makeAlert()
             return
         }
         updateData()
-        goBackToMainTabBar()
+        makeBackToMainTabBar()
     }
     @IBAction func hapusTapped(_ sender: Any) {
         dataImpianByUser.remove(at: indexSection!)
-        goBackToMainTabBar()
+        makeBackToMainTabBar()
     }
     
-    @IBOutlet var deleteButton: UIButton!
-    fileprivate func goBackToMainTabBar() {
-        let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+    fileprivate func makeBackToMainTabBar() {
+        self.present(goBackToMainTabBar(), animated: true, completion: nil)
     }
     
     fileprivate func updateData() {
         dataImpianByUser[indexSection!] = [ImpianByUser(title: judulField.text!, amount: Amount(current: impianData[0].amount.current, target: Int(targetImpian.text!)!))]
     }
     
-    private func alert() {
-        let alert = UIAlertController(title: "Bad Request", message: "Tolong masukkan data dengan lengkap", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    private func makeAlert() {
+        self.present(alert(), animated: true, completion: nil)
     }
     override func viewWillAppear(_ animated: Bool) {
         deleteButton.layer.borderWidth = 3
@@ -61,8 +56,5 @@ class UpdateImpianViewController: UIViewController {
         super.viewDidLoad()
         judulField.text = impianData[0].title
         targetImpian.text = String(impianData[0].amount.target)
-
-        // Do any additional setup after loading the view.
     }
-
 }

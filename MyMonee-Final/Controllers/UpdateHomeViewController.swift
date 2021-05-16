@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class UpdateHomeViewController: UIViewController {
     
     var lastData:HistoryData?
@@ -29,24 +28,22 @@ class UpdateHomeViewController: UIViewController {
         self.present(homeDetailViewController, animated: true, completion: nil)
     }
     @IBAction func simpan(_ sender: Any) {
-        
         if judulField.text!.isEmpty || jumlahField.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false)  {
-            alert()
+            makeAlert()
             return
         }
-        
         if statusPemasukan{
             updateData(type: .deposit)
         }
         if statusPenarikan{
             updateData(type: .withdraw)
         }
-        goBackToMainTabBar()
+        makeBackToMainTabBar()
     }
     
     @IBAction func hapus(_ sender: Any) {
         historyData.remove(at: indexData!)
-        goBackToMainTabBar()
+        makeBackToMainTabBar()
     }
     
     @IBAction func pemasukkanTapped(_ sender: Any) {
@@ -86,23 +83,17 @@ class UpdateHomeViewController: UIViewController {
         view.layer.position = view.center
     }
     
-    fileprivate func goBackToMainTabBar() {
-        let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+    fileprivate func makeBackToMainTabBar() {
+        self.present(goBackToMainTabBar(), animated: true, completion: nil)
     }
     
-    private func alert() {
-        let alert = UIAlertController(title: "Bad Request", message: "Tolong masukkan data dengan lengkap", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+    fileprivate func makeAlert() {
+        self.present(alert(), animated: true, completion: nil)
     }
     
     fileprivate func updateData(type: TypeHistory) {
         historyData[indexData!] = HistoryData(title: judulField.text!, date: getCurrentDate(), extensions: Extensions(statusHistory: type), price: Int(jumlahField.text!)!)
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         judulField.text = lastData?.title
@@ -117,6 +108,3 @@ class UpdateHomeViewController: UIViewController {
         makeViewShadow(view: pemasukanView)
     }
 }
-
-
-

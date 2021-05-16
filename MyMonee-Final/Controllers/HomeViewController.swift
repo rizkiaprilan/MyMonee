@@ -57,8 +57,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // swiftlint:disable:next line_length
         let cell = historyTableView.dequeueReusableCell(withIdentifier: homeTableViewCell, for: indexPath) as! HomeTableViewCell
-        
-//        cell.dataHistoryRow = historyData[indexPath.row]
         cell.imageStatus.image = UIImage(named: historyData[indexPath.row].extensions.image)
         cell.title.text = historyData[indexPath.row].title
         cell.dateAndTime.text = historyData[indexPath.row].date

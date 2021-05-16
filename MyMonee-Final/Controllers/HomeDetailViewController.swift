@@ -8,7 +8,7 @@
 import UIKit
 
 class HomeDetailViewController: UIViewController {
-
+    
     var dataHistory:HistoryData?
     var indexData:Int?
     
@@ -23,7 +23,7 @@ class HomeDetailViewController: UIViewController {
     }
     @IBAction func back(_ sender: UIButton) {
         let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
-
+        
         viewController.modalPresentationStyle = .fullScreen
         viewController.modalTransitionStyle = .flipHorizontal
         self.present(viewController, animated: true, completion: nil)
@@ -48,7 +48,6 @@ class HomeDetailViewController: UIViewController {
         dateTransaction.text = dataHistory?.date
         typeImage.image = UIImage(named: (dataHistory?.extensions.image)!)
         switch dataHistory!.extensions.status{
-        
         case .deposit:
             typeTransaction.text = "Pemasukan"
         case .withdraw:

@@ -21,6 +21,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="MyMonee_Final" customModuleProvider="target">
             <connections>
+                <outlet property="descriptionProfile" destination="SKn-F8-z5Q" id="men-cE-FQe"/>
                 <outlet property="editName" destination="eDZ-T7-Ldd" id="YiQ-Ww-rRI"/>
                 <outlet property="editPicture" destination="75Y-19-uvc" id="NnO-R4-zes"/>
                 <outlet property="profileImage" destination="Ju9-Wj-bOI" id="pn6-v8-6tX"/>

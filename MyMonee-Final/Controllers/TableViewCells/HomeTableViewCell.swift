@@ -9,7 +9,6 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
     
-//    var dataHistoryRow:HistoryData?
     @IBOutlet weak var homeTableViewCell: UIView!
     @IBOutlet weak var imageStatus: UIImageView!
     @IBOutlet weak var price: UILabel!

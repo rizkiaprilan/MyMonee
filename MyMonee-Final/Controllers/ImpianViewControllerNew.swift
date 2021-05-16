@@ -45,7 +45,6 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         self.present(viewController, animated: true, completion: nil)
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         dataTable.delegate = self

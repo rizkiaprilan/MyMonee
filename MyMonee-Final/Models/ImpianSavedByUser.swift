@@ -29,5 +29,6 @@ struct Amount{
 var dataImpianByUser: [[ImpianByUser]] = [
     [ImpianByUser(title: "Membeli Mobil", amount: Amount(current: 1000000000, target: 2000000000))],
     [ImpianByUser(title: "Membeli Rumah", amount: Amount(current: 2000000000, target: 10000000000))],
-    [ImpianByUser(title: "Membeli Macbook Pro", amount: Amount(current: 25000000, target: 25000000))]
+    [ImpianByUser(title: "Beli Macbook Pro", amount: Amount(current: 25000000, target: 25000000))],
+    [ImpianByUser(title: "Beli Permen", amount: Amount(current: 10000, target: 10000))]
 ]

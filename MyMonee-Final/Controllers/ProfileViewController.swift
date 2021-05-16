@@ -9,8 +9,10 @@ import UIKit
 import MobileCoreServices
 import UniformTypeIdentifiers
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,
+                             UINavigationControllerDelegate {
     
+    let picker = UIImagePickerController()
     @IBOutlet weak var status: UILabel!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var editName: UIImageView!
@@ -43,12 +45,22 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func editablePictureUser(_ sender: UITapGestureRecognizer) {
-        //        let documentPicker = UIDocumentPickerViewController(documentTypes: [kUTTypePNG as String,kUTTypeJPEG as String,kUTTypeImage as String], in: .import)
-        //        documentPicker.delegate = self
-        //        documentPicker.allowsMultipleSelection = false
-        //        present(documentPicker, animated: true, completion: nil)
-        
-        
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        picker.modalPresentationStyle = .popover
+        present(picker, animated: true, completion: nil)
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        var  chosenImage = UIImage()
+        chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage
+        profileImage.contentMode = .scaleAspectFill
+        profileImage.image = chosenImage
+        dismiss(animated:true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
     fileprivate func editAccess(isEdit:Bool) {
@@ -76,35 +88,10 @@ class ProfileViewController: UIViewController {
         profileImage.layer.cornerRadius = 50.5
         self.userName.text = profileData.name
         self.descriptionProfile.text = profileData.description
+        picker.delegate = self
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         editAccess(isEdit: false)
     }
 }
-
-//extension ProfileViewController: UIDocumentPickerDelegate{
-//    private func documentPicker(_ controller: UIDocumentPickerViewController,didPickDocumentAt urls:[URL]) {
-//        
-//        guard let selectedFileURL = urls.first else {
-//            return
-//        }
-//        // swiftlint:disable:next identifier_name
-//        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-//        let sandboxFileURL = dir.appendingPathComponent(selectedFileURL.lastPathComponent)
-//        
-//        if FileManager.default.fileExists(atPath: sandboxFileURL.path){
-//            print("already exists")
-//        }else{
-//            do {
-//                try FileManager.default.copyItem(at: selectedFileURL, to: sandboxFileURL)
-//                print("Copied")
-//            } catch  {
-//                print("Error: \(error)")
-//            }
-//        }
-//    }
-//    
-//}
-
-

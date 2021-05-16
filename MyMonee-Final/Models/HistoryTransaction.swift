@@ -82,3 +82,51 @@ func getLastDepoAndWithdraw() -> LastTransaction{
     }
     return result
 }
+
+protocol HistoryUserData{
+    func getBalance() -> String
+    func getLastDepositAndWithdraw() -> LastTransaction
+}
+
+class UserData: HistoryUserData {
+    let id:String = UUID.init().uuidString.uppercased()
+    let title: String
+    let date: String
+    let extensions: Extensions
+    let price: Int
+    
+    init(title:String,date:String,extensions:Extensions,price:Int) {
+        self.title = title
+        self.date = date
+        self.extensions = extensions
+        self.price = price
+    }
+    
+    func getBalance() -> String {
+        var result:Int = 0
+        for value in historyData {
+            switch value.extensions.status{
+            case .deposit:
+                result+=value.price
+            case .withdraw:
+                result-=value.price
+            }
+        }
+        return convertIntToFormatMoney(money: result, isDepoOrWithdraw: nil)
+    }
+    
+    func getLastDepositAndWithdraw() -> LastTransaction {
+        var result:LastTransaction = LastTransaction()
+        
+        historyData.forEach { (value: HistoryData) in
+            switch value.extensions.status{
+            case .deposit:
+                result.lastDeposit = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
+            case .withdraw:
+                result.lastWithdraw = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
+            }
+        }
+        return result
+    }
+}
+

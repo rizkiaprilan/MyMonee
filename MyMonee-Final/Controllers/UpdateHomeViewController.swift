@@ -54,7 +54,7 @@ class UpdateHomeViewController: UIViewController {
             penarikanView.layer.borderWidth = 0
         }else{
             pemasukanView.layer.borderWidth = 0
-            statusPemasukan = true
+            statusPemasukan = false
         }
         statusPenarikan = false
     }

@@ -42,7 +42,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="558" height="1000"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m4e-Rk-VSw">
-                                    <rect key="frame" x="18" y="21" width="149" height="24"/>
+                                    <rect key="frame" x="18" y="21" width="164" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="Yng-UX-xnM"/>
                                     </constraints>
@@ -55,7 +55,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3k-xh-lQ1">
-                                    <rect key="frame" x="16" y="67" width="34.5" height="21"/>
+                                    <rect key="frame" x="16" y="67" width="38.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="FXd-OH-5hZ"/>
                                     </constraints>
@@ -73,7 +73,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah (Rp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxm-vk-bvO">
-                                    <rect key="frame" x="16" y="137" width="74.5" height="21"/>
+                                    <rect key="frame" x="16" y="137" width="90" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="Ybm-iQ-Rf9"/>
                                     </constraints>
@@ -91,7 +91,7 @@
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategori Penggunaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLV-5K-5jU">
-                                    <rect key="frame" x="16" y="207" width="145.5" height="21"/>
+                                    <rect key="frame" x="16" y="207" width="166" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="X3Y-UH-Syf"/>
                                     </constraints>
@@ -283,7 +283,7 @@
         <image name="Arrow_Up" width="16" height="16"/>
         <image name="Back_Chevron" width="24" height="24"/>
         <namedColor name="4F4F4F">
-            <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.31000000238418579" green="0.31000000238418579" blue="0.31000000238418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="TabBarSelected">
             <color red="0.31400001049041748" green="0.41200000047683716" blue="0.72200000286102295" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

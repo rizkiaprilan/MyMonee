@@ -31,7 +31,7 @@ enum TypeHistory: String{
 }
 
 struct HistoryData {
-    let id:String = UUID.init().uuidString.uppercased()
+    let id:String = String(UUID.init().uuidString.uppercased().prefix(6))
     let title: String
     let date: String
     let extensions: Extensions
@@ -47,12 +47,12 @@ struct HistoryData {
 }
 
 struct LastTransaction {
-    var lastDeposit: String = "-"
-    var lastWithdraw: String = "-"
+    var lastDeposit: String = "Rp 0"
+    var lastWithdraw: String = "Rp 0"
 }
 
 var historyData: [HistoryData] = [
-    HistoryData(title: "Bayar Listrik", date: "1 May 2021 - 19.30", extensions: Extensions(statusHistory: .withdraw),price: 256000),
+//    HistoryData(title: "Bayar Listrik", date: "1 May 2021 - 19.30", extensions: Extensions(statusHistory: .withdraw),price: 256000),
     HistoryData(title: "Gaji Februari", date: "2 May 2021 - 19.30", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]
 

@@ -28,6 +28,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         self.userName.text = profileData.name
+        
+        if(historyData.isEmpty){
+            historyView = EmptyDataHistory(frame: CGRect())
+        }
     }
     
     override func viewDidLoad() {

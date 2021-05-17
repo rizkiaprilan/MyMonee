@@ -21,7 +21,6 @@ class MainTabBarController: UITabBarController {
         // Impian Tab Bar
         let impian = ImpianViewControllerNew(nibName: String(describing: ImpianViewControllerNew.self), bundle: nil)
         viewControllers.append(ViewControllerData(viewController: impian, imageNamed: "Impian", imageSelectedNamed: "Impian_Selected"))
-
         
         // Profile Tab Bar
         let profile = ProfileViewController(nibName: String(describing: ProfileViewController.self), bundle: nil)

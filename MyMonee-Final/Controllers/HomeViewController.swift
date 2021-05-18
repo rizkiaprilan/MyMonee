@@ -34,7 +34,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewWillAppear(_ animated: Bool) {
         greetingMessage.text = "Selamat \(getCurrentDayTime()),"
-        self.userName.text = UserDefaults.standard.string(forKey: "username")
+        self.userName.text = UserDefaults.standard.string(forKey: "username") ?? profileData.name
         historyTableView.reloadData()
         emptyData.delegate = self
         if(historyData.isEmpty){

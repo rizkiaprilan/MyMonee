@@ -88,8 +88,8 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImage.layer.cornerRadius = 50.5
-        self.userName.text = UserDefaults.standard.string(forKey: "username")
-        self.descriptionProfile.text = UserDefaults.standard.string(forKey: "description")
+        self.userName.text = UserDefaults.standard.string(forKey: "username") ?? profileData.name
+        self.descriptionProfile.text = UserDefaults.standard.string(forKey: "description") ?? profileData.description
         picker.delegate = self
     }
     

@@ -18,28 +18,23 @@ class AddImpianViewController: UIViewController {
             return
         }
         insertData()
-        makeBackToMainTabBar()
+        self.navigationController?.popViewController(animated: true)
         
     }
     
     @IBAction func back(_ sender: Any) {
-        makeBackToMainTabBar()
+        self.navigationController?.popViewController(animated: true)
     }
     
     fileprivate func insertData() {
         dataImpianByUser.append([ImpianByUser(title: titleImpian.text!, amount: Amount(current: 0, target: Int(targetImpian.text!)!))])
     }
-    
-    fileprivate func makeBackToMainTabBar() {
-        self.present(goBackToMainTabBar(), animated: true, completion: nil)
-    }
-    
+
     fileprivate func makeAlert() {
         self.present(alert(), animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }

@@ -27,15 +27,13 @@ class ImpianDetailViewController: UIViewController {
         historyData.append(HistoryData(title: impianData[0].title, date: getCurrentDate(), extensions: Extensions(statusHistory: .withdraw), price: impianData[0].amount.target))
         dataImpianByUser.remove(at: indexSection!)
         
-        self.present(goBackToMainTabBar(), animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func edit(_ sender: UIButton) {
         let viewController = UpdateImpianViewController(nibName: String(describing: UpdateImpianViewController.self), bundle: nil)
         viewController.impianData = impianData
         viewController.indexSection = indexSection
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     fileprivate func makeViewShadow(view: UIView) {
         view.clipsToBounds = false

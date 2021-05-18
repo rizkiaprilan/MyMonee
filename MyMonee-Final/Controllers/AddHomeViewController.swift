@@ -17,7 +17,8 @@ class AddHomeViewController: UIViewController {
     @IBOutlet var penarikan: UIView!
     @IBOutlet var pemasukan: UIView!
     @IBAction func back(_ sender: Any) {
-        makeBackToMainTabBar()
+//        makeBackToMainTabBar()
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func simpanTapped(_ sender: UIButton) {
         if fieldJudul.text!.isEmpty || fieldJumlah.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false)   {
@@ -31,7 +32,8 @@ class AddHomeViewController: UIViewController {
         if statusPenarikan{
             insertDataHistory(type: .withdraw)
         }
-        makeBackToMainTabBar()
+        self.navigationController?.popViewController(animated: true)
+//        makeBackToMainTabBar()
     }
     @IBAction func pemasukanTapped(_ sender: UITapGestureRecognizer) {
         if statusPemasukan == false{
@@ -76,9 +78,9 @@ class AddHomeViewController: UIViewController {
         historyData.append(HistoryData(title: fieldJudul.text!, date: getCurrentDate(), extensions: Extensions(statusHistory: type), price: Int(fieldJumlah.text!)!))
     }
     
-    fileprivate func makeBackToMainTabBar() {
-        self.present(goBackToMainTabBar(), animated: true, completion: nil)
-    }
+//    fileprivate func makeBackToMainTabBar() {
+//        self.present(goBackToMainTabBar(), animated: true, completion: nil)
+//    }
     
     fileprivate func makeViewShadow(view: UIView) {
         view.clipsToBounds = false

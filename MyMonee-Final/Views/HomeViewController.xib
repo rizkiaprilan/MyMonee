@@ -23,7 +23,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MyMonee_Final" customModuleProvider="target">
             <connections>
                 <outlet property="balance" destination="wqg-Iv-uTb" id="1U4-XR-4F3"/>
-                <outlet property="emptyDataView" destination="KlF-EO-Tw5" id="uPB-Jc-HSG"/>
+                <outlet property="emptyData" destination="KlF-EO-Tw5" id="Bl1-8z-4py"/>
                 <outlet property="greetingMessage" destination="9KW-RS-1Xv" id="1Ue-V0-8Fg"/>
                 <outlet property="historyTableView" destination="ICi-xc-tZW" id="7vn-3F-7OU"/>
                 <outlet property="historyView" destination="3T0-V0-GjC" id="Xzh-CK-1w5"/>

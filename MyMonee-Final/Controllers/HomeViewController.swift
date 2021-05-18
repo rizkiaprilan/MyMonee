@@ -7,7 +7,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,DataKosong {
+    func addPage() {
+        let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
+        self.navigationController?.pushViewController(addHomeViewController, animated: true)
+    }
+    
     
     let homeTableViewCell = String(describing: HomeTableViewCell.self) // ambil nama xib
     
@@ -18,38 +23,38 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var historyTableView: UITableView!
     @IBOutlet weak var greetingMessage: UILabel!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet var emptyDataView: UIView!
+    @IBOutlet var emptyData: EmptyDataHistory!
+    
     
     
     @IBAction func addPenggunaan(_ sender: UITapGestureRecognizer) {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
-        
-        addHomeViewController.modalPresentationStyle = .fullScreen
-        addHomeViewController.modalTransitionStyle = .flipHorizontal
-        self.present(addHomeViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(addHomeViewController, animated: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        self.userName.text = profileData.name
-        
-        if(historyData.isEmpty){
-            emptyDataView.layer.cornerRadius = 16
-            emptyDataView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-            emptyDataView.isHidden = false
-            historyView.isHidden = true
-        }
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
         greetingMessage.text = "Selamat \(getCurrentDayTime()),"
-        
+        self.userName.text = profileData.name
+        historyTableView.reloadData()
+        emptyData.delegate = self
+        if(historyData.isEmpty){
+            emptyData.layer.cornerRadius = 16
+            emptyData.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+            emptyData.isHidden = false
+            historyView.isHidden = true
+        }else{
+            emptyData.isHidden = true
+            historyView.isHidden = false
+        }
         balance.text = getBalance()
         
         let lastDataTransaction = getLastDepoAndWithdraw()
         lastWithdraw.text = lastDataTransaction.lastWithdraw
         lastDeposit.text = lastDataTransaction.lastDeposit
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
         historyView.layer.cornerRadius = 24
         historyView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
@@ -82,8 +87,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         homeDetailViewController.dataHistory = historyData[indexPath.row]
         homeDetailViewController.indexData = indexPath.row
-        homeDetailViewController.modalPresentationStyle = .fullScreen
-        homeDetailViewController.modalTransitionStyle = .flipHorizontal
-        self.present(homeDetailViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(homeDetailViewController, animated: true)
+//        homeDetailViewController.modalPresentationStyle = .fullScreen
+//        homeDetailViewController.modalTransitionStyle = .flipHorizontal
+//        self.present(homeDetailViewController, animated: true, completion: nil)
     }
 }

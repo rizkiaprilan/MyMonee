@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA1A27F82652D378002D8EC7 /* EmptyImpian.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1A27F72652D378002D8EC7 /* EmptyImpian.xib */; };
-		FA1A28012652D608002D8EC7 /* EmptyImpian.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A28002652D608002D8EC7 /* EmptyImpian.swift */; };
 		FA1A28152652D919002D8EC7 /* EmptyDataHistory.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1A28142652D919002D8EC7 /* EmptyDataHistory.xib */; };
 		FA1A281A2652D975002D8EC7 /* EmptyDataHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A28192652D975002D8EC7 /* EmptyDataHistory.swift */; };
 		FA8427DE264DF62F0063FED4 /* ImpianDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8427DC264DF62F0063FED4 /* ImpianDetailViewController.swift */; };
@@ -87,8 +85,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FA1A27F72652D378002D8EC7 /* EmptyImpian.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyImpian.xib; sourceTree = "<group>"; };
-		FA1A28002652D608002D8EC7 /* EmptyImpian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyImpian.swift; sourceTree = "<group>"; };
 		FA1A28142652D919002D8EC7 /* EmptyDataHistory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataHistory.xib; sourceTree = "<group>"; };
 		FA1A28192652D975002D8EC7 /* EmptyDataHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataHistory.swift; sourceTree = "<group>"; };
 		FA8427DC264DF62F0063FED4 /* ImpianDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianDetailViewController.swift; sourceTree = "<group>"; };
@@ -185,8 +181,6 @@
 		FA1A27FC2652D381002D8EC7 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
-				FA1A28002652D608002D8EC7 /* EmptyImpian.swift */,
-				FA1A27F72652D378002D8EC7 /* EmptyImpian.xib */,
 				FA1A28142652D919002D8EC7 /* EmptyDataHistory.xib */,
 				FA1A28192652D975002D8EC7 /* EmptyDataHistory.swift */,
 			);
@@ -491,7 +485,6 @@
 				FA9E6AA4264B8A0B006166F0 /* Poppins-Bold.ttf in Resources */,
 				FA8427DF264DF62F0063FED4 /* ImpianDetailViewController.xib in Resources */,
 				FA8C01CC264FBA1000CBA6BD /* UpdateHomeViewController.xib in Resources */,
-				FA1A27F82652D378002D8EC7 /* EmptyImpian.xib in Resources */,
 				FA9E6AA7264B8A0B006166F0 /* Poppins-Light.ttf in Resources */,
 				FA9E6AE5264BC2E3006166F0 /* ProfileViewController.xib in Resources */,
 				FA9E6AA9264B8A0B006166F0 /* Poppins-ExtraLightItalic.ttf in Resources */,
@@ -559,7 +552,6 @@
 				FA1A281A2652D975002D8EC7 /* EmptyDataHistory.swift in Sources */,
 				FA8C01B4264F5EE800CBA6BD /* ImpianTableViewCell.swift in Sources */,
 				FAB4A294264B66BF00611FC6 /* AppDelegate.swift in Sources */,
-				FA1A28012652D608002D8EC7 /* EmptyImpian.swift in Sources */,
 				FA8427E8264E19000063FED4 /* AddImpianViewController.swift in Sources */,
 				FA842806264E66DE0063FED4 /* AddHomeViewController.swift in Sources */,
 				FA9D1C33264D87D8000AB2A8 /* ImpianSavedByUser.swift in Sources */,

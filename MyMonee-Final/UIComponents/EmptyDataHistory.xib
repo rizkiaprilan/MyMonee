@@ -19,6 +19,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyDataHistory" customModule="MyMonee_Final" customModuleProvider="target">
             <connections>
+                <outlet property="button" destination="fS9-qZ-h1Q" id="P1N-cv-FaR"/>
                 <outlet property="view" destination="iN0-l3-epB" id="iwR-TM-UKK"/>
             </connections>
         </placeholder>
@@ -54,6 +55,9 @@ Yuk mulai buat Catatan kamu!</string>
                                     <integer key="value" value="20"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="button:" destination="-1" eventType="touchUpInside" id="TKv-iz-ayu"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>

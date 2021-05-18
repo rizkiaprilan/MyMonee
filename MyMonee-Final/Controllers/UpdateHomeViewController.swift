@@ -21,11 +21,7 @@ class UpdateHomeViewController: UIViewController {
     @IBOutlet var hapusButton: UIButton!
     
     @IBAction func back(_ sender: Any) {
-        let homeDetailViewController = HomeDetailViewController(nibName: String(describing: HomeDetailViewController.self), bundle: nil)
-        homeDetailViewController.dataHistory = lastData
-        homeDetailViewController.modalPresentationStyle = .fullScreen
-        homeDetailViewController.modalTransitionStyle = .flipHorizontal
-        self.present(homeDetailViewController, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func simpan(_ sender: Any) {
         if judulField.text!.isEmpty || jumlahField.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false)  {
@@ -38,12 +34,13 @@ class UpdateHomeViewController: UIViewController {
         if statusPenarikan{
             updateData(type: .withdraw)
         }
-        makeBackToMainTabBar()
+        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func hapus(_ sender: Any) {
         historyData.remove(at: indexData!)
-        makeBackToMainTabBar()
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     @IBAction func pemasukkanTapped(_ sender: Any) {
@@ -83,9 +80,9 @@ class UpdateHomeViewController: UIViewController {
         view.layer.position = view.center
     }
     
-    fileprivate func makeBackToMainTabBar() {
-        self.present(goBackToMainTabBar(), animated: true, completion: nil)
-    }
+//    fileprivate func makeBackToMainTabBar() {
+//        self.present(goBackToMainTabBar(), animated: true, completion: nil)
+//    }
     
     fileprivate func makeAlert() {
         self.present(alert(), animated: true, completion: nil)

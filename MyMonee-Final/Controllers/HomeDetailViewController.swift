@@ -17,16 +17,10 @@ class HomeDetailViewController: UIViewController {
         
         viewController.indexData = indexData
         viewController.lastData = dataHistory
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     @IBAction func back(_ sender: UIButton) {
-        let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
-        
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     @IBOutlet var typeImage: UIImageView!
     @IBOutlet var titleTransaction: UILabel!
@@ -41,7 +35,9 @@ class HomeDetailViewController: UIViewController {
         button.layer.cornerRadius = 20
         button.layer.borderWidth = 3
         button.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
+    
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

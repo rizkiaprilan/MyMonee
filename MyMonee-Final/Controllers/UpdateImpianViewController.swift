@@ -14,14 +14,12 @@ class UpdateImpianViewController: UIViewController {
     @IBOutlet var judulField: UITextField!
     @IBOutlet var targetImpian: UITextField!
     @IBOutlet var deleteButton: UIButton!
-    
     @IBAction func back(_ sender: Any) {
         let viewController = ImpianDetailViewController(nibName: String(describing: ImpianDetailViewController.self), bundle: nil)
         viewController.indexSection = indexSection
         viewController.impianData = impianData
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     @IBAction func perbaruiTapped(_ sender: Any) {
@@ -30,15 +28,13 @@ class UpdateImpianViewController: UIViewController {
             return
         }
         updateData()
-        makeBackToMainTabBar()
+        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func hapusTapped(_ sender: Any) {
         dataImpianByUser.remove(at: indexSection!)
-        makeBackToMainTabBar()
-    }
-    
-    fileprivate func makeBackToMainTabBar() {
-        self.present(goBackToMainTabBar(), animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     fileprivate func updateData() {
@@ -48,6 +44,7 @@ class UpdateImpianViewController: UIViewController {
     private func makeAlert() {
         self.present(alert(), animated: true, completion: nil)
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         deleteButton.layer.borderWidth = 3
         deleteButton.layer.borderColor = UIColor(red: 0.922, green: 0.341, blue: 0.341, alpha: 1).cgColor

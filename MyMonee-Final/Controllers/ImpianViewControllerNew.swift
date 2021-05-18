@@ -7,15 +7,18 @@
 
 import UIKit
 
-class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableViewDataSource,DataKosong {
+    func addPage() {
+        let viewController = AddImpianViewController(nibName: String(describing: AddImpianViewController.self), bundle: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
     
+    
+    @IBOutlet var empty: EmptyDataHistory!
     @IBOutlet var dataTable: UITableView!
     @IBAction func addImpian(_ sender: UIButton) {
         let viewController = AddImpianViewController(nibName: String(describing: AddImpianViewController.self), bundle: nil)
-        
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,12 +43,25 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         let viewController = ImpianDetailViewController(nibName: String(describing: ImpianDetailViewController.self), bundle: nil)
         viewController.indexSection = indexPath.section
         viewController.impianData = dataImpianByUser[indexPath.section]
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        dataTable.reloadData()
+        empty.delegate = self
+        if(dataImpianByUser.isEmpty){
+            empty.layer.cornerRadius = 16
+            empty.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+            empty.isHidden = false
+            empty.button.setTitle("Tambah Impian", for: .normal)
+            dataTable.isHidden = true
+        }else{
+            dataTable.isHidden = true
+            dataTable.isHidden = false
+        }
+    }
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         dataTable.delegate = self
         dataTable.dataSource = self

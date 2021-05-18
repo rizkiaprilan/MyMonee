@@ -21,7 +21,7 @@ class AddHomeViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func masuk(_ sender: Any) {
-        if statusPemasukan == false{
+        if statusPemasukan == false {
             pemasukan.layer.borderWidth = 3
             pemasukan.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
             statusPemasukan = true
@@ -55,7 +55,7 @@ class AddHomeViewController: UIViewController {
         statusPemasukan = false
     }
     @IBAction func simpanTapped(_ sender: UIButton) {
-        if fieldJudul.text!.isEmpty || fieldJumlah.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false)   {
+        if fieldJudul.text!.isEmpty || fieldJumlah.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false) {
             makeAlert()
             return
         }

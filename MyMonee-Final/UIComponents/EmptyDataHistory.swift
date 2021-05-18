@@ -30,7 +30,7 @@ class EmptyDataHistory: UIView {
         self.commonInit()
     }
     
-    private func commonInit(){
+    private func commonInit() {
         
         Bundle.main.loadNibNamed("EmptyDataHistory", owner: self, options: nil)
         addSubview(view)

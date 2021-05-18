@@ -13,7 +13,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationController?.pushViewController(addHomeViewController, animated: true)
     }
     
-    
     let homeTableViewCell = String(describing: HomeTableViewCell.self) // ambil nama xib
     
     @IBOutlet weak var lastWithdraw: UILabel!
@@ -44,7 +43,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             emptyData.isHidden = true
             historyView.isHidden = false
         }
-        balance.text = getBalance()
+        balance.text = getBalance().withFormatMoney
         
         let lastDataTransaction = getLastDepoAndWithdraw()
         lastWithdraw.text = lastDataTransaction.lastWithdraw

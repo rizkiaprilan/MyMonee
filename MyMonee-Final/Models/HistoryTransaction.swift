@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Extensions{
+struct Extensions {
     let image:String
     let fontColor:String
     let status: TypeHistory
@@ -56,24 +56,23 @@ var historyData: [HistoryData] = [
 //    HistoryData(title: "Gaji Februari", date: "2 May 2021 - 19.30", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]
 
-func getBalance() -> String {
+func getBalance() -> TypeMoney {
     var result:Int = 0
     for value in historyData {
-        switch value.extensions.status{
+        switch value.extensions.status {
         case .deposit:
             result+=value.price
         case .withdraw:
             result-=value.price
         }
     }
-    return convertIntToFormatMoney(money: result, isDepoOrWithdraw: nil)
+    return TypeMoney(withFormatMoney: convertIntToFormatMoney(money: result, isDepoOrWithdraw: nil), withoutFormatMoney: result)
 }
 
-func getLastDepoAndWithdraw() -> LastTransaction{
+func getLastDepoAndWithdraw() -> LastTransaction {
     var result:LastTransaction = LastTransaction()
-    
     historyData.forEach { (value: HistoryData) in
-        switch value.extensions.status{
+        switch value.extensions.status {
         case .deposit:
             result.lastDeposit = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
         case .withdraw:
@@ -83,49 +82,7 @@ func getLastDepoAndWithdraw() -> LastTransaction{
     return result
 }
 
-protocol HistoryUserData{
-    func getBalance() -> String
-    func getLastDepositAndWithdraw() -> LastTransaction
-}
-
-class UserData: HistoryUserData {
-    let id:String = UUID.init().uuidString.uppercased()
-    let title: String
-    let date: String
-    let extensions: Extensions
-    let price: Int
-    
-    init(title:String,date:String,extensions:Extensions,price:Int) {
-        self.title = title
-        self.date = date
-        self.extensions = extensions
-        self.price = price
-    }
-    
-    func getBalance() -> String {
-        var result:Int = 0
-        for value in historyData {
-            switch value.extensions.status{
-            case .deposit:
-                result+=value.price
-            case .withdraw:
-                result-=value.price
-            }
-        }
-        return convertIntToFormatMoney(money: result, isDepoOrWithdraw: nil)
-    }
-    
-    func getLastDepositAndWithdraw() -> LastTransaction {
-        var result:LastTransaction = LastTransaction()
-        
-        historyData.forEach { (value: HistoryData) in
-            switch value.extensions.status{
-            case .deposit:
-                result.lastDeposit = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
-            case .withdraw:
-                result.lastWithdraw = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
-            }
-        }
-        return result
-    }
+struct TypeMoney {
+    var withFormatMoney:String
+    var withoutFormatMoney:Int
 }

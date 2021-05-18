@@ -32,7 +32,7 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         let cell = dataTable.dequeueReusableCell(withIdentifier: String(describing: ImpianTableViewCell.self), for: indexPath) as! ImpianTableViewCell
         cell.title.text = dataImpianByUser[indexPath.section][indexPath.row].title
         cell.progress.progress = dataImpianByUser[indexPath.section][indexPath.row].progress
-        cell.amount.text = dataImpianByUser[indexPath.section][indexPath.row].amountString
+        cell.amount.text = "IDR \(convertIntToFormatMoneyRaw(money: getBalance().withoutFormatMoney)) / \(dataImpianByUser[indexPath.section][indexPath.row].amount.target)"
         
         return cell
         
@@ -58,13 +58,13 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
             dataTable.isHidden = true
             dataTable.isHidden = false
         }
+        let uiNib = UINib(nibName: String(describing: ImpianTableViewCell.self), bundle: nil)
+        dataTable.register(uiNib, forCellReuseIdentifier: String(describing: ImpianTableViewCell.self))
     }
     override func viewDidLoad() {
         
         super.viewDidLoad()
         dataTable.delegate = self
         dataTable.dataSource = self
-        let uiNib = UINib(nibName: String(describing: ImpianTableViewCell.self), bundle: nil)
-        dataTable.register(uiNib, forCellReuseIdentifier: String(describing: ImpianTableViewCell.self))
     }
 }

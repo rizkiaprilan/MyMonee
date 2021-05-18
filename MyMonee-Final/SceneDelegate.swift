@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        homeViewController.title = "Home" // set title
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene //set windownya
+        window?.windowScene = windowScene // set windownya
 //        window?.rootViewController = UINavigationController(rootViewController: homeViewController) //set layar awal, homeVIewController di embed ke UINavigationController
 //        window?.rootViewController = homeViewController // tanpa embed UINavigation
         window?.rootViewController = mainTabBarController
-        window?.makeKeyAndVisible() //set untuk menampilkan window
+        window?.makeKeyAndVisible() // set untuk menampilkan window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

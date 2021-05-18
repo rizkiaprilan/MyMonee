@@ -19,12 +19,11 @@ class UpdateHomeViewController: UIViewController {
     @IBOutlet var pemasukanView: UIView!
     @IBOutlet var penarikanView: UIView!
     @IBOutlet var hapusButton: UIButton!
-    
     @IBAction func back(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func simpan(_ sender: Any) {
-        if judulField.text!.isEmpty || jumlahField.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false)  {
+        if judulField.text!.isEmpty || jumlahField.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false) {
             makeAlert()
             return
         }
@@ -55,6 +54,7 @@ class UpdateHomeViewController: UIViewController {
         }
         statusPenarikan = false
     }
+    
     @IBAction func penarikanTapped(_ sender: Any) {
         if statusPenarikan == false {
             penarikanView.layer.borderWidth = 3
@@ -79,10 +79,6 @@ class UpdateHomeViewController: UIViewController {
         view.layer.bounds = view.bounds
         view.layer.position = view.center
     }
-    
-//    fileprivate func makeBackToMainTabBar() {
-//        self.present(goBackToMainTabBar(), animated: true, completion: nil)
-//    }
     
     fileprivate func makeAlert() {
         self.present(alert(), animated: true, completion: nil)

@@ -29,7 +29,7 @@ func convertIntToFormatMoney(money:Int,isDepoOrWithdraw:TypeHistory?) -> String 
     formatter.numberStyle = .decimal
     var result: String = "",symbol:String = ""
     
-    if isDepoOrWithdraw != nil{
+    if isDepoOrWithdraw != nil {
         symbol = isDepoOrWithdraw == .deposit  ? "+" : "-"
     }
     

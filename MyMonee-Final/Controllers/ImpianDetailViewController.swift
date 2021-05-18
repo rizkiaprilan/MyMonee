@@ -11,7 +11,7 @@ class ImpianDetailViewController: UIViewController {
     
     var impianData: [ImpianByUser] = Array()
     var indexSection:Int?
-    var persentage:Float = 0.0
+    var persentage:Float = Float()
     @IBOutlet var titleImpian: UILabel!
     @IBOutlet var priceImpian: UILabel!
     @IBOutlet var persantase: UILabel!
@@ -56,21 +56,21 @@ class ImpianDetailViewController: UIViewController {
         
         titleImpian.text = impianData[0].title
         priceImpian.text = convertIntToFormatMoney(money: impianData[0].amount.target, isDepoOrWithdraw: nil)
-        persantase.text = "\(persentage)%"
-        progressBar.progress = persentage/100
-        amountImpian.text = impianData[0].amountString
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.persentage = Float(impianData[0].amount.current)/Float(impianData[0].amount.target) * 100
-        makeViewShadow(view: detailVIew)
-        confirmationButton.frame = CGRect(x: 0, y: 0, width: 338, height: 43)
-        if persentage != 100 {
+        self.persentage = Float(getBalance().withoutFormatMoney)/Float(impianData[0].amount.target) * 100
+        persantase.text = self.persentage > 100 ? "100%" :"\(self.persentage)%"
+        progressBar.progress = self.persentage/100
+        amountImpian.text = "IDR \(convertIntToFormatMoneyRaw(money: getBalance().withoutFormatMoney)) / \(impianData[0].amount.target)"
+        if persentage < 100 {
             confirmationButton.isEnabled = false
             return
         }
         confirmationButton.isEnabled = true
-        
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        makeViewShadow(view: detailVIew)
+        confirmationButton.frame = CGRect(x: 0, y: 0, width: 338, height: 43)
     }
 }

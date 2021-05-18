@@ -27,7 +27,7 @@ class AddImpianViewController: UIViewController {
     }
     
     fileprivate func insertData() {
-        dataImpianByUser.append([ImpianByUser(title: titleImpian.text!, amount: Amount(current: 0, target: Int(targetImpian.text!)!))])
+        dataImpianByUser.append([ImpianByUser(title: titleImpian.text!, amount: Amount(current: getBalance().withoutFormatMoney, target: Int(targetImpian.text!)!))])
     }
 
     fileprivate func makeAlert() {

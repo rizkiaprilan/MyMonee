@@ -29,7 +29,7 @@ class MainTabBarController: UITabBarController {
         self.viewControllers = createTabBar(viewControllers: viewControllers)
     }
     
-    fileprivate func createTabBar(viewControllers:[ViewControllerData]) -> [UINavigationController]{
+    fileprivate func createTabBar(viewControllers:[ViewControllerData]) -> [UINavigationController] {
         var result:[UINavigationController] = Array()
         
         for (index,item) in viewControllers.enumerated() {

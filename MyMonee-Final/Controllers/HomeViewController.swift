@@ -18,7 +18,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var historyTableView: UITableView!
     @IBOutlet weak var greetingMessage: UILabel!
     @IBOutlet weak var userName: UILabel!
-    @IBOutlet var emptyDataHistory: EmptyDataHistory!
+    @IBOutlet var emptyDataView: UIView!
+    
     
     @IBAction func addPenggunaan(_ sender: UITapGestureRecognizer) {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
@@ -32,10 +33,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.userName.text = profileData.name
         
         if(historyData.isEmpty){
-//            emptyDataHistory.layer.cornerRadius = 16
-//            emptyDataHistory.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
-//            emptyDataHistory.isHidden = false
-//            historyView.isHidden = true
+            emptyDataView.layer.cornerRadius = 16
+            emptyDataView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
+            emptyDataView.isHidden = false
+            historyView.isHidden = true
         }
     }
     

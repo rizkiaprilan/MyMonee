@@ -23,6 +23,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="MyMonee_Final" customModuleProvider="target">
             <connections>
                 <outlet property="balance" destination="wqg-Iv-uTb" id="1U4-XR-4F3"/>
+                <outlet property="emptyDataView" destination="KlF-EO-Tw5" id="uPB-Jc-HSG"/>
                 <outlet property="greetingMessage" destination="9KW-RS-1Xv" id="1Ue-V0-8Fg"/>
                 <outlet property="historyTableView" destination="ICi-xc-tZW" id="7vn-3F-7OU"/>
                 <outlet property="historyView" destination="3T0-V0-GjC" id="Xzh-CK-1w5"/>
@@ -87,13 +88,13 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kj5-Ml-wRx" userLabel="Balance View">
                                     <rect key="frame" x="16" y="101" width="776" height="103.5"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Total Saldo Kamu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NB-tQ-yJD">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" ambiguous="YES" text="Total Saldo Kamu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NB-tQ-yJD">
                                             <rect key="frame" x="14" y="14" width="748" height="20"/>
                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
                                             <color key="textColor" name="FFFFFF"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. &lt;net amout&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqg-Iv-uTb" userLabel="balance">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rp. &lt;net amout&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqg-Iv-uTb" userLabel="balance">
                                             <rect key="frame" x="14" y="36" width="748" height="50.5"/>
                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="36"/>
                                             <color key="textColor" name="FFFFFF"/>
@@ -127,13 +128,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uang Masuk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNa-R0-XEf">
-                                            <rect key="frame" x="42" y="5" width="320.5" height="17"/>
+                                            <rect key="frame" x="42" y="5" width="320.5" height="14"/>
                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                             <color key="textColor" name="828282"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;last Depo&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zaq-Rz-xVa" userLabel="amount">
-                                            <rect key="frame" x="42" y="25.5" width="320.5" height="15.5"/>
+                                            <rect key="frame" x="42" y="28" width="320.5" height="13"/>
                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                             <color key="textColor" name="5069B8"/>
                                             <nil key="highlightedColor"/>
@@ -168,13 +169,13 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uang Keluar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR0-91-rke">
-                                            <rect key="frame" x="42" y="5" width="320.5" height="17"/>
+                                            <rect key="frame" x="42" y="5" width="320.5" height="14"/>
                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="12"/>
                                             <color key="textColor" name="828282"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;last Withdraw&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWS-GF-D2Q" userLabel="amount">
-                                            <rect key="frame" x="42" y="25.5" width="320.5" height="15.5"/>
+                                            <rect key="frame" x="42" y="28" width="320.5" height="13"/>
                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
                                             <color key="textColor" name="5069B8"/>
                                             <nil key="highlightedColor"/>
@@ -199,15 +200,19 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlF-EO-Tw5" customClass="EmptyDataHistory" customModule="MyMonee_Final" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="309.5" width="808" height="258.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3T0-V0-GjC" userLabel="History View">
                                     <rect key="frame" x="0.0" y="309.5" width="808" height="258.5"/>
                                     <subviews>
                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ICi-xc-tZW">
-                                            <rect key="frame" x="17" y="61.5" width="774" height="188"/>
+                                            <rect key="frame" x="17" y="58" width="774" height="191.5"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         </tableView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riwayat Penggunaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWE-LL-Aus">
-                                            <rect key="frame" x="17" y="23" width="175" height="22.5"/>
+                                            <rect key="frame" x="17" y="23" width="151.5" height="19"/>
                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="16"/>
                                             <color key="textColor" name="000000"/>
                                             <nil key="highlightedColor"/>
@@ -227,11 +232,14 @@
                             <color key="backgroundColor" name="AccentColor"/>
                             <constraints>
                                 <constraint firstItem="Zq2-Zy-S0Q" firstAttribute="top" secondItem="6KV-cH-eYB" secondAttribute="top" id="16V-3k-4GE"/>
+                                <constraint firstItem="KlF-EO-Tw5" firstAttribute="leading" secondItem="Msc-Qr-7vK" secondAttribute="leading" id="1MD-5n-RVj"/>
                                 <constraint firstItem="Zq2-Zy-S0Q" firstAttribute="top" secondItem="Kj5-Ml-wRx" secondAttribute="bottom" constant="12" id="1qE-ay-3V5"/>
                                 <constraint firstItem="Kj5-Ml-wRx" firstAttribute="centerX" secondItem="Msc-Qr-7vK" secondAttribute="centerX" id="3cu-9v-APx"/>
+                                <constraint firstItem="KlF-EO-Tw5" firstAttribute="top" secondItem="Zq2-Zy-S0Q" secondAttribute="bottom" constant="46" id="9a3-PU-uAA"/>
                                 <constraint firstAttribute="trailing" secondItem="Zq2-Zy-S0Q" secondAttribute="trailing" constant="16" id="Cet-Xb-Yie"/>
                                 <constraint firstItem="6KV-cH-eYB" firstAttribute="leading" secondItem="Msc-Qr-7vK" secondAttribute="leading" constant="16" id="D80-YU-R5c"/>
                                 <constraint firstItem="6KV-cH-eYB" firstAttribute="width" secondItem="Kj5-Ml-wRx" secondAttribute="width" multiplier="0.486911" id="Fl4-6D-lZB"/>
+                                <constraint firstAttribute="trailing" secondItem="KlF-EO-Tw5" secondAttribute="trailing" id="Jcv-OV-TkH"/>
                                 <constraint firstItem="Kj5-Ml-wRx" firstAttribute="top" secondItem="2kR-Ur-p98" secondAttribute="bottom" constant="24" id="LVq-dz-T46"/>
                                 <constraint firstAttribute="trailing" secondItem="Kj5-Ml-wRx" secondAttribute="trailing" constant="16" id="Pgi-54-RRR"/>
                                 <constraint firstItem="2kR-Ur-p98" firstAttribute="top" secondItem="Msc-Qr-7vK" secondAttribute="top" constant="16" id="QId-bt-3nB"/>
@@ -248,6 +256,7 @@
                                 <constraint firstItem="3T0-V0-GjC" firstAttribute="leading" secondItem="Msc-Qr-7vK" secondAttribute="leading" id="lZy-G3-90R"/>
                                 <constraint firstAttribute="bottom" secondItem="3T0-V0-GjC" secondAttribute="bottom" id="nTl-Nb-pIz"/>
                                 <constraint firstAttribute="height" constant="568" id="rFR-2D-k5L"/>
+                                <constraint firstAttribute="bottom" secondItem="KlF-EO-Tw5" secondAttribute="bottom" id="zQn-Vd-9DO"/>
                             </constraints>
                         </view>
                     </subviews>

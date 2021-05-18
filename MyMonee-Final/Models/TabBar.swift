@@ -13,4 +13,3 @@ struct ViewControllerData {
     let imageNamed: String
     let imageSelectedNamed: String
 }
-

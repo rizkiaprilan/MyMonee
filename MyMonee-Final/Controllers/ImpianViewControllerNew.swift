@@ -13,7 +13,6 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
-    
     @IBOutlet var empty: EmptyDataHistory!
     @IBOutlet var dataTable: UITableView!
     @IBAction func addImpian(_ sender: UIButton) {
@@ -49,13 +48,13 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         dataTable.reloadData()
         empty.delegate = self
-        if(dataImpianByUser.isEmpty){
+        if(dataImpianByUser.isEmpty) {
             empty.layer.cornerRadius = 16
             empty.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
             empty.isHidden = false
             empty.button.setTitle("Tambah Impian", for: .normal)
             dataTable.isHidden = true
-        }else{
+        } else {
             dataTable.isHidden = true
             dataTable.isHidden = false
         }

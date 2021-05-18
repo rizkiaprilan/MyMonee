@@ -43,7 +43,7 @@ class HomeDetailViewController: UIViewController {
         
         dateTransaction.text = dataHistory?.date
         typeImage.image = UIImage(named: (dataHistory?.extensions.image)!)
-        switch dataHistory!.extensions.status{
+        switch dataHistory!.extensions.status {
         case .deposit:
             typeTransaction.text = "Pemasukan"
         case .withdraw:

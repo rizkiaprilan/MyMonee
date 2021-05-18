@@ -15,7 +15,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var dateAndTime: UILabel!
     
-    override func awakeFromNib() { //method yg ketrigger ketika tampilan dibuka
+    override func awakeFromNib() { // method yg ketrigger ketika tampilan dibuka
         super.awakeFromNib()
 
     }

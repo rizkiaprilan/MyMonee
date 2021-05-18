@@ -25,8 +25,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var userName: UILabel!
     @IBOutlet var emptyData: EmptyDataHistory!
     
-    
-    
     @IBAction func addPenggunaan(_ sender: UITapGestureRecognizer) {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
         self.navigationController?.pushViewController(addHomeViewController, animated: true)
@@ -37,12 +35,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.userName.text = UserDefaults.standard.string(forKey: "username") ?? profileData.name
         historyTableView.reloadData()
         emptyData.delegate = self
-        if(historyData.isEmpty){
+        if(historyData.isEmpty) {
             emptyData.layer.cornerRadius = 16
             emptyData.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
             emptyData.isHidden = false
             historyView.isHidden = true
-        }else{
+        } else {
             emptyData.isHidden = true
             historyView.isHidden = false
         }
@@ -88,8 +86,5 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         homeDetailViewController.dataHistory = historyData[indexPath.row]
         homeDetailViewController.indexData = indexPath.row
         self.navigationController?.pushViewController(homeDetailViewController, animated: true)
-//        homeDetailViewController.modalPresentationStyle = .fullScreen
-//        homeDetailViewController.modalTransitionStyle = .flipHorizontal
-//        self.present(homeDetailViewController, animated: true, completion: nil)
     }
 }

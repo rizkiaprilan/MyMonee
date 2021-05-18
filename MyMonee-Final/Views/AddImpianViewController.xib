@@ -30,7 +30,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHi-KP-aLb">
-                    <rect key="frame" x="60" y="21.5" width="144" height="24"/>
+                    <rect key="frame" x="60" y="21.5" width="128" height="24"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                     <state key="normal" title="  Tambah Impian" image="Back_Chevron">
                         <color key="titleColor" name="4F4F4F"/>
@@ -40,13 +40,13 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0eO-04-gGf">
-                    <rect key="frame" x="60" y="73.5" width="38.5" height="20"/>
+                    <rect key="frame" x="60" y="73.5" width="34.5" height="16.5"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                     <color key="textColor" name="4F4F4F"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Target Capaian (Rp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-KF-pW8">
-                    <rect key="frame" x="60" y="143.5" width="145" height="20"/>
+                    <rect key="frame" x="60" y="133.5" width="123.5" height="16.5"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                     <color key="textColor" name="4F4F4F"/>
                     <nil key="highlightedColor"/>
@@ -66,13 +66,13 @@
                     </connections>
                 </button>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Target Impian" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lr7-du-8Ab">
-                    <rect key="frame" x="60" y="163.5" width="776" height="35.5"/>
+                    <rect key="frame" x="60" y="150" width="776" height="29.5"/>
                     <color key="textColor" name="4F4F4F"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Judul Impian" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4CQ-ep-0nA">
-                    <rect key="frame" x="60" y="93.5" width="776" height="36"/>
+                    <rect key="frame" x="60" y="90" width="776" height="29.5"/>
                     <color key="textColor" name="4F4F4F"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                     <textInputTraits key="textInputTraits"/>

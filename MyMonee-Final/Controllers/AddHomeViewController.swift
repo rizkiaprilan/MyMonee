@@ -38,7 +38,7 @@ class AddHomeViewController: UIViewController {
         statusPenarikan = false
     }
     @IBAction func keluar(_ sender: Any) {
-        if statusPenarikan == false{
+        if statusPenarikan == false {
             penarikan.layer.borderWidth = 3
             penarikan.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
             statusPenarikan = true
@@ -60,18 +60,17 @@ class AddHomeViewController: UIViewController {
             return
         }
         
-        if statusPemasukan{
+        if statusPemasukan {
             insertDataHistory(type: .deposit)
         }
-        if statusPenarikan{
+        if statusPenarikan {
             insertDataHistory(type: .withdraw)
         }
         self.navigationController?.popViewController(animated: true)
     }
     
-    
     @IBAction func pemasukanTapped(_ sender: UITapGestureRecognizer) {
-        if statusPemasukan == false{
+        if statusPemasukan == false {
             pemasukan.layer.borderWidth = 3
             pemasukan.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
             statusPemasukan = true
@@ -88,7 +87,7 @@ class AddHomeViewController: UIViewController {
         statusPenarikan = false
     }
     @IBAction func penarikanTapped(_ sender: UITapGestureRecognizer) {
-        if statusPenarikan == false{
+        if statusPenarikan == false {
             penarikan.layer.borderWidth = 3
             penarikan.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
             statusPenarikan = true
@@ -112,10 +111,6 @@ class AddHomeViewController: UIViewController {
     fileprivate func insertDataHistory(type: TypeHistory) {
         historyData.append(HistoryData(title: fieldJudul.text!, date: getCurrentDate(), extensions: Extensions(statusHistory: type), price: Int(fieldJumlah.text!)!))
     }
-    
-//    fileprivate func makeBackToMainTabBar() {
-//        self.present(goBackToMainTabBar(), animated: true, completion: nil)
-//    }
     
     fileprivate func makeViewShadow(view: UIView) {
         view.clipsToBounds = false

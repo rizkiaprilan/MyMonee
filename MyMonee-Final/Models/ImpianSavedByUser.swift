@@ -21,7 +21,7 @@ struct ImpianByUser {
     }
 }
 
-struct Amount{
+struct Amount {
     var current:Int
     var target:Int
 }

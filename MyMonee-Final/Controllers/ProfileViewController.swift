@@ -33,12 +33,10 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: { [weak alert] (_) in
             let textFieldName = alert?.textFields![0]
-//            profileData.name = textFieldName!.text!
             UserDefaults.standard.set(textFieldName!.text!, forKey: "username")
             self.userName.text = textFieldName!.text!
             
             let textFieldDescription = alert?.textFields![1]
-//            profileData.description = textFieldDescription!.text!
             UserDefaults.standard.set(textFieldDescription!.text!, forKey: "description")
             self.descriptionProfile.text = textFieldDescription!.text!
             self.editAccess(isEdit: false)

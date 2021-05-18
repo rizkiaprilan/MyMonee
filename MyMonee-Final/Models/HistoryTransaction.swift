@@ -14,7 +14,7 @@ struct Extensions{
     
     init(statusHistory: TypeHistory) {
         self.status = statusHistory
-        switch statusHistory{
+        switch statusHistory {
         case .deposit:
             self.image = "Arrow_Up_2"
             self.fontColor = "Deposit"
@@ -25,7 +25,7 @@ struct Extensions{
     }
 }
 
-enum TypeHistory: String{
+enum TypeHistory: String {
     case deposit
     case withdraw
 }

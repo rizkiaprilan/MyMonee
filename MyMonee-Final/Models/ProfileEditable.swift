@@ -7,11 +7,10 @@
 
 import Foundation
 
-struct ProfileData{
+struct ProfileData {
     var name:String
     var image:String
     var description:String
 }
-
 
 var profileData: ProfileData = ProfileData(name: "Your Name", image: "Default_Profile",description: "Bagus! Pengeluaranmu lebih sedikit dari Pemasukan")

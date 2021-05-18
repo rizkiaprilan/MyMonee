@@ -28,10 +28,10 @@ class UpdateHomeViewController: UIViewController {
             makeAlert()
             return
         }
-        if statusPemasukan{
+        if statusPemasukan {
             updateData(type: .deposit)
         }
-        if statusPenarikan{
+        if statusPenarikan {
             updateData(type: .withdraw)
         }
         self.navigationController?.popViewController(animated: true)
@@ -44,24 +44,24 @@ class UpdateHomeViewController: UIViewController {
     }
     
     @IBAction func pemasukkanTapped(_ sender: Any) {
-        if statusPemasukan == false{
+        if statusPemasukan == false {
             pemasukanView.layer.borderWidth = 3
             pemasukanView.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
             statusPemasukan = true
             penarikanView.layer.borderWidth = 0
-        }else{
+        } else {
             pemasukanView.layer.borderWidth = 0
             statusPemasukan = false
         }
         statusPenarikan = false
     }
     @IBAction func penarikanTapped(_ sender: Any) {
-        if statusPenarikan == false{
+        if statusPenarikan == false {
             penarikanView.layer.borderWidth = 3
             penarikanView.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
             statusPenarikan = true
             pemasukanView.layer.borderWidth = 0
-        }else{
+        } else {
             penarikanView.layer.borderWidth = 0
             statusPenarikan = false
         }

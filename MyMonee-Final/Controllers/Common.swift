@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-func getCurrentDayTime() -> String{
+func getCurrentDayTime() -> String {
     let date = Date()
     var calendar = Calendar.current
     if let timeZone = TimeZone(identifier: "WIB") {
@@ -22,8 +22,7 @@ func getCurrentDayTime() -> String{
     return "Malam"
 }
 
-
-func convertIntToFormatMoney(money:Int,isDepoOrWithdraw:TypeHistory?) -> String{
+func convertIntToFormatMoney(money:Int,isDepoOrWithdraw:TypeHistory?) -> String {
     let formatter = NumberFormatter()
     formatter.locale = Locale(identifier: "id_ID")
     formatter.groupingSeparator = "."
@@ -40,7 +39,7 @@ func convertIntToFormatMoney(money:Int,isDepoOrWithdraw:TypeHistory?) -> String{
     return result
 }
 
-func convertIntToFormatMoneyRaw(money:Int) -> String{
+func convertIntToFormatMoneyRaw(money:Int) -> String {
     let formatter = NumberFormatter()
     formatter.locale = Locale(identifier: "id_ID")
     formatter.groupingSeparator = "."

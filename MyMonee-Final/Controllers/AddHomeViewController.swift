@@ -20,6 +20,40 @@ class AddHomeViewController: UIViewController {
 //        makeBackToMainTabBar()
         self.navigationController?.popViewController(animated: true)
     }
+    @IBAction func masuk(_ sender: Any) {
+        if statusPemasukan == false{
+            pemasukan.layer.borderWidth = 3
+            pemasukan.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
+            statusPemasukan = true
+            penarikan.layer.borderWidth = 0
+            simpan.layer.backgroundColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
+            simpan.isEnabled = true
+            statusPenarikan = false
+            return
+        }
+        pemasukan.layer.borderWidth = 0
+        simpan.layer.backgroundColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
+        statusPemasukan = false
+        simpan.isEnabled = false
+        statusPenarikan = false
+    }
+    @IBAction func keluar(_ sender: Any) {
+        if statusPenarikan == false{
+            penarikan.layer.borderWidth = 3
+            penarikan.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
+            statusPenarikan = true
+            pemasukan.layer.borderWidth = 0
+            simpan.layer.backgroundColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
+            simpan.isEnabled = true
+            statusPemasukan = false
+            return
+        }
+        penarikan.layer.borderWidth = 0
+        simpan.layer.backgroundColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
+        statusPenarikan = false
+        simpan.isEnabled = false
+        statusPemasukan = false
+    }
     @IBAction func simpanTapped(_ sender: UIButton) {
         if fieldJudul.text!.isEmpty || fieldJumlah.text!.isEmpty || (statusPemasukan == false && statusPenarikan == false)   {
             makeAlert()
@@ -33,8 +67,9 @@ class AddHomeViewController: UIViewController {
             insertDataHistory(type: .withdraw)
         }
         self.navigationController?.popViewController(animated: true)
-//        makeBackToMainTabBar()
     }
+    
+    
     @IBAction func pemasukanTapped(_ sender: UITapGestureRecognizer) {
         if statusPemasukan == false{
             pemasukan.layer.borderWidth = 3

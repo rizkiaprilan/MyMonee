@@ -31,7 +31,7 @@
                     <rect key="frame" x="0.0" y="147.5" width="414" height="311"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWX-zc-eKZ">
-                            <rect key="frame" x="67" y="130.5" width="280.5" height="50.5"/>
+                            <rect key="frame" x="86.5" y="134.5" width="241.5" height="42"/>
                             <string key="text">Data kamu kosong,
 Yuk mulai buat Catatan kamu!</string>
                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
@@ -39,7 +39,7 @@ Yuk mulai buat Catatan kamu!</string>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS9-qZ-h1Q">
-                            <rect key="frame" x="91.5" y="206.5" width="231" height="43"/>
+                            <rect key="frame" x="91.5" y="202" width="231" height="43"/>
                             <color key="backgroundColor" name="5069B8"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="43" id="JYx-T1-M9B"/>

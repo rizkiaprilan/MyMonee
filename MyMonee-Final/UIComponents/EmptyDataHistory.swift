@@ -9,7 +9,7 @@ import UIKit
 
 class EmptyDataHistory: UIView {
 
-    @IBOutlet var emptyDataHistory: EmptyDataHistory!
+    @IBOutlet var view: UIView!
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.commonInit()
@@ -23,8 +23,8 @@ class EmptyDataHistory: UIView {
     
     private func commonInit(){
         Bundle.main.loadNibNamed("EmptyDataHistory", owner: self, options: nil)
-        addSubview(emptyDataHistory)
-        emptyDataHistory.frame = self.bounds
-        emptyDataHistory.autoresizingMask = [.flexibleWidth,.flexibleHeight]
+        addSubview(view)
+        view.frame = self.bounds
+        view.autoresizingMask = [.flexibleWidth,.flexibleHeight]
     }
 }

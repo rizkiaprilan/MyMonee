@@ -19,53 +19,67 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmptyDataHistory" customModule="MyMonee_Final" customModuleProvider="target">
             <connections>
-                <outlet property="emptyDataHistory" destination="iN0-l3-epB" id="Zg3-eH-Shi"/>
+                <outlet property="view" destination="BmT-JQ-v9q" id="mTz-qm-TwK"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="EmptyDataHistory" customModule="MyMonee_Final" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="321"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWX-zc-eKZ">
-                    <rect key="frame" x="86.5" y="421" width="241.5" height="54"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="54" id="TIL-Gz-nIG"/>
-                    </constraints>
-                    <string key="text">Data kamu kosong,
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BmT-JQ-v9q">
+                    <rect key="frame" x="0.0" y="60.5" width="414" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWX-zc-eKZ">
+                            <rect key="frame" x="86.5" y="73" width="241.5" height="54"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="54" id="6e9-xF-gdS"/>
+                            </constraints>
+                            <string key="text">Data kamu kosong,
 Yuk mulai buat Catatan kamu!</string>
-                    <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
-                    <color key="textColor" name="4F4F4F"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS9-qZ-h1Q">
-                    <rect key="frame" x="91.5" y="499" width="231" height="43"/>
-                    <color key="backgroundColor" name="5069B8"/>
+                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="18"/>
+                            <color key="textColor" name="4F4F4F"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fS9-qZ-h1Q">
+                            <rect key="frame" x="91.5" y="151" width="231" height="43"/>
+                            <color key="backgroundColor" name="5069B8"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="43" id="JYx-T1-M9B"/>
+                                <constraint firstAttribute="width" constant="231" id="nr8-JP-GLd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
+                            <state key="normal" title="Tambah Penggunaan">
+                                <color key="titleColor" name="F2F2F2"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="20"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="43" id="JYx-T1-M9B"/>
-                        <constraint firstAttribute="width" constant="231" id="nr8-JP-GLd"/>
+                        <constraint firstItem="fS9-qZ-h1Q" firstAttribute="centerX" secondItem="EWX-zc-eKZ" secondAttribute="centerX" id="GOj-9H-zn3"/>
+                        <constraint firstItem="fS9-qZ-h1Q" firstAttribute="top" secondItem="EWX-zc-eKZ" secondAttribute="bottom" constant="24" id="Hom-0Z-Fj8"/>
+                        <constraint firstAttribute="height" constant="200" id="YDH-Ud-qBh"/>
+                        <constraint firstItem="EWX-zc-eKZ" firstAttribute="centerY" secondItem="BmT-JQ-v9q" secondAttribute="centerY" id="dpo-du-1Xz"/>
+                        <constraint firstItem="EWX-zc-eKZ" firstAttribute="centerX" secondItem="BmT-JQ-v9q" secondAttribute="centerX" id="oap-Ma-SAK"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="14"/>
-                    <state key="normal" title="Tambah Penggunaan">
-                        <color key="titleColor" name="F2F2F2"/>
-                    </state>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                            <integer key="value" value="20"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
-                </button>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="EWX-zc-eKZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="HA5-Hl-pt8"/>
-                <constraint firstItem="fS9-qZ-h1Q" firstAttribute="centerX" secondItem="EWX-zc-eKZ" secondAttribute="centerX" id="W77-nT-0Nz"/>
-                <constraint firstItem="EWX-zc-eKZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="clb-Oh-jLP"/>
-                <constraint firstItem="fS9-qZ-h1Q" firstAttribute="top" secondItem="EWX-zc-eKZ" secondAttribute="bottom" constant="24" id="lFj-dS-w79"/>
+                <constraint firstItem="BmT-JQ-v9q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Nez-YS-khT"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="BmT-JQ-v9q" secondAttribute="trailing" id="d7g-ej-ctK"/>
+                <constraint firstItem="BmT-JQ-v9q" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="hcd-hp-lwH"/>
+                <constraint firstItem="BmT-JQ-v9q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="oJr-4W-Vz6"/>
+                <constraint firstItem="BmT-JQ-v9q" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tMq-Mz-Uzg"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="139" y="85"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-108.14732142857143"/>
         </view>
     </objects>
     <resources>

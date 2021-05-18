@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Impian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4u-Va-znm">
-                    <rect key="frame" x="16" y="60.5" width="87" height="34"/>
+                    <rect key="frame" x="16" y="60.5" width="72.5" height="28"/>
                     <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="24"/>
                     <color key="textColor" name="4F4F4F"/>
                     <nil key="highlightedColor"/>
@@ -38,7 +38,7 @@
                     </connections>
                 </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="8" translatesAutoresizingMaskIntoConstraints="NO" id="CJW-LT-1yD">
-                    <rect key="frame" x="0.0" y="125.5" width="414" height="736.5"/>
+                    <rect key="frame" x="0.0" y="119.5" width="414" height="742.5"/>
                     <color key="backgroundColor" name="AccentColor"/>
                     <color key="separatorColor" name="AccentColor"/>
                     <color key="sectionIndexBackgroundColor" name="AccentColor"/>

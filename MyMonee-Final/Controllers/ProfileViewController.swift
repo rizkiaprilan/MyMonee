@@ -24,20 +24,22 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,
         let alert = UIAlertController(title: "Edit Profile", message: "Silahkan Isi Nama Anda", preferredStyle: UIAlertController.Style.alert)
         alert.addTextField { (textFieldName : UITextField!) -> Void in
             textFieldName.placeholder = "Name"
-            textFieldName.text = profileData.name
+            textFieldName.text = UserDefaults.standard.string(forKey: "username")
         }
         alert.addTextField { (textFieldDescription : UITextField!) -> Void in
             textFieldDescription.placeholder = "Description"
-            textFieldDescription.text = profileData.description
+            textFieldDescription.text = UserDefaults.standard.string(forKey: "description")
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: { [weak alert] (_) in
             let textFieldName = alert?.textFields![0]
-            profileData.name = textFieldName!.text!
+//            profileData.name = textFieldName!.text!
+            UserDefaults.standard.set(textFieldName!.text!, forKey: "username")
             self.userName.text = textFieldName!.text!
             
             let textFieldDescription = alert?.textFields![1]
-            profileData.description = textFieldDescription!.text!
+//            profileData.description = textFieldDescription!.text!
+            UserDefaults.standard.set(textFieldDescription!.text!, forKey: "description")
             self.descriptionProfile.text = textFieldDescription!.text!
             self.editAccess(isEdit: false)
         }))
@@ -86,8 +88,8 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImage.layer.cornerRadius = 50.5
-        self.userName.text = profileData.name
-        self.descriptionProfile.text = profileData.description
+        self.userName.text = UserDefaults.standard.string(forKey: "username")
+        self.descriptionProfile.text = UserDefaults.standard.string(forKey: "description")
         picker.delegate = self
     }
     

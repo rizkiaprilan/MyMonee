@@ -85,7 +85,7 @@ class UpdateHomeViewController: UIViewController {
     }
     
     fileprivate func updateData(type: TypeHistory) {
-        historyData[indexData!] = HistoryData(title: judulField.text!, date: getCurrentDate(), extensions: Extensions(statusHistory: type), price: Int(jumlahField.text!)!)
+        historyData[indexData!] = HistoryData(title: judulField.text!, extensions: Extensions(statusHistory: type), price: Int(jumlahField.text!)!)
     }
     
     override func viewWillAppear(_ animated: Bool) {

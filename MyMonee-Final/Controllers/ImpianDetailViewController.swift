@@ -24,7 +24,7 @@ class ImpianDetailViewController: UIViewController {
         self.present(goBackToMainTabBar(), animated: true, completion: nil)
     }
     @IBAction func confirmationTapped(_ sender: UIButton) {
-        historyData.append(HistoryData(title: impianData[0].title, date: getCurrentDate(), extensions: Extensions(statusHistory: .withdraw), price: impianData[0].amount.target))
+        historyData.append(HistoryData(title: impianData[0].title, extensions: Extensions(statusHistory: .withdraw), price: impianData[0].amount.target))
         dataImpianByUser.remove(at: indexSection!)
         
         self.navigationController?.popViewController(animated: true)

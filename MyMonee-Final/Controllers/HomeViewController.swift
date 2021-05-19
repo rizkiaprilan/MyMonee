@@ -72,7 +72,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = historyTableView.dequeueReusableCell(withIdentifier: homeTableViewCell, for: indexPath) as! HomeTableViewCell
         cell.imageStatus.image = UIImage(named: historyData[indexPath.row].extensions.image)
         cell.title.text = historyData[indexPath.row].title
-        cell.dateAndTime.text = historyData[indexPath.row].date
+        cell.dateAndTime.text = historyData[indexPath.row].formatDate
         cell.price.text = convertIntToFormatMoney(money: historyData[indexPath.row].price, isDepoOrWithdraw: historyData[indexPath.row].extensions.status)
         cell.price.textColor = UIColor(named: historyData[indexPath.row].extensions.fontColor)
         

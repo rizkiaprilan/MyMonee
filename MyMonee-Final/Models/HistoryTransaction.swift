@@ -30,38 +30,36 @@ enum TypeHistory: String {
     case withdraw
 }
 
-//protocol convertion {
-//    var formatRupiah:String{get}
-//    var formatDate:String{get}
-//}
-
-struct HistoryData {
-    let id:String = String(UUID.init().uuidString.uppercased().prefix(6))
-    let title: String
-    let date: String
-    let extensions: Extensions
-    let price: Int
-    
-    init(title:String,date:String,extensions:Extensions,price:Int) {
-        self.title = title
-        self.date = date
-        self.extensions = extensions
-        self.price = price
-    }
-}
-
-
-
 struct LastTransaction {
     var lastDeposit: String = "Rp 0"
     var lastWithdraw: String = "Rp 0"
 }
 
 var historyData: [HistoryData] = [
-    HistoryData(title: "Bayar Listrik", date: "1 May 2021 - 19.30", extensions: Extensions(statusHistory: .withdraw),price: 256000),
-    HistoryData(title: "Gaji Februari", date: "2 May 2021 - 19.30", extensions: Extensions(statusHistory: .deposit),price: 1250000)
+    HistoryData(title: "Bayar Listrik", extensions: Extensions(statusHistory: .withdraw),price: 256000),
+    HistoryData(title: "Gaji Februari", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]
 
+struct HistoryData {
+
+    let id:String = String(UUID.init().uuidString.uppercased().prefix(6))
+    let title: String
+    let extensions: Extensions
+    let price: Int
+    
+    init(title:String,extensions:Extensions,price:Int) {
+        self.title = title
+        self.extensions = extensions
+        self.price = price
+    }
+}
+
+struct TypeMoney {
+    var withFormatMoney:String
+    var withoutFormatMoney:Int
+}
+
+// start No. 1
 func getBalance() -> TypeMoney {
     let total = historyData.map { (value) -> Int in
         return value.extensions.status == .withdraw ? -value.price : value.price
@@ -82,8 +80,29 @@ func getLastDepoAndWithdraw() -> LastTransaction {
     }
     return result
 }
+// end No.1
 
-struct TypeMoney {
-    var withFormatMoney:String
-    var withoutFormatMoney:Int
+// start No.2
+extension HistoryData {
+    var formatRupiah:String {
+        let formatter = NumberFormatter()
+        formatter.locale = Locale(identifier: "id_ID")
+        formatter.groupingSeparator = "."
+        formatter.numberStyle = .decimal
+        var result: String = ""
+        
+        if let formattedTipAmount = formatter.string(from: self.price as NSNumber) {
+           result = "Rp \(formattedTipAmount)"
+        }
+        return result
+    }
+    var formatDate:String {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd MMMM yyyy - HH.mm"
+        let result = formatter.string(from: date)
+        return result
+    }
 }
+// end No.2
+

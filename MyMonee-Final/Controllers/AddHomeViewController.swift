@@ -109,7 +109,7 @@ class AddHomeViewController: UIViewController {
     }
     
     fileprivate func insertDataHistory(type: TypeHistory) {
-        historyData.append(HistoryData(title: fieldJudul.text!, date: getCurrentDate(), extensions: Extensions(statusHistory: type), price: Int(fieldJumlah.text!)!))
+        historyData.append(HistoryData(title: fieldJudul.text!, extensions: Extensions(statusHistory: type), price: Int(fieldJumlah.text!)!))
     }
     
     fileprivate func makeViewShadow(view: UIView) {

@@ -8,6 +8,7 @@
 import UIKit
 
 class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableViewDataSource,DataKosong {
+    
     func addPage() {
         let viewController = AddImpianViewController(nibName: String(describing: AddImpianViewController.self), bundle: nil)
         self.navigationController?.pushViewController(viewController, animated: true)
@@ -34,8 +35,18 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         cell.progress.progress = dataImpianByUser[indexPath.section][indexPath.row].progress
         cell.amount.text = "IDR \(convertIntToFormatMoneyRaw(money: getBalance().withoutFormatMoney)) / \(dataImpianByUser[indexPath.section][indexPath.row].amount.target)"
         
-        return cell
+        cell.dataImpian = dataImpianByUser[indexPath.section][indexPath.row]
+        cell.indexSection = indexPath.section
         
+        if dataImpianByUser[indexPath.section][indexPath.row].progress * 100 < 100 {
+            cell.confirm.setImage(UIImage(named: "disable_confirm"), for: .normal)
+            cell.confirm.isEnabled = false
+        } else {
+            cell.confirm.setImage(UIImage(named: "confirm"), for: .normal)
+            cell.confirm.isEnabled = true
+        }
+        
+        return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

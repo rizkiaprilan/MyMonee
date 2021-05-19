@@ -30,6 +30,11 @@ enum TypeHistory: String {
     case withdraw
 }
 
+//protocol convertion {
+//    var formatRupiah:String{get}
+//    var formatDate:String{get}
+//}
+
 struct HistoryData {
     let id:String = String(UUID.init().uuidString.uppercased().prefix(6))
     let title: String
@@ -43,8 +48,9 @@ struct HistoryData {
         self.extensions = extensions
         self.price = price
     }
-    
 }
+
+
 
 struct LastTransaction {
     var lastDeposit: String = "Rp 0"
@@ -52,30 +58,25 @@ struct LastTransaction {
 }
 
 var historyData: [HistoryData] = [
-//    HistoryData(title: "Bayar Listrik", date: "1 May 2021 - 19.30", extensions: Extensions(statusHistory: .withdraw),price: 256000),
-//    HistoryData(title: "Gaji Februari", date: "2 May 2021 - 19.30", extensions: Extensions(statusHistory: .deposit),price: 1250000)
+    HistoryData(title: "Bayar Listrik", date: "1 May 2021 - 19.30", extensions: Extensions(statusHistory: .withdraw),price: 256000),
+    HistoryData(title: "Gaji Februari", date: "2 May 2021 - 19.30", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]
 
 func getBalance() -> TypeMoney {
-    var result:Int = 0
-    for value in historyData {
-        switch value.extensions.status {
-        case .deposit:
-            result+=value.price
-        case .withdraw:
-            result-=value.price
-        }
-    }
-    return TypeMoney(withFormatMoney: convertIntToFormatMoney(money: result, isDepoOrWithdraw: nil), withoutFormatMoney: result)
+    let total = historyData.map { (value) -> Int in
+        return value.extensions.status == .withdraw ? -value.price : value.price
+    }.reduce(0, +)
+    
+    return TypeMoney(withFormatMoney: convertIntToFormatMoney(money: total, isDepoOrWithdraw: nil), withoutFormatMoney: total)
 }
 
 func getLastDepoAndWithdraw() -> LastTransaction {
     var result:LastTransaction = LastTransaction()
-    historyData.forEach { (value: HistoryData) in
-        switch value.extensions.status {
-        case .deposit:
+    historyData.reversed().forEach { (value: HistoryData) in
+        if value.extensions.status == .deposit && result.lastDeposit == "Rp 0" {
             result.lastDeposit = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
-        case .withdraw:
+        }
+        if value.extensions.status == .withdraw && result.lastWithdraw == "Rp 0" {
             result.lastWithdraw = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
         }
     }

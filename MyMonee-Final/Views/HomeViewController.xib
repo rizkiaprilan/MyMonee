@@ -29,6 +29,7 @@
                 <outlet property="historyView" destination="3T0-V0-GjC" id="Xzh-CK-1w5"/>
                 <outlet property="lastDeposit" destination="zaq-Rz-xVa" id="9W7-5a-QDl"/>
                 <outlet property="lastWithdraw" destination="OWS-GF-D2Q" id="DDh-At-Z5Q"/>
+                <outlet property="loading" destination="uSh-ZQ-PF0" id="7eU-9S-yZn"/>
                 <outlet property="userName" destination="Wt8-nV-2TT" id="7mg-eA-DvX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -217,13 +218,18 @@
                                             <color key="textColor" name="000000"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="uSh-ZQ-PF0">
+                                            <rect key="frame" x="188.5" y="263" width="37" height="37"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" name="FFFFFF"/>
                                     <constraints>
+                                        <constraint firstItem="uSh-ZQ-PF0" firstAttribute="centerX" secondItem="3T0-V0-GjC" secondAttribute="centerX" id="0se-0c-nfu"/>
                                         <constraint firstAttribute="trailing" secondItem="ICi-xc-tZW" secondAttribute="trailing" constant="17" id="Bw7-Oh-iPh"/>
                                         <constraint firstAttribute="bottom" secondItem="ICi-xc-tZW" secondAttribute="bottom" constant="9" id="F52-Kj-UCK"/>
                                         <constraint firstItem="ICi-xc-tZW" firstAttribute="top" secondItem="qWE-LL-Aus" secondAttribute="bottom" constant="16" id="Idk-Dn-Mm2"/>
                                         <constraint firstItem="ICi-xc-tZW" firstAttribute="leading" secondItem="3T0-V0-GjC" secondAttribute="leading" constant="17" id="dLv-xh-YO8"/>
+                                        <constraint firstItem="uSh-ZQ-PF0" firstAttribute="centerY" secondItem="3T0-V0-GjC" secondAttribute="centerY" constant="27.25" id="gHm-n7-Y9T"/>
                                         <constraint firstItem="qWE-LL-Aus" firstAttribute="top" secondItem="3T0-V0-GjC" secondAttribute="top" constant="23" id="jwo-3X-Wld"/>
                                         <constraint firstItem="qWE-LL-Aus" firstAttribute="leading" secondItem="3T0-V0-GjC" secondAttribute="leading" constant="17" id="zbg-Yx-tZa"/>
                                     </constraints>

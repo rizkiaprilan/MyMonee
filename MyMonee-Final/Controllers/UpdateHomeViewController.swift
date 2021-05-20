@@ -9,7 +9,7 @@ import UIKit
 
 class UpdateHomeViewController: UIViewController {
     
-    var lastData:HistoryData?
+    var lastData:HistoryDataAPI?
     var indexData:Int?
     var indexSection:Int?
     var statusPemasukan:Bool = false
@@ -38,7 +38,11 @@ class UpdateHomeViewController: UIViewController {
     }
     
     @IBAction func hapus(_ sender: Any) {
-        historyData.remove(at: indexData!)
+//        historyData.remove(at: indexData!)
+        let service: NetworkService = NetworkService()
+        service.deleteHistoryData(id: lastData!.id)
+        
+        
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -85,7 +89,11 @@ class UpdateHomeViewController: UIViewController {
     }
     
     fileprivate func updateData(type: TypeHistory) {
-        historyData[indexData!] = HistoryData(title: judulField.text!, extensions: Extensions(statusHistory: type), price: Int(jumlahField.text!)!)
+        let data = HistoryData(title: judulField.text!, extensions: Extensions(statusHistory: type), price: Int(jumlahField.text!)!)
+        
+        let service: NetworkService =  NetworkService()
+        service.updateHistoryData(data: data,id: lastData!.id)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

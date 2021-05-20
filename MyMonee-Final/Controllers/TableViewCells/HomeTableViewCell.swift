@@ -26,4 +26,11 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func showData(historyTransaction: HistoryDataAPI){
+        imageStatus.image = UIImage(named: Extensions(statusHistory: TypeHistory(rawValue: historyTransaction.extensions)!).image)
+        price.text = convertIntToFormatMoney(money: historyTransaction.price, isDepoOrWithdraw: TypeHistory(rawValue: historyTransaction.extensions))
+        title.text = historyTransaction.title
+        dateAndTime.text = getCurrentDate()
+    }
+    
 }

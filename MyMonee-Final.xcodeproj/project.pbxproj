@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA1A28152652D919002D8EC7 /* EmptyDataHistory.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA1A28142652D919002D8EC7 /* EmptyDataHistory.xib */; };
 		FA1A281A2652D975002D8EC7 /* EmptyDataHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1A28192652D975002D8EC7 /* EmptyDataHistory.swift */; };
+		FA6E36D32656387E007F53A2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E36D22656387E007F53A2 /* NetworkService.swift */; };
 		FA8427DE264DF62F0063FED4 /* ImpianDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8427DC264DF62F0063FED4 /* ImpianDetailViewController.swift */; };
 		FA8427DF264DF62F0063FED4 /* ImpianDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA8427DD264DF62F0063FED4 /* ImpianDetailViewController.xib */; };
 		FA8427E8264E19000063FED4 /* AddImpianViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8427E6264E19000063FED4 /* AddImpianViewController.swift */; };
@@ -87,6 +88,7 @@
 /* Begin PBXFileReference section */
 		FA1A28142652D919002D8EC7 /* EmptyDataHistory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataHistory.xib; sourceTree = "<group>"; };
 		FA1A28192652D975002D8EC7 /* EmptyDataHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyDataHistory.swift; sourceTree = "<group>"; };
+		FA6E36D22656387E007F53A2 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		FA8427DC264DF62F0063FED4 /* ImpianDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpianDetailViewController.swift; sourceTree = "<group>"; };
 		FA8427DD264DF62F0063FED4 /* ImpianDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImpianDetailViewController.xib; sourceTree = "<group>"; };
 		FA8427E6264E19000063FED4 /* AddImpianViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddImpianViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				FAC2A488264CE4BC00E41F28 /* ProfileEditable.swift */,
 				FA9D1C32264D87D8000AB2A8 /* ImpianSavedByUser.swift */,
 				FAF58CA826512BAB001BE474 /* TabBar.swift */,
+				FA6E36D22656387E007F53A2 /* NetworkService.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA6E36D32656387E007F53A2 /* NetworkService.swift in Sources */,
 				FAB4A298264B66BF00611FC6 /* ViewController.swift in Sources */,
 				FA9E6AC3264BA6B4006166F0 /* HistoryTransaction.swift in Sources */,
 				FAC2A489264CE4BC00E41F28 /* ProfileEditable.swift in Sources */,

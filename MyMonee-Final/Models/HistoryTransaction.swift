@@ -36,11 +36,11 @@ struct LastTransaction {
 }
 
 var historyData: [HistoryData] = [
-    HistoryData(title: "Bayar Listrik", extensions: Extensions(statusHistory: .withdraw),price: 256000),
-    HistoryData(title: "Gaji Februari", extensions: Extensions(statusHistory: .deposit),price: 1250000)
+//    HistoryData(title: "Bayar Listrik", extensions: Extensions(statusHistory: .withdraw),price: 256000),
+//    HistoryData(title: "Gaji Februari", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]
 
-struct HistoryData {
+struct HistoryData{
 
     let id:String = String(UUID.init().uuidString.uppercased().prefix(6))
     let title: String
@@ -53,6 +53,20 @@ struct HistoryData {
         self.price = price
     }
 }
+
+struct HistoryDataAPI: Codable{
+
+    var id:String = String(UUID.init().uuidString.uppercased().prefix(6))
+    let title: String
+    let extensions: String
+    let price: Int
+}
+
+struct HistoryDataResponse: Codable {
+    var results: [HistoryDataAPI]
+}
+
+var historyDataResponse: [HistoryDataAPI] = []
 
 struct TypeMoney {
     var withFormatMoney:String

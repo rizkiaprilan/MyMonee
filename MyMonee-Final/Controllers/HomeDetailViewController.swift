@@ -9,7 +9,7 @@ import UIKit
 
 class HomeDetailViewController: UIViewController {
     
-    var dataHistory:HistoryData?
+    var dataHistory:HistoryDataAPI?
     var indexData:Int?
     
     @IBAction func edit(_ sender: Any) {
@@ -41,17 +41,17 @@ class HomeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dateTransaction.text = dataHistory?.formatDate
-        typeImage.image = UIImage(named: (dataHistory?.extensions.image)!)
-        switch dataHistory!.extensions.status {
+        dateTransaction.text = getCurrentDate()
+        typeImage.image = UIImage(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).image)
+        switch Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).status {
         case .deposit:
             typeTransaction.text = "Pemasukan"
         case .withdraw:
             typeTransaction.text = "Pengeluaran"
         }
         titleTransaction.text = dataHistory?.title
-        transactionPrice.text = convertIntToFormatMoney(money: dataHistory!.price, isDepoOrWithdraw: dataHistory!.extensions.status)
-        transactionPrice.textColor = UIColor(named: dataHistory!.extensions.fontColor)
+        transactionPrice.text = convertIntToFormatMoney(money: dataHistory!.price, isDepoOrWithdraw: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).status)
+        transactionPrice.textColor = UIColor(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).fontColor)
         trasancationId.text = dataHistory?.id
         
     }

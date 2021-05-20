@@ -7,10 +7,23 @@
 
 import UIKit
 
-class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableViewDataSource,DataKosong {
+class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableViewDataSource,DataKosong,Executable {
+    func deleteImpian(_ indexSectionImpian: Int) {
+        dataImpianByUser.remove(at: indexSectionImpian)
+        dataTable.reloadData()
+        self.viewWillAppear(true)
+    }
+    
+    func confirmImpian(_ impian: ImpianByUser, _ indexSectionImpian: Int) {
+        historyData.append(HistoryData(title: impian.title, extensions: Extensions(statusHistory: .withdraw), price: impian.amount.target))
+        dataImpianByUser.remove(at: indexSectionImpian)
+        dataTable.reloadData()
+        self.viewWillAppear(true)
+    }
     
     func addPage() {
         let viewController = AddImpianViewController(nibName: String(describing: AddImpianViewController.self), bundle: nil)
+        
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -37,8 +50,9 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         
         cell.dataImpian = dataImpianByUser[indexPath.section][indexPath.row]
         cell.indexSection = indexPath.section
+        cell.delegate = self
         
-        if dataImpianByUser[indexPath.section][indexPath.row].progress * 100 < 100 {
+        if dataImpianByUser[indexPath.section][indexPath.row].progress < 1.0 {
             cell.confirm.setImage(UIImage(named: "disable_confirm"), for: .normal)
             cell.confirm.isEnabled = false
         } else {
@@ -55,7 +69,7 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         viewController.impianData = dataImpianByUser[indexPath.section]
         self.navigationController?.pushViewController(viewController, animated: true)
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         dataTable.reloadData()
         empty.delegate = self

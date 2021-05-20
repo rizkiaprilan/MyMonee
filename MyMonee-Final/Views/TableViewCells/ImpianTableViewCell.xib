@@ -47,7 +47,7 @@
                         </constraints>
                         <state key="normal" image="delete-1"/>
                         <connections>
-                            <action selector="deleteAction:" destination="-1" eventType="touchUpInside" id="ub6-uX-hea"/>
+                            <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="uvH-Cp-wX1"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlk-lv-34d" userLabel="Confirm">
@@ -58,7 +58,7 @@
                         </constraints>
                         <state key="normal" image="disable_confirm"/>
                         <connections>
-                            <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="cX6-yg-OKe"/>
+                            <action selector="confirmAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HsM-dj-H3b"/>
                         </connections>
                     </button>
                 </subviews>
@@ -92,7 +92,7 @@
             <connections>
                 <outlet property="amount" destination="X2S-dm-EIX" id="ZQK-M2-ajn"/>
                 <outlet property="confirm" destination="Nlk-lv-34d" id="LLJ-D0-8sq"/>
-                <outlet property="delete" destination="6bL-Uu-9NH" id="jCL-Zl-Vds"/>
+                <outlet property="delete" destination="6bL-Uu-9NH" id="TOO-SC-L2u"/>
                 <outlet property="progress" destination="dJd-NX-95m" id="ygV-Ia-dX9"/>
                 <outlet property="title" destination="fc2-vV-qzx" id="qOC-Db-3J2"/>
             </connections>

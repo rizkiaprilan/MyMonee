@@ -8,21 +8,13 @@
 import UIKit
 
 protocol Executable {
-    func deleteImpian(indexSectionImpian:Int)
-    func confirmImpian(impian: ImpianByUser,indexSectionImpian:Int)
+    func deleteImpian(_ indexSectionImpian:Int)
+    func confirmImpian(_ impian: ImpianByUser,_ indexSectionImpian:Int)
 }
 
-class ImpianTableViewCell: UITableViewCell,Executable {
+class ImpianTableViewCell: UITableViewCell {
     
-    func deleteImpian(indexSectionImpian: Int) {
-        dataImpianByUser.remove(at: indexSection!)
-    }
-    
-    func confirmImpian(impian: ImpianByUser, indexSectionImpian: Int) {
-        historyData.append(HistoryData(title: dataImpian!.title, extensions: Extensions(statusHistory: .withdraw), price: dataImpian!.amount.target))
-        dataImpianByUser.remove(at: indexSection!)
-    }
-    
+    var delegate:Executable?
     var dataImpian: ImpianByUser?
     var indexSection: Int?
     var viewController: ImpianViewControllerNew?
@@ -33,12 +25,12 @@ class ImpianTableViewCell: UITableViewCell,Executable {
     @IBOutlet var confirm: UIButton!
     
     @IBAction func deleteAction(_ sender: UIButton) {
-        deleteImpian(indexSectionImpian: indexSection!)
-        viewController?.navigationController?.popToRootViewController(animated: true)
+        self.delegate?.deleteImpian(indexSection!)
+        
     }
     @IBAction func confirmAction(_ sender: UIButton) {
-        confirmImpian(impian: dataImpian!, indexSectionImpian: indexSection!)
-        viewController?.navigationController?.popToRootViewController(animated: true)
+        self.delegate?.confirmImpian(dataImpian!, indexSection!)
+    
     }
     
     override func awakeFromNib() {

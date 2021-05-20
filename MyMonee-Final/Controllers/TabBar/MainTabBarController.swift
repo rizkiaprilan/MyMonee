@@ -38,8 +38,8 @@ class MainTabBarController: UITabBarController {
             let image = UIImage(named: item.imageNamed)?.withRenderingMode(.alwaysOriginal)
             let imageSelected = UIImage(named: item.imageSelectedNamed)?.withRenderingMode(.alwaysOriginal).withTintColor(UIColor(named: "TabBarSelected") ?? UIColor.black)
             currentViewControllerTab.tabBarItem = UITabBarItem(title: item.imageNamed, image: image, selectedImage: imageSelected)
-            currentViewControllerTab.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor(named: "TabBarSelected") ?? UIColor.black], for: .selected)
-            currentViewControllerTab.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor(named: "TabBar") ?? UIColor.lightGray], for: .normal)
+            currentViewControllerTab.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor(named: "TabBarSelected")!], for: .selected)
+            currentViewControllerTab.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:UIColor(named: "TabBar")!], for: .normal)
             currentViewControllerTab.tabBarItem.tag = index
             result.append(currentViewControllerTab)
         }

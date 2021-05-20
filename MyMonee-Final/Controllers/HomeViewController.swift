@@ -10,6 +10,8 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,DataKosong {
     func addPage() {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
+        
+//        addHomeViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(addHomeViewController, animated: true)
     }
     
@@ -26,6 +28,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBAction func addPenggunaan(_ sender: UITapGestureRecognizer) {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
+//        addHomeViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(addHomeViewController, animated: true)
     }
     
@@ -84,6 +87,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         homeDetailViewController.dataHistory = historyData[indexPath.row]
         homeDetailViewController.indexData = indexPath.row
+
         self.navigationController?.pushViewController(homeDetailViewController, animated: true)
     }
 }

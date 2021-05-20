@@ -18,11 +18,13 @@ class AddImpianViewController: UIViewController {
             return
         }
         insertData()
+        
         self.navigationController?.popViewController(animated: true)
         
     }
     
     @IBAction func back(_ sender: Any) {
+        
         self.navigationController?.popViewController(animated: true)
     }
     

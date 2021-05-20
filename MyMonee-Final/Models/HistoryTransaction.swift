@@ -54,7 +54,8 @@ struct HistoryData {
 }
 
 struct HistoryDataAPI: Codable {
-    var id:String = String(UUID.init().uuidString.uppercased().prefix(6))
+    var id:String = ""
+    let uuid:String
     let title: String
     let extensions: String
     let price: Int

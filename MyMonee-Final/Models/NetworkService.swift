@@ -33,7 +33,7 @@ class NetworkService {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         // Add data to the model
-        let uploadDataModel = HistoryDataAPI(title: data.title, extensions: data.extensions.status.rawValue, price: data.price, date: data.formatDate)
+        let uploadDataModel = HistoryDataAPI(uuid: data.id, title: data.title, extensions: data.extensions.status.rawValue, price: data.price, date: data.formatDate)
         
         // Convert model to JSON data
         guard let jsonData = try? JSONEncoder().encode(uploadDataModel) else {
@@ -90,7 +90,7 @@ class NetworkService {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         // Add data to the model
-        let updateDataModel = HistoryDataAPI(title: data.title, extensions: data.extensions.status.rawValue, price: data.price, date:data.formatDate)
+        let updateDataModel = HistoryDataAPI(uuid:data.id, title: data.title, extensions: data.extensions.status.rawValue, price: data.price, date:data.formatDate)
         
         // Convert model to JSON data
         guard let jsonData = try? JSONEncoder().encode(updateDataModel) else {

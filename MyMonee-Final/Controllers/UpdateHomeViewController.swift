@@ -38,10 +38,8 @@ class UpdateHomeViewController: UIViewController {
     }
     
     @IBAction func hapus(_ sender: Any) {
-//        historyData.remove(at: indexData!)
         let service: NetworkService = NetworkService()
         service.deleteHistoryData(id: lastData!.id)
-        
         
         self.navigationController?.popToRootViewController(animated: true)
     }

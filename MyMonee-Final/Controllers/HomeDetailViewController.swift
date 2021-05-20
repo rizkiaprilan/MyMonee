@@ -52,7 +52,7 @@ class HomeDetailViewController: UIViewController {
         titleTransaction.text = dataHistory?.title
         transactionPrice.text = convertIntToFormatMoney(money: dataHistory!.price, isDepoOrWithdraw: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).status)
         transactionPrice.textColor = UIColor(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).fontColor)
-        trasancationId.text = dataHistory?.id
+        trasancationId.text = dataHistory?.uuid
         
     }
 }

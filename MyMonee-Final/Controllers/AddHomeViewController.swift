@@ -67,46 +67,11 @@ class AddHomeViewController: UIViewController {
         }
         self.navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func pemasukanTapped(_ sender: UITapGestureRecognizer) {
-        if statusPemasukan == false {
-            pemasukan.layer.borderWidth = 3
-            pemasukan.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
-            statusPemasukan = true
-            penarikan.layer.borderWidth = 0
-            simpan.layer.backgroundColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
-            simpan.isEnabled = true
-            statusPenarikan = false
-            return
-        }
-        pemasukan.layer.borderWidth = 0
-        simpan.layer.backgroundColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
-        statusPemasukan = false
-        simpan.isEnabled = false
-        statusPenarikan = false
-    }
-    @IBAction func penarikanTapped(_ sender: UITapGestureRecognizer) {
-        if statusPenarikan == false {
-            penarikan.layer.borderWidth = 3
-            penarikan.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
-            statusPenarikan = true
-            pemasukan.layer.borderWidth = 0
-            simpan.layer.backgroundColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
-            simpan.isEnabled = true
-            statusPemasukan = false
-            return
-        }
-        penarikan.layer.borderWidth = 0
-        simpan.layer.backgroundColor = UIColor(red: 0.741, green: 0.741, blue: 0.741, alpha: 1).cgColor
-        statusPenarikan = false
-        simpan.isEnabled = false
-        statusPemasukan = false
-    }
-    
+
     fileprivate func makeAlert() {
         self.present(alert(), animated: true, completion: nil)
     }
-    
+  
     fileprivate func insertDataHistory(type: TypeHistory) {
         let data: HistoryData = HistoryData(title: fieldJudul.text!, extensions: Extensions(statusHistory: type), price: Int(fieldJumlah.text!)!)
         

@@ -40,8 +40,7 @@ var historyData: [HistoryData] = [
 //    HistoryData(title: "Gaji Februari", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]
 
-struct HistoryData{
-
+struct HistoryData {
     let id:String = String(UUID.init().uuidString.uppercased().prefix(6))
     let title: String
     let extensions: Extensions
@@ -54,19 +53,13 @@ struct HistoryData{
     }
 }
 
-struct HistoryDataAPI: Codable{
-
+struct HistoryDataAPI: Codable {
     var id:String = String(UUID.init().uuidString.uppercased().prefix(6))
     let title: String
     let extensions: String
     let price: Int
+    let date: String
 }
-
-struct HistoryDataResponse: Codable {
-    var results: [HistoryDataAPI]
-}
-
-var historyDataResponse: [HistoryDataAPI] = []
 
 struct TypeMoney {
     var withFormatMoney:String

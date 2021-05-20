@@ -10,7 +10,7 @@ import Foundation
 class NetworkService {
     let currentUrl: String = "https://60a5fe0cc0c1fd00175f4df8.mockapi.io/api/v1/transaction"
     
-    func loadHistoryData(completion: @escaping(_ movies: [HistoryDataAPI])->()) {
+    func loadHistoryData(completion: @escaping(_ transaction: [HistoryDataAPI])->()) {
         let components = URLComponents(string: currentUrl)
         
         let request = URLRequest(url: (components?.url)!)
@@ -20,7 +20,6 @@ class NetworkService {
                 
                 let getAllHistory = try! decoder.decode([HistoryDataAPI].self, from: data)
                 completion(getAllHistory)
-                
             }
         }
         task.resume()
@@ -34,7 +33,7 @@ class NetworkService {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         // Add data to the model
-        let uploadDataModel = HistoryDataAPI(title: data.title, extensions: data.extensions.status.rawValue, price: data.price)
+        let uploadDataModel = HistoryDataAPI(title: data.title, extensions: data.extensions.status.rawValue, price: data.price, date: data.formatDate)
         
         // Convert model to JSON data
         guard let jsonData = try? JSONEncoder().encode(uploadDataModel) else {
@@ -91,7 +90,7 @@ class NetworkService {
         request.setValue("application/json", forHTTPHeaderField: "Accept")
         
         // Add data to the model
-        let updateDataModel = HistoryDataAPI(title: data.title, extensions: data.extensions.status.rawValue, price: data.price)
+        let updateDataModel = HistoryDataAPI(title: data.title, extensions: data.extensions.status.rawValue, price: data.price, date:data.formatDate)
         
         // Convert model to JSON data
         guard let jsonData = try? JSONEncoder().encode(updateDataModel) else {

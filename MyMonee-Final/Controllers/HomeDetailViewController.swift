@@ -41,7 +41,7 @@ class HomeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dateTransaction.text = getCurrentDate()
+        dateTransaction.text = dataHistory?.date
         typeImage.image = UIImage(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).image)
         switch Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).status {
         case .deposit:

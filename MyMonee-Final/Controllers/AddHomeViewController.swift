@@ -17,7 +17,6 @@ class AddHomeViewController: UIViewController {
     @IBOutlet var penarikan: UIView!
     @IBOutlet var pemasukan: UIView!
     @IBAction func back(_ sender: Any) {
-//        makeBackToMainTabBar()
         self.navigationController?.popViewController(animated: true)
     }
     @IBAction func masuk(_ sender: Any) {
@@ -109,14 +108,9 @@ class AddHomeViewController: UIViewController {
     }
     
     fileprivate func insertDataHistory(type: TypeHistory) {
-        let service: NetworkService = NetworkService()
-        
         let data: HistoryData = HistoryData(title: fieldJudul.text!, extensions: Extensions(statusHistory: type), price: Int(fieldJumlah.text!)!)
         
-//        historyData.append(data)
-        
-        service.createHistoryData(data: data)
-        // =======api=======
+        NetworkService().createHistoryData(data: data)
     }
     
     fileprivate func makeViewShadow(view: UIView) {

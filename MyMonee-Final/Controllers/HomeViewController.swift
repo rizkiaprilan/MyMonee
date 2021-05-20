@@ -14,7 +14,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     let homeTableViewCell = String(describing: HomeTableViewCell.self) // ambil nama xib
-    var dataSource: [HistoryDataAPI] = []
+//    var dataSource: [HistoryDataAPI] = []
     @IBOutlet weak var lastWithdraw: UILabel!
     @IBOutlet weak var lastDeposit: UILabel!
     @IBOutlet weak var balance: UILabel!
@@ -44,10 +44,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.loadData()
         greetingMessage.text = "Selamat \(getCurrentDayTime()),"
         self.userName.text = UserDefaults.standard.string(forKey: "username") ?? profileData.name
-        balance.text = getBalance().withFormatMoney
-        let lastDataTransaction = getLastDepoAndWithdraw()
-        lastWithdraw.text = lastDataTransaction.lastWithdraw
-        lastDeposit.text = lastDataTransaction.lastDeposit
         emptyData.delegate = self
         
         historyTableView.reloadData()
@@ -56,9 +52,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     func loadData() {
         NetworkService().loadHistoryData(completion: { (historyList) in
             DispatchQueue.main.async {
-                self.dataSource = historyList
+                dataSource = historyList
                 self.historyTableView.reloadData()
                 self.viewHistoryTransaction()
+                self.balance.text = getBalance().withFormatMoney
+                let lastDataTransaction = getLastDepoAndWithdraw()
+                self.lastWithdraw.text = lastDataTransaction.lastWithdraw
+                self.lastDeposit.text = lastDataTransaction.lastDeposit
             }
         })
     }

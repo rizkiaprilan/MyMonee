@@ -40,6 +40,8 @@ var historyData: [HistoryData] = [
 //    HistoryData(title: "Gaji Februari", extensions: Extensions(statusHistory: .deposit),price: 1250000)
 ]
 
+var dataSource: [HistoryDataAPI] = []
+
 struct HistoryData {
     let id:String = String(UUID.init().uuidString.uppercased().prefix(6))
     let title: String
@@ -69,8 +71,8 @@ struct TypeMoney {
 
 // start No. 1
 func getBalance() -> TypeMoney {
-    let total = historyData.map { (value) -> Int in
-        return value.extensions.status == .withdraw ? -value.price : value.price
+    let total = dataSource.map { (value) -> Int in
+        return Extensions(statusHistory: TypeHistory(rawValue: value.extensions)!).status == .withdraw ? -value.price : value.price
     }.reduce(0, +)
     
     return TypeMoney(withFormatMoney: convertIntToFormatMoney(money: total, isDepoOrWithdraw: nil), withoutFormatMoney: total)
@@ -78,13 +80,18 @@ func getBalance() -> TypeMoney {
 
 func getLastDepoAndWithdraw() -> LastTransaction {
     var result:LastTransaction = LastTransaction()
-    historyData.reversed().forEach { (value: HistoryData) in
-        if value.extensions.status == .deposit && result.lastDeposit == "Rp 0" {
+    for value in dataSource.reversed() {
+        var count = 0
+        if Extensions(statusHistory: TypeHistory(rawValue: value.extensions)!).status == .deposit && result.lastDeposit == "Rp 0" {
             result.lastDeposit = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
+            count+=1
         }
-        if value.extensions.status == .withdraw && result.lastWithdraw == "Rp 0" {
+        if Extensions(statusHistory: TypeHistory(rawValue: value.extensions)!).status == .withdraw && result.lastWithdraw == "Rp 0" {
             result.lastWithdraw = convertIntToFormatMoney(money: value.price, isDepoOrWithdraw: nil)
+            count+=1
         }
+        if count == 2 {break}
+
     }
     return result
 }

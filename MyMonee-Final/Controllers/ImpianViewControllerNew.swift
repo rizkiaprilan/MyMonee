@@ -15,15 +15,14 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func confirmImpian(_ impian: ImpianByUser, _ indexSectionImpian: Int) {
-        historyData.append(HistoryData(title: impian.title, extensions: Extensions(statusHistory: .withdraw), price: impian.amount.target))
         dataImpianByUser.remove(at: indexSectionImpian)
+        NetworkService().createHistoryData(data: HistoryData(title: impian.title, extensions: Extensions(statusHistory: .withdraw), price: impian.amount.target))
         dataTable.reloadData()
         self.viewWillAppear(true)
     }
     
     func addPage() {
         let viewController = AddImpianViewController(nibName: String(describing: AddImpianViewController.self), bundle: nil)
-        
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -43,16 +42,17 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let persentase = Float(getBalance().withoutFormatMoney)/Float(dataImpianByUser[indexPath.section][indexPath.row].amount.target)
         let cell = dataTable.dequeueReusableCell(withIdentifier: String(describing: ImpianTableViewCell.self), for: indexPath) as! ImpianTableViewCell
         cell.title.text = dataImpianByUser[indexPath.section][indexPath.row].title
-        cell.progress.progress = dataImpianByUser[indexPath.section][indexPath.row].progress
+        cell.progress.progress = persentase
         cell.amount.text = "IDR \(convertIntToFormatMoneyRaw(money: getBalance().withoutFormatMoney)) / \(dataImpianByUser[indexPath.section][indexPath.row].amount.target)"
         
         cell.dataImpian = dataImpianByUser[indexPath.section][indexPath.row]
         cell.indexSection = indexPath.section
         cell.delegate = self
         
-        if dataImpianByUser[indexPath.section][indexPath.row].progress < 1.0 {
+        if persentase < 1.0 {
             cell.confirm.setImage(UIImage(named: "disable_confirm"), for: .normal)
             cell.confirm.isEnabled = false
         } else {
@@ -86,8 +86,8 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         let uiNib = UINib(nibName: String(describing: ImpianTableViewCell.self), bundle: nil)
         dataTable.register(uiNib, forCellReuseIdentifier: String(describing: ImpianTableViewCell.self))
     }
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         dataTable.delegate = self
         dataTable.dataSource = self

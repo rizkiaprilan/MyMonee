@@ -51,6 +51,7 @@ class ProfileViewController: UIViewController,UIImagePickerControllerDelegate,
         picker.modalPresentationStyle = .popover
         present(picker, animated: true, completion: nil)
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var  chosenImage = UIImage()
         chosenImage = info[UIImagePickerController.InfoKey.originalImage] as! UIImage

@@ -10,11 +10,11 @@ import UIKit
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,DataKosong {
     func addPage() {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
+        addHomeViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(addHomeViewController, animated: true)
     }
     
     let homeTableViewCell = String(describing: HomeTableViewCell.self) // ambil nama xib
-//    var dataSource: [HistoryDataAPI] = []
     @IBOutlet var loading: UIActivityIndicatorView!
     @IBOutlet weak var lastWithdraw: UILabel!
     @IBOutlet weak var lastDeposit: UILabel!
@@ -26,6 +26,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var emptyData: EmptyDataHistory!
     @IBAction func addPenggunaan(_ sender: UITapGestureRecognizer) {
         let addHomeViewController = AddHomeViewController(nibName: String(describing: AddHomeViewController.self), bundle: nil)
+        addHomeViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(addHomeViewController, animated: true)
     }
     
@@ -46,7 +47,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         greetingMessage.text = "Selamat \(getCurrentDayTime()),"
         self.userName.text = UserDefaults.standard.string(forKey: "username") ?? profileData.name
         emptyData.delegate = self
-        
         historyTableView.reloadData()
     }
     
@@ -61,7 +61,6 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let lastDataTransaction = getLastDepoAndWithdraw()
                 self.lastWithdraw.text = lastDataTransaction.lastWithdraw
                 self.lastDeposit.text = lastDataTransaction.lastDeposit
-                self.loading.hidesWhenStopped = true
                 self.loading.stopAnimating()
             }
         })
@@ -93,7 +92,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let homeDetailViewController = HomeDetailViewController(nibName: String(describing: HomeDetailViewController.self), bundle: nil)
         homeDetailViewController.dataHistory = dataSource[indexPath.row]
         homeDetailViewController.indexData = indexPath.row
-        
+
+        homeDetailViewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(homeDetailViewController, animated: true)
     }
 }

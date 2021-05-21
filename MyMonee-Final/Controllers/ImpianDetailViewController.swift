@@ -21,7 +21,8 @@ class ImpianDetailViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet var detailVIew: UIView!
     @IBAction func backTapped(_ sender: UIButton) {
-        self.present(goBackToMainTabBar(), animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
+//        self.present(goBackToMainTabBar(), animated: true, completion: nil)
     }
     @IBAction func confirmationTapped(_ sender: UIButton) {
         historyData.append(HistoryData(title: impianData[0].title, extensions: Extensions(statusHistory: .withdraw), price: impianData[0].amount.target))
@@ -33,6 +34,7 @@ class ImpianDetailViewController: UIViewController {
         let viewController = UpdateImpianViewController(nibName: String(describing: UpdateImpianViewController.self), bundle: nil)
         viewController.impianData = impianData
         viewController.indexSection = indexSection
+        self.navigationController?.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     fileprivate func makeViewShadow(view: UIView) {

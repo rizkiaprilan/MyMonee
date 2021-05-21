@@ -17,6 +17,7 @@ class HomeDetailViewController: UIViewController {
         
         viewController.indexData = indexData
         viewController.lastData = dataHistory
+        viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     @IBAction func back(_ sender: UIButton) {

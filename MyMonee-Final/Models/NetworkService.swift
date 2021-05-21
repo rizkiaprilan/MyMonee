@@ -81,7 +81,6 @@ class NetworkService {
     }
     
     func updateHistoryData(data:HistoryData,id:String) {
-        print("\(currentUrl)/\(id)")
         let components = URLComponents(string: "\(currentUrl)/\(id)")
         
         var request = URLRequest(url: (components?.url)!)

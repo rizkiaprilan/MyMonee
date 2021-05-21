@@ -65,13 +65,14 @@ class AddHomeViewController: UIViewController {
         if statusPenarikan {
             insertDataHistory(type: .withdraw)
         }
+        self.showToast(message: "Data Save.")
         self.navigationController?.popViewController(animated: true)
     }
-
+    
     fileprivate func makeAlert() {
         self.present(alert(), animated: true, completion: nil)
     }
-  
+    
     fileprivate func insertDataHistory(type: TypeHistory) {
         let data: HistoryData = HistoryData(title: fieldJudul.text!, extensions: Extensions(statusHistory: type), price: Int(fieldJumlah.text!)!)
         
@@ -96,5 +97,35 @@ class AddHomeViewController: UIViewController {
         
         makeViewShadow(view: penarikan)
         makeViewShadow(view: pemasukan)
+    }
+}
+
+extension UIViewController {
+    func toast(title:String ,text:String, delay:Int) -> Void {
+        let alert = UIAlertController(title: title, message: text, preferredStyle: .alert)
+        self.present(alert, animated: true)
+        let deadlineTime = DispatchTime.now() + .seconds(delay)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: {
+            alert.dismiss(animated: true, completion: nil)
+        })
+    }
+    func showToast(message : String) {
+
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = .center
+        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10
+        toastLabel.clipsToBounds  =  true
+        self.view.addSubview(toastLabel)
+        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
+            toastLabel.alpha = 0.0
+        }, completion: {(isCompleted) in
+            toastLabel.removeFromSuperview()
+        })
+        
     }
 }

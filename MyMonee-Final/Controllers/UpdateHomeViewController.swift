@@ -91,7 +91,6 @@ class UpdateHomeViewController: UIViewController {
         
         let service: NetworkService =  NetworkService()
         service.updateHistoryData(data: data,id: lastData!.id)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

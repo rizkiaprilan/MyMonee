@@ -51,9 +51,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func loadData() {
+        self.loading.startAnimating()
         NetworkService().loadHistoryData(completion: { (historyList) in
             DispatchQueue.main.async {
-                self.loading.startAnimating()
                 dataSource = historyList
                 self.historyTableView.reloadData()
                 self.viewHistoryTransaction()

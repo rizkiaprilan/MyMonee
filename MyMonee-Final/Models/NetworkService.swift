@@ -10,11 +10,11 @@ import Foundation
 class NetworkService {
     let currentUrl: String = "https://60a5fe0cc0c1fd00175f4df8.mockapi.io/api/v1/transaction"
     
-    func loadHistoryData(completion: @escaping(_ transaction: [HistoryDataAPI])->()) {
+    func loadHistoryData(completion: @escaping(_ transaction: [HistoryDataAPI]) -> Void) {
         let components = URLComponents(string: currentUrl)
         
         let request = URLRequest(url: (components?.url)!)
-        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: request) { (data, _, _) in
             if let data = data {
                 let decoder = JSONDecoder()
                 

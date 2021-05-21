@@ -73,7 +73,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Judul " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aur-L0-1By">
-                                    <rect key="frame" x="20" y="88" width="65.5" height="35"/>
+                                    <rect key="frame" x="20" y="88" width="339" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="sRc-rr-olg"/>
                                     </constraints>
@@ -82,7 +82,7 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </textField>
                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Jumlah" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="My6-rS-XnM">
-                                    <rect key="frame" x="20" y="154" width="81.5" height="35"/>
+                                    <rect key="frame" x="20" y="154" width="339" height="35"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="Jej-93-bii"/>
                                     </constraints>
@@ -209,9 +209,11 @@
                                 <constraint firstItem="My6-rS-XnM" firstAttribute="top" secondItem="h6S-ww-LLg" secondAttribute="bottom" id="Q63-Mc-b8j"/>
                                 <constraint firstItem="1k7-NX-oOn" firstAttribute="top" secondItem="JbG-Qa-SPg" secondAttribute="top" id="VPJ-2x-8r3"/>
                                 <constraint firstItem="Jkj-Y0-BHK" firstAttribute="top" secondItem="Q93-hJ-3T3" secondAttribute="bottom" constant="23" id="Ye5-yo-KwL"/>
+                                <constraint firstAttribute="trailing" secondItem="aur-L0-1By" secondAttribute="trailing" constant="20" id="bpV-gS-g56"/>
                                 <constraint firstAttribute="trailing" secondItem="1k7-NX-oOn" secondAttribute="trailing" constant="16" id="epZ-Wu-XtS"/>
                                 <constraint firstItem="Jkj-Y0-BHK" firstAttribute="leading" secondItem="be1-af-d0r" secondAttribute="leading" constant="20" id="fZV-eV-3o9"/>
                                 <constraint firstItem="1k7-NX-oOn" firstAttribute="bottom" secondItem="JbG-Qa-SPg" secondAttribute="bottom" id="fZa-yL-HlO"/>
+                                <constraint firstAttribute="trailing" secondItem="My6-rS-XnM" secondAttribute="trailing" constant="20" id="fyR-I7-keA"/>
                                 <constraint firstItem="aur-L0-1By" firstAttribute="leading" secondItem="Jkj-Y0-BHK" secondAttribute="leading" id="jQl-yO-0bf"/>
                                 <constraint firstItem="h6S-ww-LLg" firstAttribute="leading" secondItem="Jkj-Y0-BHK" secondAttribute="leading" id="o87-6R-dta"/>
                                 <constraint firstAttribute="bottom" secondItem="5Rz-im-yVn" secondAttribute="bottom" constant="76.5" id="pNk-zN-9jb"/>

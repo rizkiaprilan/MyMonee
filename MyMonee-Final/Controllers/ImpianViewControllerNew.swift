@@ -23,7 +23,7 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
     
     func addPage() {
         let viewController = AddImpianViewController(nibName: String(describing: AddImpianViewController.self), bundle: nil)
-        self.navigationController?.hidesBottomBarWhenPushed = true
+        viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -31,7 +31,7 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet var dataTable: UITableView!
     @IBAction func addImpian(_ sender: UIButton) {
         let viewController = AddImpianViewController(nibName: String(describing: AddImpianViewController.self), bundle: nil)
-        self.navigationController?.hidesBottomBarWhenPushed = true
+        viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -69,7 +69,7 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
         let viewController = ImpianDetailViewController(nibName: String(describing: ImpianDetailViewController.self), bundle: nil)
         viewController.indexSection = indexPath.section
         viewController.impianData = dataImpianByUser[indexPath.section]
-        self.navigationController?.hidesBottomBarWhenPushed = true
+        viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     

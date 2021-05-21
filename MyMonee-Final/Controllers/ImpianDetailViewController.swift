@@ -34,7 +34,7 @@ class ImpianDetailViewController: UIViewController {
         let viewController = UpdateImpianViewController(nibName: String(describing: UpdateImpianViewController.self), bundle: nil)
         viewController.impianData = impianData
         viewController.indexSection = indexSection
-        self.navigationController?.hidesBottomBarWhenPushed = true
+        viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     fileprivate func makeViewShadow(view: UIView) {

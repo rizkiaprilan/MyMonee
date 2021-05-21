@@ -35,6 +35,7 @@ class UpdateHomeViewController: UIViewController {
         }
         self.navigationController?.popViewController(animated: true)
         self.navigationController?.popViewController(animated: true)
+        self.showToast("Berhasil Terupdate", delay: 1.5)
     }
     
     @IBAction func hapus(_ sender: Any) {
@@ -42,6 +43,7 @@ class UpdateHomeViewController: UIViewController {
         service.deleteHistoryData(id: lastData!.id)
         
         self.navigationController?.popToRootViewController(animated: true)
+        self.showToast("Berhasil Terhapus", delay: 1.5)
     }
     
     @IBAction func pemasukkanTapped(_ sender: Any) {

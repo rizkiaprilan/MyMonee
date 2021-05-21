@@ -65,8 +65,11 @@ class AddHomeViewController: UIViewController {
         if statusPenarikan {
             insertDataHistory(type: .withdraw)
         }
-        self.showToast(message: "Data Save.")
-        self.navigationController?.popViewController(animated: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.navigationController?.popViewController(animated: true)
+            self.showToast("Berhasil Tersimpan", delay: 1.5)
+        }
     }
     
     fileprivate func makeAlert() {
@@ -100,32 +103,3 @@ class AddHomeViewController: UIViewController {
     }
 }
 
-extension UIViewController {
-    func toast(title:String ,text:String, delay:Int) -> Void {
-        let alert = UIAlertController(title: title, message: text, preferredStyle: .alert)
-        self.present(alert, animated: true)
-        let deadlineTime = DispatchTime.now() + .seconds(delay)
-        DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: {
-            alert.dismiss(animated: true, completion: nil)
-        })
-    }
-    func showToast(message : String) {
-
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
-        toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
-        toastLabel.textColor = UIColor.white
-        toastLabel.textAlignment = .center
-        toastLabel.font = UIFont(name: "Montserrat-Light", size: 12.0)
-        toastLabel.text = message
-        toastLabel.alpha = 1.0
-        toastLabel.layer.cornerRadius = 10
-        toastLabel.clipsToBounds  =  true
-        self.view.addSubview(toastLabel)
-        UIView.animate(withDuration: 4.0, delay: 0.1, options: .curveEaseOut, animations: {
-            toastLabel.alpha = 0.0
-        }, completion: {(isCompleted) in
-            toastLabel.removeFromSuperview()
-        })
-        
-    }
-}

@@ -22,7 +22,6 @@ class ImpianDetailViewController: UIViewController {
     @IBOutlet var detailVIew: UIView!
     @IBAction func backTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
-//        self.present(goBackToMainTabBar(), animated: true, completion: nil)
     }
     @IBAction func confirmationTapped(_ sender: UIButton) {
         historyData.append(HistoryData(title: impianData[0].title, extensions: Extensions(statusHistory: .withdraw), price: impianData[0].amount.target))
@@ -37,29 +36,19 @@ class ImpianDetailViewController: UIViewController {
         viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
-    fileprivate func makeViewShadow(view: UIView) {
-        view.clipsToBounds = false
-        let shadowPath0 = UIBezierPath(roundedRect: view.bounds, cornerRadius: 8)
-        view.layer.shadowPath = shadowPath0.cgPath
-        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
-        view.layer.shadowOpacity = 1
-        view.layer.shadowRadius = 8
-        view.layer.shadowOffset = CGSize(width: 0, height: 2)
-        view.layer.bounds = view.bounds
-        view.layer.position = view.center
-    }
+    
     override func viewWillAppear(_ animated: Bool) {
         backButton.layer.borderWidth = 3
         backButton.layer.cornerRadius = 20
         backButton.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
-        
+
         confirmationButton.layer.backgroundColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
         confirmationButton.layer.cornerRadius = 20
-        
+
         titleImpian.text = impianData[0].title
         priceImpian.text = convertIntToFormatMoney(money: impianData[0].amount.target, isDepoOrWithdraw: nil)
         self.persentage = Float(getBalance().withoutFormatMoney)/Float(impianData[0].amount.target) * 100
-        persantase.text = self.persentage > 100 ? "100%" :"\(self.persentage)%"
+        persantase.text = self.persentage > 100 ? "100%" :"\(round(self.persentage * 100) / 100.0)%"
         progressBar.progress = self.persentage/100
         amountImpian.text = "IDR \(convertIntToFormatMoneyRaw(money: getBalance().withoutFormatMoney)) / \(impianData[0].amount.target)"
         if persentage < 100 {

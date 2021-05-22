@@ -18,7 +18,6 @@ class NetworkService {
             if let data = data {
                 let decoder = JSONDecoder()
                 
-                
                 guard error == nil else {
                     completion([],"Error: error calling POST")
                     print(error!)

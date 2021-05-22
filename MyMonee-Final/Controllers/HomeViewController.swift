@@ -103,6 +103,13 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
 }
 
 extension UIViewController {
+    func makeViewShadow(view: UIView) {
+        view.clipsToBounds = false
+        view.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.15).cgColor
+        view.layer.shadowOpacity = 1
+        view.layer.shadowRadius = 8
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+    }
     
     func showToast(_ text: String, delay: Float) {
         guard let window = UIApplication.shared.keyWindow else {

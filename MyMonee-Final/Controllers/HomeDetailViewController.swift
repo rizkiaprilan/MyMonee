@@ -20,9 +20,11 @@ class HomeDetailViewController: UIViewController {
         viewController.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(viewController, animated: true)
     }
+    
     @IBAction func back(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBOutlet var typeImage: UIImageView!
     @IBOutlet var titleTransaction: UILabel!
     @IBOutlet var typeTransaction: UILabel!
@@ -36,24 +38,31 @@ class HomeDetailViewController: UIViewController {
         button.layer.cornerRadius = 20
         button.layer.borderWidth = 3
         button.layer.borderColor = UIColor(red: 0.314, green: 0.412, blue: 0.722, alpha: 1).cgColor
+        
+    }
     
+    func loadData() {
+        NetworkService().loadHistoryDataById(completion: { [self] (historyDataAPI) in
+            DispatchQueue.main.async {
+                dataHistory = historyDataAPI
+                dateTransaction.text = dataHistory?.date
+                typeImage.image = UIImage(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).image)
+                switch Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).status {
+                case .deposit:
+                    typeTransaction.text = "Pemasukan"
+                case .withdraw:
+                    typeTransaction.text = "Pengeluaran"
+                }
+                titleTransaction.text = dataHistory?.title
+                transactionPrice.text = convertIntToFormatMoney(money: dataHistory!.price, isDepoOrWithdraw: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).status)
+                transactionPrice.textColor = UIColor(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).fontColor)
+                trasancationId.text = dataHistory?.uuid
+            }
+        }, id: dataHistory!.id)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        dateTransaction.text = dataHistory?.date
-        typeImage.image = UIImage(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).image)
-        switch Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).status {
-        case .deposit:
-            typeTransaction.text = "Pemasukan"
-        case .withdraw:
-            typeTransaction.text = "Pengeluaran"
-        }
-        titleTransaction.text = dataHistory?.title
-        transactionPrice.text = convertIntToFormatMoney(money: dataHistory!.price, isDepoOrWithdraw: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).status)
-        transactionPrice.textColor = UIColor(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).fontColor)
-        trasancationId.text = dataHistory?.uuid
-        
+        loadData()
     }
 }

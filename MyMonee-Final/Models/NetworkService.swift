@@ -25,6 +25,21 @@ class NetworkService {
         task.resume()
     }
     
+    func loadHistoryDataById(completion: @escaping(_ transaction: HistoryDataAPI) -> Void,id:String) {
+        let components = URLComponents(string: "\(currentUrl)/\(id)")
+        
+        let request = URLRequest(url: (components?.url)!)
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let data = data {
+                let decoder = JSONDecoder()
+                
+                let getAllHistory = try! decoder.decode(HistoryDataAPI.self, from: data)
+                completion(getAllHistory)
+            }
+        }
+        task.resume()
+    }
+    
     func createHistoryData(data:HistoryData) {
         var components = URLComponents(string: currentUrl)
         var request = URLRequest(url: (components?.url)!)

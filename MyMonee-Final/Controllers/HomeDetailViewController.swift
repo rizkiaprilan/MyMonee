@@ -42,8 +42,12 @@ class HomeDetailViewController: UIViewController {
     }
     
     func loadData() {
-        NetworkService().loadHistoryDataById(completion: { [self] (historyDataAPI) in
+        NetworkService().loadHistoryDataById(completion: { [self] (historyDataAPI,messageError) in
             DispatchQueue.main.async {
+                if messageError != nil {
+                    self.showToast(messageError!, delay: 1.5)
+                    return
+                }
                 dataHistory = historyDataAPI
                 dateTransaction.text = dataHistory?.date
                 typeImage.image = UIImage(named: Extensions(statusHistory: TypeHistory(rawValue: dataHistory!.extensions)!).image)

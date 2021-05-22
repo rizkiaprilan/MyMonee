@@ -25,6 +25,7 @@
                 <outlet property="hapusButton" destination="knx-5p-PB6" id="uar-b8-axX"/>
                 <outlet property="judulField" destination="Sac-ea-S6x" id="iGw-yH-xRg"/>
                 <outlet property="jumlahField" destination="csT-ff-rnW" id="eg5-IG-zJS"/>
+                <outlet property="loading" destination="3d3-ye-1V7" id="q1b-Dc-kc8"/>
                 <outlet property="pemasukanView" destination="NEO-MG-igg" id="l2a-Ry-Ef3"/>
                 <outlet property="penarikanView" destination="dzt-IH-Hi1" id="VLf-j0-WZA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -208,6 +209,9 @@
                                         <action selector="hapus:" destination="-1" eventType="touchUpInside" id="zYL-0h-t2D"/>
                                     </connections>
                                 </button>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3d3-ye-1V7">
+                                    <rect key="frame" x="260.5" y="481.5" width="37" height="37"/>
+                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -216,6 +220,7 @@
                                 <constraint firstItem="NEO-MG-igg" firstAttribute="width" secondItem="dzt-IH-Hi1" secondAttribute="width" id="2CN-r1-S0a"/>
                                 <constraint firstAttribute="trailing" secondItem="Ftn-ha-kHk" secondAttribute="trailing" constant="16" id="2WN-P5-J1c"/>
                                 <constraint firstItem="csT-ff-rnW" firstAttribute="leading" secondItem="IA8-MZ-dO3" secondAttribute="leading" constant="16" id="5Fb-bI-nFY"/>
+                                <constraint firstItem="3d3-ye-1V7" firstAttribute="centerX" secondItem="IA8-MZ-dO3" secondAttribute="centerX" id="62I-wA-IEf"/>
                                 <constraint firstItem="dzt-IH-Hi1" firstAttribute="centerY" secondItem="NEO-MG-igg" secondAttribute="centerY" id="Bp0-Cd-9aw"/>
                                 <constraint firstAttribute="trailing" secondItem="csT-ff-rnW" secondAttribute="trailing" constant="16" id="Bym-YU-h9h"/>
                                 <constraint firstItem="dzt-IH-Hi1" firstAttribute="bottom" secondItem="NEO-MG-igg" secondAttribute="bottom" id="Dm9-Qc-CfS"/>
@@ -231,6 +236,7 @@
                                 <constraint firstAttribute="bottom" secondItem="knx-5p-PB6" secondAttribute="bottom" constant="89" id="XDg-nq-rkJ"/>
                                 <constraint firstItem="knx-5p-PB6" firstAttribute="top" secondItem="Ftn-ha-kHk" secondAttribute="bottom" constant="16" id="ZYa-oP-08H"/>
                                 <constraint firstItem="Ftn-ha-kHk" firstAttribute="leading" secondItem="IA8-MZ-dO3" secondAttribute="leading" constant="16" id="ZuU-5Q-0Ih"/>
+                                <constraint firstItem="3d3-ye-1V7" firstAttribute="centerY" secondItem="IA8-MZ-dO3" secondAttribute="centerY" id="bQP-wH-daU"/>
                                 <constraint firstItem="dzt-IH-Hi1" firstAttribute="top" secondItem="NEO-MG-igg" secondAttribute="top" id="bcw-w4-fMm"/>
                                 <constraint firstItem="m3k-xh-lQ1" firstAttribute="top" secondItem="m4e-Rk-VSw" secondAttribute="bottom" constant="22" id="e1L-Tj-sXc"/>
                                 <constraint firstAttribute="trailing" secondItem="dzt-IH-Hi1" secondAttribute="trailing" constant="16" id="eDV-RX-q1n"/>

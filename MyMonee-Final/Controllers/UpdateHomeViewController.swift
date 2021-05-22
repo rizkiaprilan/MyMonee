@@ -19,6 +19,7 @@ class UpdateHomeViewController: UIViewController {
     @IBOutlet var pemasukanView: UIView!
     @IBOutlet var penarikanView: UIView!
     @IBOutlet var hapusButton: UIButton!
+    @IBOutlet var loading: UIActivityIndicatorView!
     @IBAction func back(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -27,23 +28,23 @@ class UpdateHomeViewController: UIViewController {
             makeAlert()
             return
         }
-        if statusPemasukan {
-            updateData(type: .deposit)
-        }
-        if statusPenarikan {
-            updateData(type: .withdraw)
-        }
+        updateData(type: statusPemasukan ? .deposit : .withdraw)
         self.navigationController?.popViewController(animated: true)
         self.navigationController?.popViewController(animated: true)
-        self.showToast("Berhasil Terupdate", delay: 1.5)
+        
     }
     
     @IBAction func hapus(_ sender: Any) {
-        let service: NetworkService = NetworkService()
-        service.deleteHistoryData(id: lastData!.id)
-        
-        self.navigationController?.popToRootViewController(animated: true)
-        self.showToast("Berhasil Terhapus", delay: 1.5)
+        self.loading.isHidden = false
+        self.loading.startAnimating()
+        NetworkService().deleteHistoryData(id: lastData!.id) { (messageError) -> Void in
+            DispatchQueue.main.async {
+                self.showToast(messageError, delay: 0.0)
+                self.loading.stopAnimating()
+                self.navigationController?.popToRootViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func pemasukkanTapped(_ sender: Any) {
@@ -89,10 +90,18 @@ class UpdateHomeViewController: UIViewController {
     }
     
     fileprivate func updateData(type: TypeHistory) {
+        self.loading.isHidden = false
+        self.loading.startAnimating()
         let data = HistoryData(title: judulField.text!, extensions: Extensions(statusHistory: type), price: Int(jumlahField.text!)!)
         
-        let service: NetworkService =  NetworkService()
-        service.updateHistoryData(data: data,id: lastData!.id)
+        NetworkService().updateHistoryData(data: data, id: lastData!.id) { (errorMessage) in
+            DispatchQueue.main.async {
+                self.showToast(errorMessage, delay: 1.5)
+                self.loading.stopAnimating()
+                self.navigationController?.popViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -104,6 +113,7 @@ class UpdateHomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.loading.isHidden = true
         makeViewShadow(view: penarikanView)
         makeViewShadow(view: pemasukanView)
     }

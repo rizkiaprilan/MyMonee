@@ -16,7 +16,9 @@ class ImpianViewControllerNew: UIViewController, UITableViewDelegate, UITableVie
     
     func confirmImpian(_ impian: ImpianByUser, _ indexSectionImpian: Int) {
         dataImpianByUser.remove(at: indexSectionImpian)
-        NetworkService().createHistoryData(data: HistoryData(title: impian.title, extensions: Extensions(statusHistory: .withdraw), price: impian.amount.target))
+        NetworkService().createHistoryData(data: HistoryData(title: impian.title, extensions: Extensions(statusHistory: .withdraw), price: impian.amount.target)) { (message) in
+            self.showToast(message, delay: 1.5)
+        }
         dataTable.reloadData()
         self.viewWillAppear(true)
     }

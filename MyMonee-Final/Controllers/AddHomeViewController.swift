@@ -16,6 +16,7 @@ class AddHomeViewController: UIViewController {
     @IBOutlet var simpan: UIButton!
     @IBOutlet var penarikan: UIView!
     @IBOutlet var pemasukan: UIView!
+    @IBOutlet var loading: UIActivityIndicatorView!
     @IBAction func back(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -58,28 +59,25 @@ class AddHomeViewController: UIViewController {
             makeAlert()
             return
         }
-        
-        if statusPemasukan {
-            insertDataHistory(type: .deposit)
-        }
-        if statusPenarikan {
-            insertDataHistory(type: .withdraw)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.navigationController?.popViewController(animated: true)
-            self.showToast("Berhasil Tersimpan", delay: 1.5)
-        }
+        insertDataHistory(type: statusPemasukan ? .deposit : .withdraw)
     }
     
     fileprivate func makeAlert() {
         self.present(alert(), animated: true, completion: nil)
     }
-    
+
     fileprivate func insertDataHistory(type: TypeHistory) {
+        self.loading.isHidden = false
+        self.loading.startAnimating()
         let data: HistoryData = HistoryData(title: fieldJudul.text!, extensions: Extensions(statusHistory: type), price: Int(fieldJumlah.text!)!)
         
-        NetworkService().createHistoryData(data: data)
+        NetworkService().createHistoryData(data: data) { (errorMessage) in
+            DispatchQueue.main.async {
+                self.showToast(errorMessage, delay: 1.5)
+                self.loading.stopAnimating()
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     fileprivate func makeViewShadow(view: UIView) {
@@ -97,9 +95,9 @@ class AddHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         simpan.isEnabled = false
+        self.loading.isHidden = true
         
         makeViewShadow(view: penarikan)
         makeViewShadow(view: pemasukan)
     }
 }
-

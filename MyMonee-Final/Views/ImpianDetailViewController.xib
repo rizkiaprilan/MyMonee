@@ -184,7 +184,6 @@
                             <constraints>
                                 <constraint firstItem="21Y-jQ-N2P" firstAttribute="top" secondItem="JWm-75-WK5" secondAttribute="bottom" constant="23" id="04n-kF-La0"/>
                                 <constraint firstItem="F6H-Bj-tbj" firstAttribute="centerX" secondItem="bBg-gk-pqI" secondAttribute="centerX" constant="1.5" id="0ew-TH-6Cg"/>
-                                <constraint firstItem="21Y-jQ-N2P" firstAttribute="top" secondItem="JWm-75-WK5" secondAttribute="bottom" constant="23" id="1r3-vc-QzK"/>
                                 <constraint firstItem="JWm-75-WK5" firstAttribute="top" secondItem="OfB-yF-uNA" secondAttribute="top" constant="17.530000000000001" id="5R6-v8-ZHg"/>
                                 <constraint firstItem="21Y-jQ-N2P" firstAttribute="leading" secondItem="OfB-yF-uNA" secondAttribute="leading" id="9Yg-vu-35m"/>
                                 <constraint firstAttribute="trailing" secondItem="JWm-75-WK5" secondAttribute="trailing" constant="17" id="DqW-Ji-RY2"/>

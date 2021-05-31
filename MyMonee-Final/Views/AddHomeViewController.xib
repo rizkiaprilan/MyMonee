@@ -43,7 +43,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="379" height="667"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q93-hJ-3T3">
-                                    <rect key="frame" x="22.5" y="20" width="186" height="24"/>
+                                    <rect key="frame" x="22.5" y="20" width="165" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="24" id="MFj-eG-DFp"/>
                                     </constraints>
@@ -56,7 +56,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Judul" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jkj-Y0-BHK">
-                                    <rect key="frame" x="20" y="67" width="38.5" height="21"/>
+                                    <rect key="frame" x="20" y="67" width="34.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="rC1-Oc-eZa"/>
                                     </constraints>
@@ -65,7 +65,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumlah (Rp)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6S-ww-LLg">
-                                    <rect key="frame" x="20" y="133" width="90" height="21"/>
+                                    <rect key="frame" x="20" y="133" width="74.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="KMH-Nb-EBC"/>
                                     </constraints>
@@ -92,7 +92,7 @@
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 </textField>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kategori Penggunaan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LdB-cJ-IAV">
-                                    <rect key="frame" x="20" y="203" width="166" height="21"/>
+                                    <rect key="frame" x="20" y="203" width="145.5" height="21"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="21" id="9Hu-jP-XfG"/>
                                     </constraints>

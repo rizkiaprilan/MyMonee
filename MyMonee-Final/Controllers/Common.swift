@@ -65,6 +65,7 @@ func alert() -> UIAlertController {
     return alert
 }
 
+@available(iOS 13.0, *)
 func goBackToMainTabBar() -> UIViewController {
     let viewController = MainTabBarController(nibName: String(describing: MainTabBarController.self), bundle: nil)
     viewController.modalPresentationStyle = .fullScreen
